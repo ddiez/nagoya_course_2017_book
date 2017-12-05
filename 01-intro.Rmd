@@ -6,3 +6,27 @@ Bioinformatics can be defined as the use of computational tools to answer questi
 * Omics analysis
 * Structural analysis
 
+## Sequence analysis
+
+The main goal of sequence analysis is two answer questions regarding the nature of DNA, RNA and/or protein sequences. Are there any other similar sequences? What parts of the sequences are similar and which one are not? Can we see a conservation pattern among a set of sequences?
+
+An example would be a protein sequence for which we have no other information than its primary sequence (i.e. the sequence of amino acids bound by peptidic bound).
+
+```
+MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAG
+QEEYSAMRDQYMRTGEGFLCVFAINNTKSFEDIHHYREQIKRVKDSEDVPMVLVGNKCDL
+PSRTVDTKQAQDLARSYGIPFIETSAKTRQRVEDAFYTLVREIRQYRLKKISKEEKTPGC
+VKIKKCIIM
+```
+
+## Omics analysis
+
+In omics analysis we are concerned with the manipulation, processing and analysis of high-throughtput data from omics technologies, including microarrays, next generation sequencing (NGS) methods like RNA-seq and ChIP-seq, mass-spectromemtry (MS) methods like MS proteomics, etc.
+
+For example, we can consider an study in which the effect of some drug on the expression profile of epithelial cells in the lung will be evaluated. Mice are treated with either the drug or some placebo. Epithelial cells are isolated from the lungs and RNA is extracted. After amplification and convertion into cDNA we hybridize the samples to microarrays containing probes for >55 thousand transcripts. This will give us an estimate of the expression profile for 55 thousand transcripts. If we have initially 3 samples per group, we will obtain a 55,000 x 6 matrix of expression values. How can we process and analyze this data in a way that avoids biases and gives us some information about the biological question of interest?
+
+## Structural analysis
+
+Structural bioinformatics deals with methods predicting the structure of biopolymers and their interactions with one another as well as with small molecules.
+
+
