@@ -1,0 +1,11 @@
+# Reproducible research
+
+## Git
+
+### Github
+
+## Literate programming
+
+### RMarkdown notebooks
+
+### Jupyter notebooks
