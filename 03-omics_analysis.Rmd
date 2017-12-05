@@ -109,7 +109,25 @@ Other NGS technologies are becoming popular in recent years. For example, TSS-se
 
 ## Mass spectromics methods
 
+Studying transcriptional regulation is one important part for understanding the cell’s phenotype. But some of the transcribed genes will produce proteins that engage in diverse functions in the cell, including signaling pathways that regulate the cell’s behavior and enzymes that regulate metabolic pathways. Therefore, the other important part to understand the cell’s phenotype are the proteome and metabolome. For studying the proteome mass-spectrometry (or MS) approaches have been fundamental. Here we will focus on the use of MS approaches for proteomics.
 
+MS uses the mass-to-charge ratio to identify and quantify chemical molecules. MS is used not only to quantify protein expression, but also post-translational modifications like phosphorylation or ubiquitination, and protein-protein interactions.
+
+### MS
+
+The general proteomics protocol requires digesting the proteins into fragments (peptides). These will be initially separated by liquid chromatography (LC) coupled to MS. This will lead to peptide separation but identification requires another round of fragmentation followed by MS. Each peptide produces a distinct spectrum, which is compared against a database linking spectra to peptide sequences. The identified peptides are then mapped to a protein database to identify the proteins they came from. The number of mapping peptides will be proportional to the original abundance of the proteins, enabling their quantification.
+
+```{r ms, echo=FALSE, fig.cap="Workflow for MS proteomics."}
+knitr::include_graphics("pic/ms.png")
+```
+
+### AP-MS
+
+Protein interactions are fundamental in regulating cellular pathways, and they play as well important roles in immunology. To obtain protein-protein interaction information we can use a modified MS protocol called AP-MS (affinity purification followed by MS). Similar to ChIP-seq, the first step is to crosslink interacting proteins together with formaldehyde. Next, we isolate the complexes with an antibody against the target protein, also call the bait. Then, crosslinking is reversed, the proteins are digested and LC-MS/MS performed in the usual way. Mapping the peptides to the proteome will identify which other proteins where interacting with our target protein. AP-MS can only assay the interactome around the target protein. Also, it does not identify direct interactions, but proteins that are part of the same protein complex.
+
+```{r ap-ms, echo=FALSE, fig.cap="Workflow for AP-MS proteomics for identifying protein-protein interactions."}
+knitr::include_graphics("pic/ap-ms.png")
+```
 
 ## Single cell omics
 

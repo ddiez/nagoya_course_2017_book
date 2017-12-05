@@ -132,7 +132,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.3.4" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#example-stat3-binding-in-macrophages-exposed-to-il10"><i class="fa fa-check"></i><b>3.3.4</b> Example: Stat3 binding in macrophages exposed to IL10</a></li>
 <li class="chapter" data-level="3.3.5" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#other-ngs-technologies"><i class="fa fa-check"></i><b>3.3.5</b> Other NGS technologies</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#mass-spectromics-methods"><i class="fa fa-check"></i><b>3.4</b> Mass spectromics methods</a></li>
+<li class="chapter" data-level="3.4" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#mass-spectromics-methods"><i class="fa fa-check"></i><b>3.4</b> Mass spectromics methods</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#ms"><i class="fa fa-check"></i><b>3.4.1</b> MS</a></li>
+<li class="chapter" data-level="3.4.2" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#ap-ms"><i class="fa fa-check"></i><b>3.4.2</b> AP-MS</a></li>
+</ul></li>
 <li class="chapter" data-level="3.5" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#single-cell-omics"><i class="fa fa-check"></i><b>3.5</b> Single cell omics</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html"><i class="fa fa-check"></i><b>4</b> Bioinformatics resources</a><ul>
@@ -296,6 +299,28 @@ Figure 3.11: Stat3 binding profile around the Stat3 locus
 </div>
 <div id="mass-spectromics-methods" class="section level2">
 <h2><span class="header-section-number">3.4</span> Mass spectromics methods</h2>
+<p>Studying transcriptional regulation is one important part for understanding the cell’s phenotype. But some of the transcribed genes will produce proteins that engage in diverse functions in the cell, including signaling pathways that regulate the cell’s behavior and enzymes that regulate metabolic pathways. Therefore, the other important part to understand the cell’s phenotype are the proteome and metabolome. For studying the proteome mass-spectrometry (or MS) approaches have been fundamental. Here we will focus on the use of MS approaches for proteomics.</p>
+<p>MS uses the mass-to-charge ratio to identify and quantify chemical molecules. MS is used not only to quantify protein expression, but also post-translational modifications like phosphorylation or ubiquitination, and protein-protein interactions.</p>
+<div id="ms" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> MS</h3>
+<p>The general proteomics protocol requires digesting the proteins into fragments (peptides). These will be initially separated by liquid chromatography (LC) coupled to MS. This will lead to peptide separation but identification requires another round of fragmentation followed by MS. Each peptide produces a distinct spectrum, which is compared against a database linking spectra to peptide sequences. The identified peptides are then mapped to a protein database to identify the proteins they came from. The number of mapping peptides will be proportional to the original abundance of the proteins, enabling their quantification.</p>
+<div class="figure"><span id="fig:ms"></span>
+<img src="pic/ms.png" alt="Workflow for MS proteomics." width="586" />
+<p class="caption">
+Figure 3.12: Workflow for MS proteomics.
+</p>
+</div>
+</div>
+<div id="ap-ms" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> AP-MS</h3>
+<p>Protein interactions are fundamental in regulating cellular pathways, and they play as well important roles in immunology. To obtain protein-protein interaction information we can use a modified MS protocol called AP-MS (affinity purification followed by MS). Similar to ChIP-seq, the first step is to crosslink interacting proteins together with formaldehyde. Next, we isolate the complexes with an antibody against the target protein, also call the bait. Then, crosslinking is reversed, the proteins are digested and LC-MS/MS performed in the usual way. Mapping the peptides to the proteome will identify which other proteins where interacting with our target protein. AP-MS can only assay the interactome around the target protein. Also, it does not identify direct interactions, but proteins that are part of the same protein complex.</p>
+<div class="figure"><span id="fig:ap-ms"></span>
+<img src="pic/ap-ms.png" alt="Workflow for AP-MS proteomics for identifying protein-protein interactions." width="818" />
+<p class="caption">
+Figure 3.13: Workflow for AP-MS proteomics for identifying protein-protein interactions.
+</p>
+</div>
+</div>
 </div>
 <div id="single-cell-omics" class="section level2">
 <h2><span class="header-section-number">3.5</span> Single cell omics</h2>
