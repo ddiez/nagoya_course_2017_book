@@ -103,6 +103,9 @@ knitr::include_graphics("pic/stat3_chipseq.png")
 
 An important limitation of ChIP-seq is that it can only identify binding sites for a single TF or histone modification at a time. Another problem is that in eukaryotes, enhancers can be located far away from the genes they regulate, hampering the assignment of TF binding to target genes. Finally, the observation of protein binding to DNA does not demonstrate its functional relevance, which requires additional functional experiments.
 
+### Other NGS technologies
+
+Other NGS technologies are becoming popular in recent years. For example, TSS-seq and CAGE-seq are technologies that identify the 5’ cap structure of the processed mRNA, revealing the location of active promoters. Other technologies are able to reveal information about the chromatin. Chromatin accessibility can be assayed by means of either DNaseI digestion or by transposase reaction. In both cases the enzymes have a preference to react with open chromatin regions, with regions of close chromatin or protected by the binding of proteins being more resilient. This enables to map open chromatin and even the location of nucleosomes and binding of TFs if enough sequencing depth is performed. Nucleosome location can be more directly assayed by using the Mnase-seq protocol. Finally, the methylation of the DNA can be assayed by bisulfite sequencing.
 
 ## Mass spectromics methods
 
