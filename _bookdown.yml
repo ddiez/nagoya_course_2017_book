@@ -1,0 +1,4 @@
+book_filename: "nagoya_course_book"
+language:
+  ui:
+    chapter_name: "Chapter "

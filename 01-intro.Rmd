@@ -1,0 +1,8 @@
+# Introduction {#intro}
+
+Bioinformatics can be defined as the use of computational tools to answer questions in Biology. Several topics are covered:
+
+* Sequence analysis
+* Omics analysis
+* Structural analysis
+
