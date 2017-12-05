@@ -6,6 +6,27 @@ This chapter gives a brief introduction on the most common omics technologies.
 
 ## Microarrays
 
+Microarrays were arguably the first of the “omics” technologies, starting a new generation of high-throughput analyses. This type of exploratory analysis enables the generation of new hypotheses that can be further tested, becoming one important source of knowledge discovery. Microarrays were the first technology to allow this and currently there is a wealth of experimental data available in public databases. There are over 50,000 samples for expression microarrays deposited in the NCBI gene expression omnibus (Figure \@ref(fig:geo)).
+
+```{r geo, echo=FALSE, fig.cap="Number of submissions per year for various technologies."}
+knitr::include_graphics("pic/geo_total.png")
+```
+
+
+Microarrays are basically made of a solid surface with short oligonucleotides attached to it (see Figure \@ref(fig:microarray)). Each oligonucleotide has a specific sequence, complementary to a particular gene transcript. This makes the oligonucleotide a probe for the expression level of the target transcript. The solid surface is divided into regions forming an array. Each region has attached the same oligonucleotide and therefore measures the expression of a single transcript.
+
+```{r microarray, echo=FALSE, fig.cap="Microarrays are made of oligonucleotide probes attached to a solid surface."}
+knitr::include_graphics("pic/microarray.png")
+```
+
+
+Here we can see a typical microarray experiment protocol in more detail (Figure \@ref(fig:microarray-workflow)). The RNA extracted from the target cells is converted into cDNA using nucleotides with a fluorescence molecule attached. A hybridization reaction is performed to allow the labelled cDNA to bind to its complementary probes. The location of the hybridized probes is revealed by exciting the array with a laser. Only those regions with cDNA bound will emit fluorescence upon stimulation with the laser. Because the location and sequence of the oligonucleotides are known, the location of the fluorescence will tell us which transcript has been detected. Image analysis is performed to quantify the signal associated with each probe, obtaining an estimate of the transcript’s expression level. Analysis of the raw data involves preprocessing of the intensities (usually background correction and normalization) and statistical analysis. Variants of this basic protocol exist that use different labeling approaches, detection methods, amplification of original RNA, etc.
+
+```{r microarray-workflow, echo=FALSE, fig.cap="Summary of typical microarray workflow."}
+knitr::include_graphics("pic/microarray_workflow.png")
+```
+
+
 ## Next-generation sequencing
 
 ## Mass spectromics methods

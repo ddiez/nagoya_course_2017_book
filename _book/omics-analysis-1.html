@@ -131,9 +131,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html"><i class="fa fa-check"></i><b>4</b> Bioinformatics resources</a><ul>
 <li class="chapter" data-level="4.1" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#gene-ontology"><i class="fa fa-check"></i><b>4.1</b> Gene Ontology</a></li>
-<li class="chapter" data-level="4.2" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#pathway-databases"><i class="fa fa-check"></i><b>4.2</b> Pathway databases</a></li>
-<li class="chapter" data-level="4.3" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#domain-databases"><i class="fa fa-check"></i><b>4.3</b> Domain databases</a></li>
+<li class="chapter" data-level="4.2" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#pathway-databases"><i class="fa fa-check"></i><b>4.2</b> Pathway databases</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#kegg"><i class="fa fa-check"></i><b>4.2.1</b> KEGG</a></li>
+<li class="chapter" data-level="4.2.2" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#reactome"><i class="fa fa-check"></i><b>4.2.2</b> Reactome</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#domain-databases"><i class="fa fa-check"></i><b>4.3</b> Domain databases</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#pfam"><i class="fa fa-check"></i><b>4.3.1</b> PFAM</a></li>
+</ul></li>
 <li class="chapter" data-level="4.4" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#motif-databases"><i class="fa fa-check"></i><b>4.4</b> Motif databases</a></li>
+<li class="chapter" data-level="4.5" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#interaction-networks"><i class="fa fa-check"></i><b>4.5</b> Interaction networks</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#biogrid"><i class="fa fa-check"></i><b>4.5.1</b> Biogrid</a></li>
+<li class="chapter" data-level="4.5.2" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#string"><i class="fa fa-check"></i><b>4.5.2</b> STRING</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="reproducible-research.html"><a href="reproducible-research.html"><i class="fa fa-check"></i><b>5</b> Reproducible research</a><ul>
 <li class="chapter" data-level="5.1" data-path="reproducible-research.html"><a href="reproducible-research.html#git"><i class="fa fa-check"></i><b>5.1</b> Git</a><ul>
@@ -171,6 +180,27 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="microarrays" class="section level2">
 <h2><span class="header-section-number">3.2</span> Microarrays</h2>
+<p>Microarrays were arguably the first of the “omics” technologies, starting a new generation of high-throughput analyses. This type of exploratory analysis enables the generation of new hypotheses that can be further tested, becoming one important source of knowledge discovery. Microarrays were the first technology to allow this and currently there is a wealth of experimental data available in public databases. There are over 50,000 samples for expression microarrays deposited in the NCBI gene expression omnibus (Figure <a href="omics-analysis-1.html#fig:geo">3.1</a>).</p>
+<div class="figure"><span id="fig:geo"></span>
+<img src="pic/geo_total.png" alt="Number of submissions per year for various technologies." width="432" />
+<p class="caption">
+Figure 3.1: Number of submissions per year for various technologies.
+</p>
+</div>
+<p>Microarrays are basically made of a solid surface with short oligonucleotides attached to it (see Figure <a href="omics-analysis-1.html#fig:microarray">3.2</a>). Each oligonucleotide has a specific sequence, complementary to a particular gene transcript. This makes the oligonucleotide a probe for the expression level of the target transcript. The solid surface is divided into regions forming an array. Each region has attached the same oligonucleotide and therefore measures the expression of a single transcript.</p>
+<div class="figure"><span id="fig:microarray"></span>
+<img src="pic/microarray.png" alt="Microarrays are made of oligonucleotide probes attached to a solid surface." width="674" />
+<p class="caption">
+Figure 3.2: Microarrays are made of oligonucleotide probes attached to a solid surface.
+</p>
+</div>
+<p>Here we can see a typical microarray experiment protocol in more detail (Figure <a href="omics-analysis-1.html#fig:microarray-workflow">3.3</a>). The RNA extracted from the target cells is converted into cDNA using nucleotides with a fluorescence molecule attached. A hybridization reaction is performed to allow the labelled cDNA to bind to its complementary probes. The location of the hybridized probes is revealed by exciting the array with a laser. Only those regions with cDNA bound will emit fluorescence upon stimulation with the laser. Because the location and sequence of the oligonucleotides are known, the location of the fluorescence will tell us which transcript has been detected. Image analysis is performed to quantify the signal associated with each probe, obtaining an estimate of the transcript’s expression level. Analysis of the raw data involves preprocessing of the intensities (usually background correction and normalization) and statistical analysis. Variants of this basic protocol exist that use different labeling approaches, detection methods, amplification of original RNA, etc.</p>
+<div class="figure"><span id="fig:microarray-workflow"></span>
+<img src="pic/microarray_workflow.png" alt="Summary of typical microarray workflow." width="722" />
+<p class="caption">
+Figure 3.3: Summary of typical microarray workflow.
+</p>
+</div>
 </div>
 <div id="next-generation-sequencing" class="section level2">
 <h2><span class="header-section-number">3.3</span> Next-generation sequencing</h2>
@@ -221,7 +251,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["nagoya_course_book.pdf"],
 "toc": {
 "collapse": "subsection"
 }
