@@ -112,7 +112,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="2" data-path="sequence-analysis-1.html"><a href="sequence-analysis-1.html"><i class="fa fa-check"></i><b>2</b> Sequence analysis</a><ul>
 <li class="chapter" data-level="2.1" data-path="sequence-analysis-1.html"><a href="sequence-analysis-1.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
-<li class="chapter" data-level="2.2" data-path="sequence-analysis-1.html"><a href="sequence-analysis-1.html#two-sequence-alignment"><i class="fa fa-check"></i><b>2.2</b> Two sequence alignment</a></li>
+<li class="chapter" data-level="2.2" data-path="sequence-analysis-1.html"><a href="sequence-analysis-1.html#two-sequence-alignment"><i class="fa fa-check"></i><b>2.2</b> Two sequence alignment</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="sequence-analysis-1.html"><a href="sequence-analysis-1.html#comparing-two-sequences-of-different-lengths"><i class="fa fa-check"></i><b>2.2.1</b> Comparing two sequences of different lengths</a></li>
+<li class="chapter" data-level="2.2.2" data-path="sequence-analysis-1.html"><a href="sequence-analysis-1.html#smith-waterman-global-alignment"><i class="fa fa-check"></i><b>2.2.2</b> Smith-waterman (global alignment)</a></li>
+<li class="chapter" data-level="2.2.3" data-path="sequence-analysis-1.html"><a href="sequence-analysis-1.html#needleman--local-alignment"><i class="fa fa-check"></i><b>2.2.3</b> Needleman- (local alignment)</a></li>
+<li class="chapter" data-level="2.2.4" data-path="sequence-analysis-1.html"><a href="sequence-analysis-1.html#blast"><i class="fa fa-check"></i><b>2.2.4</b> Blast</a></li>
+</ul></li>
 <li class="chapter" data-level="2.3" data-path="sequence-analysis-1.html"><a href="sequence-analysis-1.html#multiple-sequence-alignment"><i class="fa fa-check"></i><b>2.3</b> Multiple sequence alignment</a></li>
 <li class="chapter" data-level="2.4" data-path="sequence-analysis-1.html"><a href="sequence-analysis-1.html#domains-and-motifs"><i class="fa fa-check"></i><b>2.4</b> Domains and motifs</a></li>
 <li class="chapter" data-level="2.5" data-path="sequence-analysis-1.html"><a href="sequence-analysis-1.html#phylogenetic-methods"><i class="fa fa-check"></i><b>2.5</b> Phylogenetic methods</a></li>
@@ -157,12 +162,38 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="two-sequence-alignment" class="section level2">
 <h2><span class="header-section-number">2.2</span> Two sequence alignment</h2>
+<p>When we want to compare two sequences of the same size a naive method would be line them up and count the number of mismatches.</p>
+<pre><code>AAGGATGA
+AACGATAA
+..*...*.</code></pre>
+<div id="comparing-two-sequences-of-different-lengths" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Comparing two sequences of different lengths</h3>
+</div>
+<div id="smith-waterman-global-alignment" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Smith-waterman (global alignment)</h3>
+</div>
+<div id="needleman--local-alignment" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Needleman- (local alignment)</h3>
+</div>
+<div id="blast" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> Blast</h3>
+</div>
 </div>
 <div id="multiple-sequence-alignment" class="section level2">
 <h2><span class="header-section-number">2.3</span> Multiple sequence alignment</h2>
+<p>When we want to align 3 o more sequences together we have a multiple sequence alignment (MSA). In MSA there is more ambiguity in what determines a correct alignment.</p>
+<p>Software for MSA:</p>
+<ul>
+<li>MAFFT</li>
+<li>Clustal (Classic)</li>
+<li>MUSCLE</li>
+</ul>
 </div>
 <div id="domains-and-motifs" class="section level2">
 <h2><span class="header-section-number">2.4</span> Domains and motifs</h2>
+<p>Biological sequences contain regions of high similarity to other similar regions in other proteins. Sometimes this regios are small, accounting for a few aminoacids, and they are typically named <em>motifs</em>. In other cases the conserved regions are larger, and then are called <em>domains</em>. Domains are sometimes associated with some structurally motivated definition of domain. Sometimes however, the distinction between these two types of conserved regions is ambigous.</p>
+<p>Motifs and domains can be identified by using the information from a MSA. This is the approach followed in the Pfam database. Sections of MSAs containing the domain of interest are manually curated. These are used to train a Hidden Markov Model (HMM) that learns how to recognize the same domain in other sequences. With that model, we can identify all sequences in a database containing that particular domain.</p>
+<p>The software HMMER implements HMM for the analysis of biological sequences. It can learn models representing motifs, domains or entire sequences. These models are used to search for sequences matching the models in databases. It can also be used to annotate the domains/motifs present in a sequence using a database of domains. PFAM uses HMMER and manually curated MSA of domains to generate a database of protein families (PFAM).</p>
 </div>
 <div id="phylogenetic-methods" class="section level2">
 <h2><span class="header-section-number">2.5</span> Phylogenetic methods</h2>

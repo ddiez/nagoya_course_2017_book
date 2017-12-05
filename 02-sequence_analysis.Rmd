@@ -6,8 +6,38 @@ This chapter introduces the basics of sequence analysis methods.
 
 ## Two sequence alignment
 
+When we want to compare two sequences of the same size a naive method would be line them up and count the number of mismatches.
+
+```
+AAGGATGA
+AACGATAA
+..*...*.
+```
+
+### Comparing two sequences of different lengths
+
+### Smith-waterman (global alignment)
+
+### Needleman- (local alignment)
+
+### Blast
+
 ## Multiple sequence alignment
 
+When we want to align 3 o more sequences together we have a multiple sequence alignment (MSA). In MSA there is more ambiguity in what determines a correct alignment.
+
+Software for MSA:
+
+* MAFFT
+* Clustal (Classic)
+* MUSCLE
+
 ## Domains and motifs
+
+Biological sequences contain regions of high similarity to other similar regions in other proteins. Sometimes this regios are small, accounting for a few aminoacids, and they are typically named *motifs*. In other cases the conserved regions are larger, and then are called *domains*. Domains are sometimes associated with some structurally motivated definition of domain. Sometimes however, the distinction between these two types of conserved regions is ambigous.
+
+Motifs and domains can be identified by using the information from a MSA. This is the approach followed in the Pfam database. Sections of MSAs containing the domain of interest are manually curated. These are used to train a Hidden Markov Model (HMM) that learns how to recognize the same domain in other sequences. With that model, we can identify all sequences in a database containing that particular domain.
+
+The software HMMER implements HMM for the analysis of biological sequences. It can learn models representing motifs, domains or entire sequences. These models are used to search for sequences matching the models in databases. It can also be used to annotate the domains/motifs present in a sequence using a database of domains. PFAM uses HMMER and manually curated MSA of domains to generate a database of protein families (PFAM).
 
 ## Phylogenetic methods
