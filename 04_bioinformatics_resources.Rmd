@@ -1,5 +1,7 @@
 # Bioinformatics resources
 
+In this chapter some of the most important Bioinformatics resources are described. An attempt to organized them by topic is made, but most of these resources are highly integrated. So, for example, you would thing that to do a Blast search you need to go to the Blast web page. But you can also perform Blast searches from the Uniprot and EnsEMBL web pages, to mention just two. Similarly, most if not all sequence databases link the associated Gene Ontology information to their sequence entries. This high degree of integration might make difficult at first to value the existence of different resources.
+
 ## Gene Ontology
 
 One important difficulty when dealing with Biological structures (molecules, organelles, etc.) is the vocabulary we use to described them. As this type of information accumulated different researches would tend to use slighly different ways to describe the same thing. In other cases they can use similar words to describe different things. These nuances make the descriptions often found in publications ambiguous making it difficult to determine the exact meaning of some assertion. This difficulty became more prominent once the amount of information increased dramatically with the advent of omics technologies, and the information about the biological stuff was the subject of computational analyses. There was a need for an standardized nomenclature, and that was the origin of the [Gene Ontology](http://www.geneontology.org) project. The purpose of the Gene Ontology project is stated in it web page:
