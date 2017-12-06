@@ -29,8 +29,8 @@ knitr::include_graphics("pic/omics_3.png")
 
 Microarrays were arguably the first of the “omics” technologies, starting a new generation of high-throughput analyses. This type of exploratory analysis enables the generation of new hypotheses that can be further tested, becoming one important source of knowledge discovery. Microarrays were the first technology to allow this and currently there is a wealth of experimental data available in public databases. There are over 50,000 samples for expression microarrays deposited in the NCBI gene expression omnibus (Figure \@ref(fig:geo)).
 
-```{r geo, echo=FALSE, fig.cap="Number of submissions per year for various technologies."}
-knitr::include_graphics("pic/geo_total.png")
+```{r geo, echo=FALSE, fig.cap="Number of total submissions for the top 4 technologies."}
+knitr::include_graphics("pic/geo_total.pdf")
 ```
 
 
