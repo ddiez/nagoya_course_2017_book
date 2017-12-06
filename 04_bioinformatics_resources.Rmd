@@ -46,6 +46,12 @@ The [Gene Expression Omnibus (GEO)](https://www.ncbi.nlm.nih.gov/geo/) database 
 knitr::include_graphics("pic/geo_web.png")
 ```
 
+The number of submissions per year for microarrays and RNA-seq continues to increase.
+
+```{r geo-year, echo=FALSE, fig.cap="Number of GEO submissions per year for the top 4 technologies."}
+knitr::include_graphics("pic/geo_year.pdf")
+```
+
 ### ArrayExpress
 
 [ArrayExpress](https://www.ebi.ac.uk/arrayexpress/) is the alternative at the European Bioinformatics Institute.
