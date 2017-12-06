@@ -4,6 +4,27 @@ This chapter gives a brief introduction on the most common omics technologies.
 
 ## Introduction
 
+What is omics? In the last 20 years there has been an explosion of words ending in ~ome and ~omics in the scientific literature. All these words probably derive from the word genome and genomics. The definition for genome in a classic textbook in Biology says: “Genome is the complete set of genes of an organism”. Genomics, would be the science that studies the genome.
+
+In a similar way, all the RNA molecules expressed in a cell at a particular time is called transcriptome. For all the proteins expressed in a cell we use proteome. For all the metabolites we use metabolome, and so on. The ome word is also used to describe the complete set of other "things" that are not molecules but some kind of property, feature or virtually almost anything. For example, interactome may refer to the complete set of interactions between molecules in the cell. Extensions of this terminology have resulted in the appearance of terms like phenome, diseasome, and so on. The technologies used to study “omes” are called “omics”. For example, transcriptomics is the field that studies the transcriptome. Proteomics is the study of the proteome, etc. This leads to a whole world of omics technologies.
+
+```{r omics-1, echo=FALSE, fig.cap="A world of OMICS technologies."}
+knitr::include_graphics("pic/omics_1.png")
+```
+
+Let’s look into the basic idea behind one of these technologies and what kind of information they allow us to obtain.
+For example, here we have one cell before and after exposure to some stimulus. Transcripts are represented by these ribbons, each color being a different transcript. Imagine we are interested on the effect of some chemical on our cells. We hypothesize that the expression of some genes may be altered by the effect of the stimulus, but we do not know whether this is true or what genes may be altered. We decide to do transcriptomics, or gene expression profiling, to identify which genes are affected. Here we can see the result from such experiment. In this hypothetical scenario gene 1 has two transcripts, but only the first one is downregulated, i.e. its expression is reduced after exposure to the stimulus. Gene 4 has one transcript that is upregulated, i.e. its expression is increased by the stimulus. Other transcripts seem to be unchanged. The expression level for all transcripts at a given condition is called the expression profile. By comparing expression profiles we can reveal which genes are altered between the different conditions. These are called differentially expressed genes. One of the goals of transcriptomics is to identify DEGs between different experimental conditions (for example, between control and treatment, patient and disease, etc.).
+
+```{r omics-2, echo=FALSE, fig.cap="Rationale behind OMICS technologies."}
+knitr::include_graphics("pic/omics_2.png")
+```
+
+Existing omics technologies can be roughly divided into three categories: microarray based, next generation sequencing approaches (or NGS) and mass-spectrometry methods (or MS). We will briefly describe some of these techniques in the following videos.
+
+```{r omics-3, echo=FALSE, fig.cap="Classification of OMICS technologies."}
+knitr::include_graphics("pic/omics_3.png")
+```
+
 ## Microarrays
 
 Microarrays were arguably the first of the “omics” technologies, starting a new generation of high-throughput analyses. This type of exploratory analysis enables the generation of new hypotheses that can be further tested, becoming one important source of knowledge discovery. Microarrays were the first technology to allow this and currently there is a wealth of experimental data available in public databases. There are over 50,000 samples for expression microarrays deposited in the NCBI gene expression omnibus (Figure \@ref(fig:geo)).
@@ -130,4 +151,13 @@ knitr::include_graphics("pic/ap-ms.png")
 ```
 
 ## Single cell omics
+
+So far we have assumed that in each omic experiment we obtain a tissue sample, or perhaps isolate the cell type of interest with FACS and then perform the analysis on the bulk of cells. An experiment performed in this way reveals information about (in the case of transcriptomics) the average expression level of all cells in the bulk. In general, this approach is valid if we believe that most of the cells in the population are similarly and that they behavior is homogeneous.
+However, recent evidence shows that even in seemingly homogenous populations, there is substantial heterogeneity in the expression levels of genes and proteins. This is even more dramatic in populations where a few cells are regulated distinctly and initiate changes that will drive future responses. For example, in the lymph node there are many naive T cells but only the ones in contact with their specific antigen will be activated and mature into effector cells. Because the associated changes occur in a very limited number of cells, that information may be lost in the averaging resulting from analyzing bulks of cells. This is the motivation behind the field of single cells omics. The foundation of single cell omics is almost identical to what we have seen so far. The main difference is that these omics technologies are applied to each cell individually, requiring of methods to manipulate and extract the target material from single cells in parallel and efficiently. Another challenge is the analysis of this type of data. The data resulting from single cell omics is multivariate in nature and specialized methods are required for their interpretation.
+
+```{r sc, echo=FALSE, fig.cap="Single cell omics captures the stochastic nature of biological processes"}
+knitr::include_graphics("pic/ngs_sc.png")
+```
+
+The field of single cell omics is in constant development and new or improved methodologies appear increasingly. For transcriptomics the use of microfluidic reaction chambers enables single cells to be subjected to RNA-seq protocols. Another methodology is Fluorescence based flow cytometry (FBFC), which enables to quantify the amount of proteins using fluorophores attached to antibodies. However, because spectral overlap, the maximum number of proteins that can be measured simultaneously is limited. A modification of this technology known as mass cytometry tags antibodies with rare isotopes and uses mass spectrometry to identify proteins. This technique highly improves the dimensionality by increasing the number of proteins and conditions that can be analyzed simultaneously.
 
