@@ -67,6 +67,14 @@ knitr::include_graphics("pic/string_web.png")
 
 ## Bioformatics software
 
+### Blast
+
+The [Blast](https://blast.ncbi.nlm.nih.gov) web page at NCBI is the main point of access to this versitile tool. It can be used to search for sequence similarity against any of the sequence databases at the NCBI.
+
+```{r blast-web, echo=FALSE, fig.cap="Screenshot of the Blast home page at https://blast.ncbi.nlm.nih.gov."}
+knitr::include_graphics("pic/blast_web.png")
+```
+
 ### Bioconductor
 
 ### Cytoscape
