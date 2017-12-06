@@ -10,6 +10,10 @@ In particular:
 
 >The Gene Ontology project provides a controlled vocabulary of terms for describing gene product characteristics and gene product annotation data from GO Consortium members, as well as tools to access and process these data.
 
+```{r go-web, echo=FALSE, fig.cap="Screenshot of the Gene Ontology home page at http://www.geneontology.org."}
+knitr::include_graphics("pic/go_web.png")
+```
+
 ## Pathway databases
 
 As information about genes, proteins and metabolites accumulates, it becomes more and more important to organize this knowledge in a comprehensive way. We have mentioned how genes and their products participate in the networks of cellular processes, the cell's pathway. This network includes metabolic, signaling and gene regulatory networks. This information is critical to understand the cell's phenotype, but the accumulated knowledge is daunting. It would benefit to have some central repository with easily accessible tools that enables to visualize existing knowledge in an easy way. It would be also very useful if it was possible to use that information in computer analysis. This is the motivation behind some of the web resources described below.
