@@ -20,11 +20,3 @@
 
 ### STRING
 
-
-## Community resources
-
-### Biostar
-
-### Stackoverflow
-
-### Bioconductor support site
