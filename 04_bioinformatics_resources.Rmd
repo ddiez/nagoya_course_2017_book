@@ -20,6 +20,12 @@ knitr::include_graphics("pic/go_web.png")
 
 ### EnsEMBL
 
+[EnsEMBL](https://www.ensembl.org) is a database where the genome information about many species is collected with a focus con comparative genomics research.
+
+```{r ensembl-web, echo=FALSE, fig.cap="Screenshot of the EnsEMBL home page at https://www.ensembl.org."}
+knitr::include_graphics("pic/ensembl_web.png")
+```
+
 ### Uniprot
 
 The [Uniprot](http://www.uniprot.org) website focuses on information about protein sequences, including splice forms.
