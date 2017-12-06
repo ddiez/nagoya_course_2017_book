@@ -13,7 +13,7 @@ Bioinformatics is a very broad terms covering and overlapping with other previou
 
 Below we will briefly describe each of these topics. In this introductory course, however, we will focus on two topics, sequence analysis and omics analysis.
 
-## Sequence analysis
+## Sequence analysis {#intro-sequence-analysis}
 
 The main goal of sequence analysis is two answer questions regarding DNA, RNA and/or protein sequences. For example, we could be presented with an unknown sequence, like the one shown here:
 

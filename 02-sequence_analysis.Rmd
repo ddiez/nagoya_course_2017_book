@@ -1,20 +1,27 @@
 # Sequence analysis
 
-This chapter introduces the basics of sequence analysis methods.
-
-## Introduction
-
-## Two sequence alignment
-
-When we want to compare two sequences of the same size a naive method would be line them up and count the number of mismatches.
+This chapter introduces the basics of sequence analysis methods. As mentioned in Section \@ref(intro-sequence-analysis) ([Sequence analysis](intro-sequence-analysis)), the main goal of sequence analysis is two answer questions regarding DNA, RNA and/or protein sequences. For example, we could be presented with an unknown sequence, like the one shown here:
 
 ```
-AAGGATGA
-AACGATAA
-..*...*.
+MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAG
+QEEYSAMRDQYMRTGEGFLCVFAINNTKSFEDIHHYREQIKRVKDSEDVPMVLVGNKCDL
+PSRTVDTKQAQDLARSYGIPFIETSAKTRQRVEDAFYTLVREIRQYRLKKISKEEKTPGC
+VKIKKCIIM
 ```
 
-### Comparing two sequences of different lengths
+Since we only have the amino acid sequence, the first thing we may want to do is to compare these sequence with the sequence of other proteins in order to see whether we find other proteins that look similar. The process of comparing two sequences to figure out their similarity is called sequence alignment.
+
+## Sequence alignment
+
+Imagine we could find a known protein for which 100% of its amino acid sequence is identical with our unknown sequence. Then we could say we have identified our protein! Imagine however that not all the amino acids are exactly identical. At some positions we may have some changes. The more changes we have, the more disimilar the two sequences will be. We want a way to quantitatively measure how much different (or similar) two sequences are. This is represented below by the two DNA sequences (seq1 and seq2) which are put together. The sequence of dots and asteriks below indicates whether the two aminoacids aligned are identical (and then is a `.`) or different (and then is a `*`).
+
+```
+seq1 AAGGATGA
+seq2 AACGATAA
+     ..*...*.
+```
+
+There are two main methods to compare two sequences.
 
 ### Smith-waterman (global alignment)
 

@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
-<link rel="next" href="intro.html">
+<link rel="prev" href="intro.html">
+<link rel="next" href="omics-analysis-1.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -180,24 +180,59 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="prerequisites" class="section level1 unnumbered">
-<h1>Prerequisites</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)
-<span class="co"># or the development version</span>
-<span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need to install XeLaTeX.</p>
+<div id="sequence-analysis" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Sequence analysis</h1>
+<p>This chapter introduces the basics of sequence analysis methods. As mentioned in Section <a href="intro.html#intro-sequence-analysis">1.1</a> (<a href="intro-sequence-analysis">Sequence analysis</a>), the main goal of sequence analysis is two answer questions regarding DNA, RNA and/or protein sequences. For example, we could be presented with an unknown sequence, like the one shown here:</p>
+<pre><code>MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAG
+QEEYSAMRDQYMRTGEGFLCVFAINNTKSFEDIHHYREQIKRVKDSEDVPMVLVGNKCDL
+PSRTVDTKQAQDLARSYGIPFIETSAKTRQRVEDAFYTLVREIRQYRLKKISKEEKTPGC
+VKIKKCIIM</code></pre>
+<p>Since we only have the amino acid sequence, the first thing we may want to do is to compare these sequence with the sequence of other proteins in order to see whether we find other proteins that look similar. The process of comparing two sequences to figure out their similarity is called sequence alignment.</p>
+<div id="sequence-alignment" class="section level2">
+<h2><span class="header-section-number">2.1</span> Sequence alignment</h2>
+<p>Imagine we could find a known protein for which 100% of its amino acid sequence is identical with our unknown sequence. Then we could say we have identified our protein! Imagine however that not all the amino acids are exactly identical. At some positions we may have some changes. The more changes we have, the more disimilar the two sequences will be. We want a way to quantitatively measure how much different (or similar) two sequences are. This is represented below by the two DNA sequences (seq1 and seq2) which are put together. The sequence of dots and asteriks below indicates whether the two aminoacids aligned are identical (and then is a <code>.</code>) or different (and then is a <code>*</code>).</p>
+<pre><code>seq1 AAGGATGA
+seq2 AACGATAA
+     ..*...*.</code></pre>
+<p>There are two main methods to compare two sequences.</p>
+<div id="smith-waterman-global-alignment" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Smith-waterman (global alignment)</h3>
+</div>
+<div id="needleman--local-alignment" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Needleman- (local alignment)</h3>
+</div>
+<div id="blast" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Blast</h3>
+</div>
+</div>
+<div id="multiple-sequence-alignment" class="section level2">
+<h2><span class="header-section-number">2.2</span> Multiple sequence alignment</h2>
+<p>When we want to align 3 o more sequences together we have a multiple sequence alignment (MSA). In MSA there is more ambiguity in what determines a correct alignment.</p>
+<p>Software for MSA:</p>
+<ul>
+<li>MAFFT</li>
+<li>Clustal (Classic)</li>
+<li>MUSCLE</li>
+</ul>
+</div>
+<div id="domains-and-motifs" class="section level2">
+<h2><span class="header-section-number">2.3</span> Domains and motifs</h2>
+<p>Biological sequences contain regions of high similarity to other similar regions in other proteins. Sometimes this regios are small, accounting for a few aminoacids, and they are typically named <em>motifs</em>. In other cases the conserved regions are larger, and then are called <em>domains</em>. Domains are sometimes associated with some structurally motivated definition of domain. Sometimes however, the distinction between these two types of conserved regions is ambigous.</p>
+<p>Motifs and domains can be identified by using the information from a MSA. This is the approach followed in the Pfam database. Sections of MSAs containing the domain of interest are manually curated. These are used to train a Hidden Markov Model (HMM) that learns how to recognize the same domain in other sequences. With that model, we can identify all sequences in a database containing that particular domain.</p>
+<p>The software HMMER implements HMM for the analysis of biological sequences. It can learn models representing motifs, domains or entire sequences. These models are used to search for sequences matching the models in databases. It can also be used to annotate the domains/motifs present in a sequence using a database of domains. PFAM uses HMMER and manually curated MSA of domains to generate a database of protein families (PFAM).</p>
+</div>
+<div id="phylogenetic-methods" class="section level2">
+<h2><span class="header-section-number">2.4</span> Phylogenetic methods</h2>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="omics-analysis-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
