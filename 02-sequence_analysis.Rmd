@@ -21,11 +21,11 @@ seq2 AACGATAA
      ..*...*.
 ```
 
-There are two main methods to compare two sequences.
+There are two main methods to compare two sequences, global and local. In global alignment the two sequences are aligned along their entire lengths, and the best alignment is returned. In local alignment the best subsequence alignment is found. Global alignment is used to compare two sequences end-to-end, whereas local alignment is used to identify which parts of the sequence are most similar.
 
-### Smith-waterman (global alignment)
+### Needleman-Wunsch (global alignment)
 
-### Needleman- (local alignment)
+### Smith-Waterman (local alignment)
 
 ### Blast
 

@@ -113,8 +113,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="2" data-path="sequence-analysis.html"><a href="sequence-analysis.html"><i class="fa fa-check"></i><b>2</b> Sequence analysis</a><ul>
 <li class="chapter" data-level="2.1" data-path="sequence-analysis.html"><a href="sequence-analysis.html#sequence-alignment"><i class="fa fa-check"></i><b>2.1</b> Sequence alignment</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="sequence-analysis.html"><a href="sequence-analysis.html#smith-waterman-global-alignment"><i class="fa fa-check"></i><b>2.1.1</b> Smith-waterman (global alignment)</a></li>
-<li class="chapter" data-level="2.1.2" data-path="sequence-analysis.html"><a href="sequence-analysis.html#needleman--local-alignment"><i class="fa fa-check"></i><b>2.1.2</b> Needleman- (local alignment)</a></li>
+<li class="chapter" data-level="2.1.1" data-path="sequence-analysis.html"><a href="sequence-analysis.html#needleman-wunsch-global-alignment"><i class="fa fa-check"></i><b>2.1.1</b> Needleman-Wunsch (global alignment)</a></li>
+<li class="chapter" data-level="2.1.2" data-path="sequence-analysis.html"><a href="sequence-analysis.html#smith-waterman-local-alignment"><i class="fa fa-check"></i><b>2.1.2</b> Smith-Waterman (local alignment)</a></li>
 <li class="chapter" data-level="2.1.3" data-path="sequence-analysis.html"><a href="sequence-analysis.html#blast"><i class="fa fa-check"></i><b>2.1.3</b> Blast</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="sequence-analysis.html"><a href="sequence-analysis.html#multiple-sequence-alignment"><i class="fa fa-check"></i><b>2.2</b> Multiple sequence alignment</a></li>
@@ -216,12 +216,12 @@ VKIKKCIIM</code></pre>
 <pre><code>seq1 AAGGATGA
 seq2 AACGATAA
      ..*...*.</code></pre>
-<p>There are two main methods to compare two sequences.</p>
-<div id="smith-waterman-global-alignment" class="section level3">
-<h3><span class="header-section-number">2.1.1</span> Smith-waterman (global alignment)</h3>
+<p>There are two main methods to compare two sequences, global and local. In global alignment the two sequences are aligned along their entire lengths, and the best alignment is returned. In local alignment the best subsequence alignment is found. Global alignment is used to compare two sequences end-to-end, whereas local alignment is used to identify which parts of the sequence are most similar.</p>
+<div id="needleman-wunsch-global-alignment" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Needleman-Wunsch (global alignment)</h3>
 </div>
-<div id="needleman--local-alignment" class="section level3">
-<h3><span class="header-section-number">2.1.2</span> Needleman- (local alignment)</h3>
+<div id="smith-waterman-local-alignment" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Smith-Waterman (local alignment)</h3>
 </div>
 <div id="blast" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> Blast</h3>
