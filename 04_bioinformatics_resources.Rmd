@@ -33,9 +33,23 @@ knitr::include_graphics("pic/kegg_web.png")
 
 ## Interaction networks
 
-### Biogrid
+Information about protein-protein interactions has grown incredibly due to advances in MS in combination with affinity purification methods. There are several databases integrating existing information. Two resources will be highlighted here: BioGRID and STRING.
+
+### BioGRID
+
+[BioGRID](https://thebiogrid.org) focuses on storing information about PPIs for which experimental evidence exists.
+
+```{r biogrid-web, echo=FALSE, fig.cap="Screenshot of the BioGRID home page at https://thebiogrid.org."}
+knitr::include_graphics("pic/biogrid_web.png")
+```
 
 ### STRING
+
+STRING combines experimental and computational evidence to infer PPIs.
+
+```{r string-web, echo=FALSE, fig.cap="Screenshot of the STRING home page at https://string-db.org."}
+knitr::include_graphics("pic/string_web.png")
+```
 
 ## Bioformatics software
 
