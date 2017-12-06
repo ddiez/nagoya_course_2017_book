@@ -16,7 +16,12 @@ As information about genes, proteins and metabolites accumulates, it becomes mor
 
 ### KEGG
 
-KEGG stands for [Kyoto Encyclopedia for Genes and Genomes](http://www.kegg.jp). Is an integrative resource.
+KEGG stands for [Kyoto Encyclopedia for Genes and Genomes](http://www.kegg.jp) (Figure \@ref(fig:kegg-web)). Is an integrative resource with information about matabolic and signaling pathways in different species, from bacteria and archaea to mammals.
+
+```{r kegg-web, echo=FALSE, fig.cap="Screenshot of the KEGG home page at http://www.kegg.jp."}
+knitr::include_graphics("pic/kegg_web.png")
+```
+
 
 ### Reactome
 
