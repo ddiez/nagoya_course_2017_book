@@ -14,6 +14,8 @@ description: "Material covered in the *Introduction to Bioinformatics* intensive
 
 This book includes some of the topics covered during the intensive course *Introduction to Bioinformatics* held in at Nagoya University in Dec 13-14, 2017. It does not try to be particularly comprehensive but serve as a small guide for the students.
 
+Some parts of these book are inspired by my edX lectures *Introduction to Systems Immunology*.
+
 # Prerequisites {-}
 
 This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
