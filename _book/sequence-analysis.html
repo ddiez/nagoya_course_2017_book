@@ -226,9 +226,12 @@ seq2 AACGATAA
 </div>
 <div id="smith-waterman-local-alignment" class="section level3">
 <h3><span class="header-section-number">2.1.2</span> Smith-Waterman (local alignment)</h3>
+<p>You can see a very nice explanation of how the SW algorithm works in the <a href="https://en.wikipedia.org/wiki/Smith–Waterman_algorithm">Smith-Waterman Algorithm</a> wikipedia page.</p>
 </div>
 <div id="blast" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> Blast</h3>
+<p>Searching for similar sequences in a large sequence database can be computationally expensive because the SW algorithm is relativelly slow. Therefore, some alternatives to it have been developed over the years. One such alternative is Blast.</p>
+<p>Blast stands for Basic Local Alignment Tools. Blast uses some heuristics to improve the speed of the local alignment and therefore can be used to search for large sequence databases. Often the quality of the alignment is as good as the one we could obtain with SW. However, it is possible to loose some accuracy.</p>
 </div>
 </div>
 <div id="multiple-sequence-alignment" class="section level2">
