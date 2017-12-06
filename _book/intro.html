@@ -25,7 +25,7 @@
 <meta name="author" content="Diego Diez">
 
 
-<meta name="date" content="2017-12-05">
+<meta name="date" content="2017-12-06">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -109,6 +109,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#sequence-analysis"><i class="fa fa-check"></i><b>1.1</b> Sequence analysis</a></li>
 <li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#omics-analysis"><i class="fa fa-check"></i><b>1.2</b> Omics analysis</a></li>
 <li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#structural-analysis"><i class="fa fa-check"></i><b>1.3</b> Structural analysis</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#phylogenetic-analysis"><i class="fa fa-check"></i><b>1.4</b> Phylogenetic analysis</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="sequence-analysis-1.html"><a href="sequence-analysis-1.html"><i class="fa fa-check"></i><b>2</b> Sequence analysis</a><ul>
 <li class="chapter" data-level="2.1" data-path="sequence-analysis-1.html"><a href="sequence-analysis-1.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
@@ -183,29 +184,45 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="intro" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p>Bioinformatics can be defined as the use of computational tools to answer questions in Biology. Several topics are covered:</p>
+<p>Bioinformatics can be defined as the use of computational methods to answer questions in Biology. Another way to define it is as the field concerned with the development of such tools. Another related name is Computational Biologist, which refers to a Biologist that use mainly Bioinformatics tools to tackle questions in Biology. All these terms can be confusing but here we will put our focus on the Biologist point of view. From that perspective Bioinformatics is just a tool, in the same way as Molecular Biology is, that can help us to get insight into Biology.</p>
+<p>Another confusion comes from the overlap with other fields like Statistics and Computer Science. This is because researchers that use Bioinformatics tools may inevitably end up using also methods and tools from Statistics, Computer Science, Machine learning, etc. Here we will concentrate on the description of mainly purely Bioinformatics tools. However, it is unavoidable that reference and/or knowledge of these other fields will be required to have some understanding of how Bioinformatics tools work, and also to be able to interpret the results from Bioinformatics tools.</p>
+<p>Bioinformatics is a very broad terms covering and overlapping with other previously existing fields. Some of the topics touched by Bioinformatics include:</p>
 <ul>
 <li>Sequence analysis</li>
+<li>Phylogenetic analysis</li>
 <li>Omics analysis</li>
 <li>Structural analysis</li>
 </ul>
+<p>Below we will briefly describe each of these topics. In this introductory course, however, we will focus on two topics, sequence analysis and omics analysis.</p>
 <div id="sequence-analysis" class="section level2">
 <h2><span class="header-section-number">1.1</span> Sequence analysis</h2>
-<p>The main goal of sequence analysis is two answer questions regarding the nature of DNA, RNA and/or protein sequences. Are there any other similar sequences? What parts of the sequences are similar and which one are not? Can we see a conservation pattern among a set of sequences?</p>
-<p>An example would be a protein sequence for which we have no other information than its primary sequence (i.e. the sequence of amino acids bound by peptidic bound).</p>
+<p>The main goal of sequence analysis is two answer questions regarding DNA, RNA and/or protein sequences. For example, we could be presented with an unknown sequence, like the one shown here:</p>
 <pre><code>MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAG
 QEEYSAMRDQYMRTGEGFLCVFAINNTKSFEDIHHYREQIKRVKDSEDVPMVLVGNKCDL
 PSRTVDTKQAQDLARSYGIPFIETSAKTRQRVEDAFYTLVREIRQYRLKKISKEEKTPGC
 VKIKKCIIM</code></pre>
+<p>The question is what can we learn about this unknown sequence identity from the sequence information alone. In particular, we can ask:</p>
+<ul>
+<li>Are there any other similar sequences?</li>
+<li>What parts of the sequences are similar and which one are not?</li>
+<li>Can we see a conservation pattern among a set of sequences?</li>
+<li>What is its function?</li>
+</ul>
+<p>Sequence analysis deals with the methods used to answer some of these questions.</p>
 </div>
 <div id="omics-analysis" class="section level2">
 <h2><span class="header-section-number">1.2</span> Omics analysis</h2>
-<p>In omics analysis we are concerned with the manipulation, processing and analysis of high-throughtput data from omics technologies, including microarrays, next generation sequencing (NGS) methods like RNA-seq and ChIP-seq, mass-spectromemtry (MS) methods like MS proteomics, etc.</p>
-<p>For example, we can consider an study in which the effect of some drug on the expression profile of epithelial cells in the lung will be evaluated. Mice are treated with either the drug or some placebo. Epithelial cells are isolated from the lungs and RNA is extracted. After amplification and convertion into cDNA we hybridize the samples to microarrays containing probes for &gt;55 thousand transcripts. This will give us an estimate of the expression profile for 55 thousand transcripts. If we have initially 3 samples per group, we will obtain a 55,000 x 6 matrix of expression values. How can we process and analyze this data in a way that avoids biases and gives us some information about the biological question of interest?</p>
+<p>In omics analysis we are concerned with the manipulation, processing and analysis of high-throughtput data from omics technologies, including microarrays, next generation sequencing (NGS) and mass-spectromemtry (MS). High-throughput here means that we are concerned with measuring the expression of, for example, all the transcripts in the cell, not just a small number of them. We may also be interested on the information about all the proteins, or all the metabolites, etc. Omics technologies enables this to be done, and generate large datasets with information about all the molecular components of the cell.</p>
+<p>For example, we can consider an study in which the effect of some drug on the expression profile of some cells will be evaluated. Mice are treated with either the drug or some placebo. Cells are isolated from the tissue and RNA is extracted. After amplification and convertion into cDNA we hybridize the samples to microarrays containing probes for &gt;55 thousand transcripts. This will give us an estimate of the expression profile for 55 thousand transcripts. If we have initially 3 samples per group, we will obtain a 55,000 x 6 matrix of expression values.</p>
+<p>Omics analysis deals with problems associated with the manipulation, processing and analysis of omics datasets. How can we process and analyze this data in a way that avoids biases and gives us some information about the biological question of interest?</p>
 </div>
 <div id="structural-analysis" class="section level2">
 <h2><span class="header-section-number">1.3</span> Structural analysis</h2>
-<p>Structural bioinformatics deals with methods predicting the structure of biopolymers and their interactions with one another as well as with small molecules.</p>
+<p>Structural bioinformatics deals with methods predicting the structure of biopolymers and their interactions with one another as well as with small molecules. It can be very important in order to decipher the mechanism of action of some drugs.</p>
+</div>
+<div id="phylogenetic-analysis" class="section level2">
+<h2><span class="header-section-number">1.4</span> Phylogenetic analysis</h2>
+<p>Phylogenetic analysis is concerned with the evolutionary relationships between biological sequences and what can that tell us about the evolution of species. It uses information directly related with the sequence analysis methods described above, and includes additional methods to talckle specific questions in the field.</p>
 
 </div>
 </div>
