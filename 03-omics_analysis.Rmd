@@ -74,8 +74,8 @@ The most popular application of NGS technologies is RNA-seq, a technology to mea
 
 Because we are not limited to pre-specified sequence probes we can use the NGS data to detect the expression of alternative splice variants, non-coding RNAs, genetic variants (or SNPs) and even the expression of uncharacterized transcripts. Also, if the reference genome information is updated, the original data can be realigned, never becoming obsolete and possibly revealing additional information. This versatility increases dramatically the amount of information that can be obtained from a single experiment, making RNA-seq one of the most widely used omics technologies.
 
-```{r ngs-rnaseq, echo=FALSE, fig.cap="Summary of typical NGS workflow."}
-knitr::include_graphics("pic/ngs_rnaseq.png.png")
+```{r ngs-rnaseq, echo=FALSE, fig.cap="Summary of typical RNA-seq workflow."}
+knitr::include_graphics("pic/ngs_rnaseq.png")
 ```
 
 ### Example: Stat3 expression in macrophages exposed to IL10
