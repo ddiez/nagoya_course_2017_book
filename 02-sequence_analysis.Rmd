@@ -16,14 +16,81 @@ Since we only have the amino acid sequence, the first thing we may want to do is
 Imagine we could find a known protein for which 100% of its amino acid sequence is identical with our unknown sequence. Then we could say we have identified our protein! Imagine however that not all the amino acids are exactly identical. At some positions we may have some changes. The more changes we have, the more disimilar the two sequences will be. We want a way to quantitatively measure how much different (or similar) two sequences are. This is represented below by the two DNA sequences (seq1 and seq2) which are put together. The sequence of dots and asteriks below indicates whether the two aminoacids aligned are identical (and then is a `.`) or different (and then is a `*`).
 
 ```
-seq1 AAGGATGA
-seq2 AACGATAA
-     ..*...*.
+seq1 A A G G A T G A
+seq2 A A C G A T A A
+     . . * . . . * .
 ```
 
-There are two main methods to compare two sequences, global and local. In global alignment the two sequences are aligned along their entire lengths, and the best alignment is returned. In local alignment the best subsequence alignment is found. Global alignment is used to compare two sequences end-to-end, whereas local alignment is used to identify which parts of the sequence are most similar.
+It is possible for the sequences to not be the same lengths. In that situation the residue positions not matching to any other residue in the other sequence are indicated with the gap symbol `-`. Gaps, however, may appear also when comparing sequences of the same length.
+
+```
+seq3 A A G G A T G G A
+seq2 A A C G A T A - A
+     . . * . . . * * .
+```
+
+When aligning two sequences we need to specify a scoring system. This is a matrix with a score proportional to the probability of the change in residue happening. A simple scoring system could be the following: +1 when the two residues are the same, -1 otherwise:
+
+```{r, echo=FALSE, comment=NA}
+r <- c("A", "G", "T", "C")
+m <- matrix(-1, ncol = 4, nrow = 4, dimnames = list(r, r))
+diag(m) <- 1
+m
+```
+
+If we consider this scoring system, the score of the following alignment can be calculated using the information in the scoring matrix. In the following example `+` indicates the +1 score and `-` the -1 score.
+
+```
+seq1 A A G G A T G A 
+seq2 A A C G A T A A
+     + + - + + + - +
+
+score: 6 * (+1) + 2 * (-1) = +4
+```
+
+When there are gaps, a score for the gap needs to be specified. For example, we could use a score of -1 and the score of the gapped alignment above can be computed accordingly.
+
+```
+seq3 A A G G A T G G A
+seq2 A A C G A T A - A
+     + + - + + + - - +
+
+score: 6 * (+1) + 3 * (-1) = +3
+```
+
+Different alignments will produce different scores. For example, we could have aligned the `seq3` and `seq2` in a different way.
+
+```
+seq3 A A G G A T G G A
+seq2 A A C G A T A A -
+     + + - + + + - - -
+
+score: 5 * (+1) + 4 * (-1) = +1
+```
+
+This alignment produces a smaller score and therefore is not as optimal as the original one. The goal of sequence alignment algorithms is to find the optimal alignment, that is, the aligment that maximizes the score. It is important to notice that sometimes there is *best* alignment. For example, consider this alternative alignment.
+
+```
+seq3 A A G G A T G G A
+seq2 A A C G A T - A A
+     + + - + + + - - +
+
+score: 6 * (+1) + 3 * (-1) = +3
+```
+
+There is a slight difference in where the second-to-last `A` in `seq2` is located. Both alternatives produce the same score, so there is no way to know which one is the best.
+
+There are two main methods to perform sequence alignment: global and local. In global alignment the two sequences are aligned along their entire lengths, and the best alignment is returned. In local alignment the best subsequence alignment is found. Global alignment is used to compare two sequences end-to-end, whereas local alignment is used to identify the parts of the sequences that are most similar. For example, using the scoring system above, we can compute the result from global and local aligment for `seq2` and `seq3` using the Biostrings package in Bioconductor:
+
+```{r, echo=FALSE, comment=NA}
+Biostrings::pairwiseAlignment("AAGGATGGA", "AACGATAA", type = "global", substitutionMatrix = m, gapOpening = 1, gapExtension = 0)
+Biostrings::pairwiseAlignment("AAGGATGGA", "AACGATAA", type = "local", substitutionMatrix = m, gapOpening = 1, gapExtension = 0)
+```
+
 
 ### Needleman-Wunsch (global alignment)
+
+In global alignment we align the two sequences along their entire lengths. This means every residue of a sequence is aligned to a residue of the other sequence or to a gap.
 
 ### Smith-Waterman (local alignment)
 
