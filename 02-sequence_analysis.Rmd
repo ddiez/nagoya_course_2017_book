@@ -107,18 +107,22 @@ Biostrings::pairwiseAlignment(
 
 Global aligment is alse called [Needleman-Wunsch](https://en.wikipedia.org/wiki/Needleman–Wunsch_algorithm) whereas local aligment is called [Smith-Waterman](https://en.wikipedia.org/wiki/Smith–Waterman_algorithm). You can see more details regarding how these two algorithms work in their wikipedia pages.
 
-### Scoring matrices
+## Scoring matrices
 
-In reality we do not use a scoring matrix like the one above. We want to use scoring matrices that reflect how residue changes (whether amino acid or nucleotide) occur in nature. There are two main types of matrices used typically in sequence aligments: BLOSUM and PAM.
+In reality we do not use a scoring matrix like the one above. We want to use scoring matrices that reflect how residue changes (whether amino acid or nucleotide) occur in nature. For protein sequences there are two main types of matrices used typically in sequence aligments: BLOSUM and PAM.
 
-BLOSUM matrices are epirical, derived from the frequencies of changes found typically in nature. They are derived from multiple sequence aligments (MSA; more on this below) from protein sequences at a particular level of similarity. This is reflected in the matrix name. For example, the BLOSUM62 matrix is derived from MSA of sequence with 62% or higher similarity. Here you can see a fragment of the BLOSUM62 matrix. As you can see the diagonal contains positive scores (e.g. A->A score 4), indicating that identity is highly favored. Not all scores in the diagonal are equal. This reflects that some identities are more strongly enforced that others. For example, the score for D->D is 6, indicating that this identity happens more frequently than A->A. This probably reflect the fact that an A can be replaced by more amino acids without causing a big disruption in the structure than if the change involves a D. Some of the positions are 0, and some others are negative, indicating non-favorable substitutions. For example, the change E->C has a score of -4 indicating that it doesn't happen often, probably because is not favored.
+BLOSUM stands for BLOcks SUbstitution Matrix. BLOSUM matrices are empirical, derived from local aligment of protein sequenes found in databases (originally in the BLOCKS database). The matrix number indicates the selection process for including sequences into the computatiom. For example, the BLOSUM62 matrix includes aligments of sequences with less than 62% similarity. A fragment of the BLOSUM62 matrix is shown below.
 
 ```{r, echo=FALSE, comment=NA}
 data("BLOSUM62", package = "Biostrings")
 BLOSUM62[1:10, 1:10]
 ```
 
-### Blast
+As you can see the diagonal contains positive scores (e.g. A->A score 4), indicating that identity is highly favored. Not all scores in the diagonal are equal. This reflects that some identities are more strongly enforced that others. For example, the score for D->D is 6, indicating that this identity happens more frequently than A->A. This probably reflect the fact that an A can be replaced by more amino acids without causing a big disruption in the structure than if the change involves a D. Some of the positions are 0, and some others are negative, indicating non-favorable substitutions. For example, the change E->C has a score of -4 indicating that it doesn't happen often, probably because is not favored.
+
+An alternative to the BLOSUM matrices are the [PAM matrices](https://en.wikipedia.org/wiki/Point_accepted_mutation).
+
+## Blast
 
 Searching for similar sequences in a large sequence database can be computationally expensive because the SW algorithm is relativelly slow. Therefore, some alternatives to it have been developed over the years. One such alternative is Blast.
 

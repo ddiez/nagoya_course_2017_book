@@ -112,13 +112,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#phylogenetic-analysis"><i class="fa fa-check"></i><b>1.4</b> Phylogenetic analysis</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="sequence-analysis.html"><a href="sequence-analysis.html"><i class="fa fa-check"></i><b>2</b> Sequence analysis</a><ul>
-<li class="chapter" data-level="2.1" data-path="sequence-analysis.html"><a href="sequence-analysis.html#pairwise-alignment"><i class="fa fa-check"></i><b>2.1</b> Pairwise alignment</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="sequence-analysis.html"><a href="sequence-analysis.html#scoring-matrices"><i class="fa fa-check"></i><b>2.1.1</b> Scoring matrices</a></li>
-<li class="chapter" data-level="2.1.2" data-path="sequence-analysis.html"><a href="sequence-analysis.html#blast"><i class="fa fa-check"></i><b>2.1.2</b> Blast</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="sequence-analysis.html"><a href="sequence-analysis.html#multiple-sequence-alignment"><i class="fa fa-check"></i><b>2.2</b> Multiple sequence alignment</a></li>
-<li class="chapter" data-level="2.3" data-path="sequence-analysis.html"><a href="sequence-analysis.html#domains-and-motifs"><i class="fa fa-check"></i><b>2.3</b> Domains and motifs</a></li>
-<li class="chapter" data-level="2.4" data-path="sequence-analysis.html"><a href="sequence-analysis.html#phylogenetic-methods"><i class="fa fa-check"></i><b>2.4</b> Phylogenetic methods</a></li>
+<li class="chapter" data-level="2.1" data-path="sequence-analysis.html"><a href="sequence-analysis.html#pairwise-alignment"><i class="fa fa-check"></i><b>2.1</b> Pairwise alignment</a></li>
+<li class="chapter" data-level="2.2" data-path="sequence-analysis.html"><a href="sequence-analysis.html#scoring-matrices"><i class="fa fa-check"></i><b>2.2</b> Scoring matrices</a></li>
+<li class="chapter" data-level="2.3" data-path="sequence-analysis.html"><a href="sequence-analysis.html#blast"><i class="fa fa-check"></i><b>2.3</b> Blast</a></li>
+<li class="chapter" data-level="2.4" data-path="sequence-analysis.html"><a href="sequence-analysis.html#multiple-sequence-alignment"><i class="fa fa-check"></i><b>2.4</b> Multiple sequence alignment</a></li>
+<li class="chapter" data-level="2.5" data-path="sequence-analysis.html"><a href="sequence-analysis.html#domains-and-motifs"><i class="fa fa-check"></i><b>2.5</b> Domains and motifs</a></li>
+<li class="chapter" data-level="2.6" data-path="sequence-analysis.html"><a href="sequence-analysis.html#phylogenetic-methods"><i class="fa fa-check"></i><b>2.6</b> Phylogenetic methods</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html"><i class="fa fa-check"></i><b>3</b> Omics analysis</a><ul>
 <li class="chapter" data-level="3.1" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
@@ -269,10 +268,11 @@ pattern: [1] AAGGAT
 subject: [1] AACGAT 
 score: 4 </code></pre>
 <p>Global aligment is alse called <a href="https://en.wikipedia.org/wiki/Needleman–Wunsch_algorithm">Needleman-Wunsch</a> whereas local aligment is called <a href="https://en.wikipedia.org/wiki/Smith–Waterman_algorithm">Smith-Waterman</a>. You can see more details regarding how these two algorithms work in their wikipedia pages.</p>
-<div id="scoring-matrices" class="section level3">
-<h3><span class="header-section-number">2.1.1</span> Scoring matrices</h3>
-<p>In reality we do not use a scoring matrix like the one above. We want to use scoring matrices that reflect how residue changes (whether amino acid or nucleotide) occur in nature. There are two main types of matrices used typically in sequence aligments: BLOSUM and PAM.</p>
-<p>BLOSUM matrices are epirical, derived from the frequencies of changes found typically in nature. They are derived from multiple sequence aligments (MSA; more on this below) from protein sequences at a particular level of similarity. This is reflected in the matrix name. For example, the BLOSUM62 matrix is derived from MSA of sequence with 62% or higher similarity. Here you can see a fragment of the BLOSUM62 matrix. As you can see the diagonal contains positive scores (e.g. A-&gt;A score 4), indicating that identity is highly favored. Not all scores in the diagonal are equal. This reflects that some identities are more strongly enforced that others. For example, the score for D-&gt;D is 6, indicating that this identity happens more frequently than A-&gt;A. This probably reflect the fact that an A can be replaced by more amino acids without causing a big disruption in the structure than if the change involves a D. Some of the positions are 0, and some others are negative, indicating non-favorable substitutions. For example, the change E-&gt;C has a score of -4 indicating that it doesn’t happen often, probably because is not favored.</p>
+</div>
+<div id="scoring-matrices" class="section level2">
+<h2><span class="header-section-number">2.2</span> Scoring matrices</h2>
+<p>In reality we do not use a scoring matrix like the one above. We want to use scoring matrices that reflect how residue changes (whether amino acid or nucleotide) occur in nature. For protein sequences there are two main types of matrices used typically in sequence aligments: BLOSUM and PAM.</p>
+<p>BLOSUM stands for BLOcks SUbstitution Matrix. BLOSUM matrices are empirical, derived from local aligment of protein sequenes found in databases (originally in the BLOCKS database). The matrix number indicates the selection process for including sequences into the computatiom. For example, the BLOSUM62 matrix includes aligments of sequences with less than 62% similarity. A fragment of the BLOSUM62 matrix is shown below.</p>
 <pre><code>   A  R  N  D  C  Q  E  G  H  I
 A  4 -1 -2 -2  0 -1 -1  0 -2 -1
 R -1  5  0 -2 -3  1  0 -2  0 -3
@@ -284,15 +284,16 @@ E -1  0  0  2 -4  2  5 -2  0 -3
 G  0 -2  0 -1 -3 -2 -2  6 -2 -4
 H -2  0  1 -1 -3  0  0 -2  8 -3
 I -1 -3 -3 -3 -1 -3 -3 -4 -3  4</code></pre>
+<p>As you can see the diagonal contains positive scores (e.g. A-&gt;A score 4), indicating that identity is highly favored. Not all scores in the diagonal are equal. This reflects that some identities are more strongly enforced that others. For example, the score for D-&gt;D is 6, indicating that this identity happens more frequently than A-&gt;A. This probably reflect the fact that an A can be replaced by more amino acids without causing a big disruption in the structure than if the change involves a D. Some of the positions are 0, and some others are negative, indicating non-favorable substitutions. For example, the change E-&gt;C has a score of -4 indicating that it doesn’t happen often, probably because is not favored.</p>
+<p>An alternative to the BLOSUM matrices are the <a href="https://en.wikipedia.org/wiki/Point_accepted_mutation">PAM matrices</a>.</p>
 </div>
-<div id="blast" class="section level3">
-<h3><span class="header-section-number">2.1.2</span> Blast</h3>
+<div id="blast" class="section level2">
+<h2><span class="header-section-number">2.3</span> Blast</h2>
 <p>Searching for similar sequences in a large sequence database can be computationally expensive because the SW algorithm is relativelly slow. Therefore, some alternatives to it have been developed over the years. One such alternative is Blast.</p>
 <p>Blast stands for Basic Local Alignment Tools. Blast uses some heuristics to improve the speed of the local alignment and therefore can be used to search for large sequence databases. Often the quality of the alignment is as good as the one we could obtain with SW. However, it is possible to loose some accuracy.</p>
 </div>
-</div>
 <div id="multiple-sequence-alignment" class="section level2">
-<h2><span class="header-section-number">2.2</span> Multiple sequence alignment</h2>
+<h2><span class="header-section-number">2.4</span> Multiple sequence alignment</h2>
 <p>When we want to align 3 o more sequences together we have a multiple sequence alignment (MSA). In MSA there is more ambiguity in what determines a correct alignment.</p>
 <p>Software for MSA:</p>
 <ul>
@@ -302,13 +303,13 @@ I -1 -3 -3 -3 -1 -3 -3 -4 -3  4</code></pre>
 </ul>
 </div>
 <div id="domains-and-motifs" class="section level2">
-<h2><span class="header-section-number">2.3</span> Domains and motifs</h2>
+<h2><span class="header-section-number">2.5</span> Domains and motifs</h2>
 <p>Biological sequences contain regions of high similarity to other similar regions in other proteins. Sometimes this regios are small, accounting for a few aminoacids, and they are typically named <em>motifs</em>. In other cases the conserved regions are larger, and then are called <em>domains</em>. Domains are sometimes associated with some structurally motivated definition of domain. Sometimes however, the distinction between these two types of conserved regions is ambigous.</p>
 <p>Motifs and domains can be identified by using the information from a MSA. This is the approach followed in the Pfam database. Sections of MSAs containing the domain of interest are manually curated. These are used to train a Hidden Markov Model (HMM) that learns how to recognize the same domain in other sequences. With that model, we can identify all sequences in a database containing that particular domain.</p>
 <p>The software HMMER implements HMM for the analysis of biological sequences. It can learn models representing motifs, domains or entire sequences. These models are used to search for sequences matching the models in databases. It can also be used to annotate the domains/motifs present in a sequence using a database of domains. PFAM uses HMMER and manually curated MSA of domains to generate a database of protein families (PFAM).</p>
 </div>
 <div id="phylogenetic-methods" class="section level2">
-<h2><span class="header-section-number">2.4</span> Phylogenetic methods</h2>
+<h2><span class="header-section-number">2.6</span> Phylogenetic methods</h2>
 
 </div>
 </div>
