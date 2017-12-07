@@ -289,7 +289,28 @@ I -1 -3 -3 -3 -1 -3 -3 -4 -3  4</code></pre>
 </div>
 <div id="blast" class="section level2">
 <h2><span class="header-section-number">2.3</span> Blast</h2>
-<p>Searching for similar sequences in a large sequence database can be computationally expensive because the SW algorithm is relativelly slow. Therefore, some alternatives using heuristics have been developed over the years. One such alternative is <a href="https://en.wikipedia.org/wiki/BLAST">Blast</a>. Blast stands for Basic Local Alignment Tool. Blast uses some heuristics to improve the speed of the local alignment and therefore can be used to search for large sequence databases. Often the quality of the alignment is as good as the one we could obtain with SW, however, it is possible to loose some accuracy. The <a href="https://www.ncbi.nlm.nih.gov/BLAST">Blast web server</a> is located at the NCBI web page and can be used to search for sequence similarity against a wide range of sequence databases hosted at NCBI. Blast searches are also available at many other sequence database resources like <a href="https://www.ensembl.org/Multi/Tools/Blast?db=core">EnsEMBL</a> and <a href="http://www.uniprot.org/blast/">Uniprot</a>.</p>
+<p>Searching for similar sequences in a large sequence database can be computationally expensive because the SW algorithm is relativelly slow. Therefore, some alternatives using heuristics have been developed over the years. One such alternative is <a href="https://en.wikipedia.org/wiki/BLAST">Blast</a>. Blast stands for Basic Local Alignment Tool. Blast uses some heuristics to improve the speed of the local alignment and therefore can be used to search for large sequence databases. Often the quality of the alignment is as good as the one we could obtain with SW, however, it is possible to loose some accuracy. The <a href="https://www.ncbi.nlm.nih.gov/BLAST">NCBI Blast</a> web server can be used to search for sequence similarity against a wide range of sequence databases hosted at NCBI. Blast searches are also available at many other sequence database resources like <a href="https://www.ensembl.org/Multi/Tools/Blast?db=core">EnsEMBL</a> and <a href="http://www.uniprot.org/blast/">Uniprot</a>.</p>
+<p>For example, we can use the NCBI Blast service to identify our unknown sequence at the begining of this chapter. Go <a href="https://www.ncbi.nlm.nih.gov/BLAST">there</a> and click on <code>Protein BLAST</code>. A web form will show. Copy/paste our unknown sequence on the textbox saying <em>Enter accession number(s), gi(s), or FASTA sequence(s)</em>. Click the blue rounded button saying <em>BLAST</em>. Wait a few seconds (or minutes depending on the network load) for the result page to show.</p>
+<div class="figure"><span id="fig:unnamed-chunk-6"></span>
+<img src="pic/blast_submit.png" alt="Standard Protein Blast submit form." width="491" />
+<p class="caption">
+Figure 2.1: Standard Protein Blast submit form.
+</p>
+</div>
+<p>The result page will look something like this.</p>
+<div class="figure"><span id="fig:unnamed-chunk-7"></span>
+<img src="pic/blast_result_1.png" alt="Standard Protein Blast result page (top)." width="650" />
+<p class="caption">
+Figure 2.2: Standard Protein Blast result page (top).
+</p>
+</div>
+<div class="figure"><span id="fig:unnamed-chunk-8"></span>
+<img src="pic/blast_result_2.png" alt="Standard Protein Blast result page (hit list)." width="651" />
+<p class="caption">
+Figure 2.3: Standard Protein Blast result page (hit list).
+</p>
+</div>
+<p>We can see from this list that the first hit is the human GTPase KRas. This is reassuring since that is indeed the sequence I downloaded (<a href="http://www.uniprot.org/uniprot/P01116">from Uniprot</a>) and included at the beginning of this chapter.</p>
 </div>
 <div id="multiple-sequence-alignment" class="section level2">
 <h2><span class="header-section-number">2.4</span> Multiple sequence alignment</h2>
