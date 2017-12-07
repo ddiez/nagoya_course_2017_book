@@ -113,9 +113,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="2" data-path="sequence-analysis.html"><a href="sequence-analysis.html"><i class="fa fa-check"></i><b>2</b> Sequence analysis</a><ul>
 <li class="chapter" data-level="2.1" data-path="sequence-analysis.html"><a href="sequence-analysis.html#sequence-alignment"><i class="fa fa-check"></i><b>2.1</b> Sequence alignment</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="sequence-analysis.html"><a href="sequence-analysis.html#needleman-wunsch-global-alignment"><i class="fa fa-check"></i><b>2.1.1</b> Needleman-Wunsch (global alignment)</a></li>
-<li class="chapter" data-level="2.1.2" data-path="sequence-analysis.html"><a href="sequence-analysis.html#smith-waterman-local-alignment"><i class="fa fa-check"></i><b>2.1.2</b> Smith-Waterman (local alignment)</a></li>
-<li class="chapter" data-level="2.1.3" data-path="sequence-analysis.html"><a href="sequence-analysis.html#blast"><i class="fa fa-check"></i><b>2.1.3</b> Blast</a></li>
+<li class="chapter" data-level="2.1.1" data-path="sequence-analysis.html"><a href="sequence-analysis.html#scoring-matrices"><i class="fa fa-check"></i><b>2.1.1</b> Scoring matrices</a></li>
+<li class="chapter" data-level="2.1.2" data-path="sequence-analysis.html"><a href="sequence-analysis.html#needleman-wunsch-global-alignment"><i class="fa fa-check"></i><b>2.1.2</b> Needleman-Wunsch (global alignment)</a></li>
+<li class="chapter" data-level="2.1.3" data-path="sequence-analysis.html"><a href="sequence-analysis.html#smith-waterman-local-alignment"><i class="fa fa-check"></i><b>2.1.3</b> Smith-Waterman (local alignment)</a></li>
+<li class="chapter" data-level="2.1.4" data-path="sequence-analysis.html"><a href="sequence-analysis.html#blast"><i class="fa fa-check"></i><b>2.1.4</b> Blast</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="sequence-analysis.html"><a href="sequence-analysis.html#multiple-sequence-alignment"><i class="fa fa-check"></i><b>2.2</b> Multiple sequence alignment</a></li>
 <li class="chapter" data-level="2.3" data-path="sequence-analysis.html"><a href="sequence-analysis.html#domains-and-motifs"><i class="fa fa-check"></i><b>2.3</b> Domains and motifs</a></li>
@@ -268,16 +269,32 @@ score: 3 </code></pre>
 pattern: [1] AAGGAT 
 subject: [1] AACGAT 
 score: 4 </code></pre>
+<div id="scoring-matrices" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Scoring matrices</h3>
+<p>In reality we do not use a scoring matrix like the one above. We want to use scoring matrices that reflect how residue changes (whether amino acid or nucleotide) occur in nature. There are two main types of matrices used typically in sequence aligments: BLOSUM and PAM.</p>
+<p>BLOSUM matrices are epirical, derived from the frequencies of changes found typically in nature. They are derived from multiple sequence aligments (MSA; more on this below) from protein sequences at a particular level of similarity. This is reflected in the matrix name. For example, the BLOSUM62 matrix is derived from MSA of sequence with 62% or higher similarity. Here you can see a fragment of the BLOSUM62 matrix. As you can see the diagonal contains positive scores (e.g. A-&gt;A score 4), indicating that identity is highly favored. Not all scores in the diagonal are equal. This reflects that some identities are more strongly enforced that others. For example, the score for D-&gt;D is 6, indicating that this identity happens more frequently than A-&gt;A. This probably reflect the fact that an A can be replaced by more amino acids without causing a big disruption in the structure than if the change involves a D. Some of the positions are 0, and some others are negative, indicating non-favorable substitutions. For example, the change E-&gt;C has a score of -4 indicating that it doesn’t happen often, probably because is not favored.</p>
+<pre><code>   A  R  N  D  C  Q  E  G  H  I
+A  4 -1 -2 -2  0 -1 -1  0 -2 -1
+R -1  5  0 -2 -3  1  0 -2  0 -3
+N -2  0  6  1 -3  0  0  0  1 -3
+D -2 -2  1  6 -3  0  2 -1 -1 -3
+C  0 -3 -3 -3  9 -3 -4 -3 -3 -1
+Q -1  1  0  0 -3  5  2 -2  0 -3
+E -1  0  0  2 -4  2  5 -2  0 -3
+G  0 -2  0 -1 -3 -2 -2  6 -2 -4
+H -2  0  1 -1 -3  0  0 -2  8 -3
+I -1 -3 -3 -3 -1 -3 -3 -4 -3  4</code></pre>
+</div>
 <div id="needleman-wunsch-global-alignment" class="section level3">
-<h3><span class="header-section-number">2.1.1</span> Needleman-Wunsch (global alignment)</h3>
+<h3><span class="header-section-number">2.1.2</span> Needleman-Wunsch (global alignment)</h3>
 <p>In global alignment we align the two sequences along their entire lengths. This means every residue of a sequence is aligned to a residue of the other sequence or to a gap.</p>
 </div>
 <div id="smith-waterman-local-alignment" class="section level3">
-<h3><span class="header-section-number">2.1.2</span> Smith-Waterman (local alignment)</h3>
+<h3><span class="header-section-number">2.1.3</span> Smith-Waterman (local alignment)</h3>
 <p>You can see a very nice explanation of how the SW algorithm works in the <a href="https://en.wikipedia.org/wiki/Smith–Waterman_algorithm">Smith-Waterman Algorithm</a> wikipedia page.</p>
 </div>
 <div id="blast" class="section level3">
-<h3><span class="header-section-number">2.1.3</span> Blast</h3>
+<h3><span class="header-section-number">2.1.4</span> Blast</h3>
 <p>Searching for similar sequences in a large sequence database can be computationally expensive because the SW algorithm is relativelly slow. Therefore, some alternatives to it have been developed over the years. One such alternative is Blast.</p>
 <p>Blast stands for Basic Local Alignment Tools. Blast uses some heuristics to improve the speed of the local alignment and therefore can be used to search for large sequence databases. Often the quality of the alignment is as good as the one we could obtain with SW. However, it is possible to loose some accuracy.</p>
 </div>
