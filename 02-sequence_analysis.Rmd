@@ -124,9 +124,7 @@ An alternative to the BLOSUM matrices are the [PAM matrices](https://en.wikipedi
 
 ## Blast
 
-Searching for similar sequences in a large sequence database can be computationally expensive because the SW algorithm is relativelly slow. Therefore, some alternatives to it have been developed over the years. One such alternative is Blast.
-
-Blast stands for Basic Local Alignment Tools. Blast uses some heuristics to improve the speed of the local alignment and therefore can be used to search for large sequence databases. Often the quality of the alignment is as good as the one we could obtain with SW. However, it is possible to loose some accuracy.
+Searching for similar sequences in a large sequence database can be computationally expensive because the SW algorithm is relativelly slow. Therefore, some alternatives using heuristics have been developed over the years. One such alternative is [Blast](https://en.wikipedia.org/wiki/BLAST). Blast stands for Basic Local Alignment Tool. Blast uses some heuristics to improve the speed of the local alignment and therefore can be used to search for large sequence databases. Often the quality of the alignment is as good as the one we could obtain with SW, however, it is possible to loose some accuracy. The [Blast web server](https://www.ncbi.nlm.nih.gov/BLAST) is located at the NCBI web page and can be used to search for sequence similarity against a wide range of sequence databases hosted at NCBI. Blast searches are also available at many other sequence database resources like [EnsEMBL](https://www.ensembl.org/Multi/Tools/Blast?db=core) and [Uniprot](http://www.uniprot.org/blast/).
 
 ## Multiple sequence alignment
 
