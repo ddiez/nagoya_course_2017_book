@@ -27,6 +27,8 @@ knitr::include_graphics("pic/omics_3.png")
 
 ## Microarrays
 
+### Expression microarrays
+
 Microarrays were arguably the first of the “omics” technologies, starting a new generation of high-throughput analyses. This type of exploratory analysis enables the generation of new hypotheses that can be further tested, becoming one important source of knowledge discovery. Microarrays were the first technology to allow this and currently there is a wealth of experimental data available in public databases. There are over 50,000 samples for expression microarrays deposited in the NCBI gene expression omnibus (Figure \@ref(fig:geo)).
 
 ```{r geo, echo=FALSE, fig.cap="Number of total submissions for the top 4 technologies."}
@@ -45,6 +47,72 @@ Here we can see a typical microarray experiment protocol in more detail (Figure 
 
 ```{r microarray-workflow, echo=FALSE, fig.cap="Summary of typical microarray workflow."}
 knitr::include_graphics("pic/microarray_workflow.png")
+```
+
+### Analysis of microarray data
+
+Once the hybridization of the samples and microarrays is finished, we need to measure the signal. This is done by exciting the microarray with a laser and quantifying the fluerescence light emited. An image of the microarray is then generated.
+
+In the image only the regions of the microarray where the cDNA has hybridized will emit light, so we can identify the probes by considering the position of the emited light. The intensity of the light is proportional to the amount of cDNA in the original sample complementary for each probe. So it becomes an estimate of the expression level.
+
+Typically this quantification process is automated and done by the company or service performing the microarray experiment. So our data corresponds with a file containing information about each of the probes in the array and the raw signal (intensity) of the probe, plus some estimate of the noise associated with each probe. From here, the following steps are necessary:
+
+1. Load the data into the analysis software (e.g. into R).
+2. Preprocess the microarray signal.
+  1. Background correction.
+  2. Normalization.
+  3. Summarization (for Affymetrix microarrays).
+3. Statistical analysis.
+4. Writing report sumarizing the results.
+
+For example, here we can se the output of some microarray platform. The files contain information about each probe position and the intensities.
+
+```
+[CEL]
+Version=3
+
+[HEADER]
+Cols=602
+Rows=602
+TotalX=602
+TotalY=602
+OffsetX=0
+OffsetY=0
+GridCornerUL=234 232
+GridCornerUR=3844 228
+GridCornerLR=3847 3838
+GridCornerLL=236 3842
+Axis-invertX=0
+AxisInvertY=0
+swapXY=0
+DatHeader=[0..24458]  Madrid pool TX+T3
+Algorithm=Percentile
+AlgorithmParameters=Percentile:75;CellMargin:2;OutlierHigh:1.500;OutlierLow:1.004
+
+[INTENSITY]
+NumberCells=362404
+CellHeader=X    Y       MEAN    STDV    NPIXELS
+  0       0     114.0   16.4     16
+  1       0     8715.8  982.2    16
+  2       0     137.3   18.5     16
+  3       0     9857.0  1267.9   16
+  4       0     65.3    13.3     16
+  5       0     121.3   16.6     16
+  6       0     8474.8  1411.3   16
+  7       0     129.8   27.2     16
+  8       0     8462.5  1526.1   16
+  9       0     130.8   25.6     16
+ 10       0     9004.8  1564.8   16
+ 11       0     120.3   15.3     16
+ 12       0     9083.0  1590.8   16
+ 13       0     117.0   21.2     16
+ 14       0     9177.3  1692.9   16
+ 15       0     123.0   15.7     16
+ 16       0     9258.0  1606.6   16
+ 17       0     116.8   19.3     16
+ 18       0     9016.0  1662.7   16
+ 19       0     124.3   22.4     16
+
 ```
 
 ## Next-generation sequencing
@@ -160,4 +228,7 @@ knitr::include_graphics("pic/ngs_sc.png")
 ```
 
 The field of single cell omics is in constant development and new or improved methodologies appear increasingly. For transcriptomics the use of microfluidic reaction chambers enables single cells to be subjected to RNA-seq protocols. Another methodology is Fluorescence based flow cytometry (FBFC), which enables to quantify the amount of proteins using fluorophores attached to antibodies. However, because spectral overlap, the maximum number of proteins that can be measured simultaneously is limited. A modification of this technology known as mass cytometry tags antibodies with rare isotopes and uses mass spectrometry to identify proteins. This technique highly improves the dimensionality by increasing the number of proteins and conditions that can be analyzed simultaneously.
+
+## Batch effects
+
 
