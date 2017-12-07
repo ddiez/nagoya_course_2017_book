@@ -121,6 +121,14 @@ The [Blast](https://blast.ncbi.nlm.nih.gov) web page at NCBI is the main point o
 knitr::include_graphics("pic/blast_web.png")
 ```
 
+### Jalview
+
+[Jalview](http://www.jalview.org) is a software for sequence analysis. It can visualize sequences, submit them to multiple sequence aligment servers, visualize the resulting MSA, create basic phylogenetic trees and visualize associated structures.
+
+```{r jalview-web, echo=FALSE, fig.cap="Screenshot of the Jalview home page at http://www.jalview.org."}
+knitr::include_graphics("pic/jalview_web.png")
+```
+
 ### Bioconductor
 
 ### Cytoscape
