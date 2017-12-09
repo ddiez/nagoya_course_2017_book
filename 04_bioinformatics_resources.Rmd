@@ -91,6 +91,14 @@ knitr::include_graphics("pic/pfam_web.png")
 
 ## Motif databases
 
+### Jaspar
+
+[Jaspar](http://jaspar.genereg.net) is a database for transcription factor DNA binding motifs.
+
+```{r jaspar-web, echo=FALSE, fig.cap="Screenshot of the Jaspar home page at http://jaspar.genereg.net."}
+knitr::include_graphics("pic/jaspar_web.png")
+```
+
 ## Interaction networks
 
 Information about protein-protein interactions has grown incredibly due to advances in MS in combination with affinity purification methods. There are several databases integrating existing information. Two resources will be highlighted here: BioGRID and STRING.
