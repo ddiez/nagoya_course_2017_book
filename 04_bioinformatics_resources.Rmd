@@ -129,6 +129,14 @@ knitr::include_graphics("pic/blast_web.png")
 knitr::include_graphics("pic/jalview_web.png")
 ```
 
+### MEME
+
+The [MEME-suite](http://meme-suite.org) is a collection of tools for the discovery of motifs in proteins, DNA and RNA sequences. If can find de-novo motifs (e.g. MEME) or search for known motifs from a motif database (e.g. MAST, FIMO, etc.)
+
+```{r meme-web, echo=FALSE, fig.cap="Screenshot of the MEME-suite home page at http://meme-suite.org."}
+knitr::include_graphics("pic/meme_web.png")
+```
+
 ### Bioconductor
 
 ### Cytoscape
