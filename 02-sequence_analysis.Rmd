@@ -148,10 +148,10 @@ We can see from this list that the first hit is the human GTPase KRas. This is r
 
 ## Multiple sequence alignment
 
-When we want to align 3 o more sequences together we have a multiple sequence alignment (MSA). In MSA there is more ambiguity in what determines a correct alignment. Here you can see a MSA of four sequences, members of the Ras family. Three of them correspond to human sequences, the last one to mouse RASH.
+When we want to align 3 o more sequences together we have a multiple sequence alignment (MSA). In a MSA there is more ambiguity about what determines a correct alignment. Also, finding the *best* aligment in terms of scoring scheme is more computationally expensive. Therefore, MSA software uses heuristics to find good but often sub-optimal solutions. Here you can see a MSA of four sequences, members of the Ras family. Three of them correspond to human sequences, the last one to mouse RASH.
 
-```{r, echo=FALSE}
-knitr::include_graphics("pic/msa.svg")
+```{r, echo=FALSE, fig.cap="Multiple sequence aligment of RAS protein family members."}
+knitr::include_graphics("pic/msa.pdf")
 ```
 
 
