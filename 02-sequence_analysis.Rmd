@@ -161,6 +161,14 @@ Software for MSA:
 * Clustal (Classic)
 * MUSCLE
 
+## Tree methods
+
+Sequence aligment methods give us information about the similarity between different sequences. Some sequences are more similar to one another than to other sequences. Although this information is somwhat visible in the MSA, it is difficult to visualize complex similarity relationships when many sequences are considered. To help with this problem tree visualization methods can be useful. Tree methods use a distance matrix, e.g. derived from pairwise sequence aligment of a set of sequences, and constructs a binary tree in which proteins closer in the tree are more similar. For example, take a look at the tree shown in Figure XXX for the 4 RAS proteins.
+
+```{r, echo=FALSE, fig.cap="Phylogenetic tree of 4 RAS proteins."}
+knitr::include_graphics("pic/tree_ras.pdf")
+```
+
 ## Domains and motifs
 
 Biological sequences contain regions of high similarity to other similar regions in other proteins. Sometimes this regios are small, accounting for a few aminoacids, and they are typically named *motifs*. In other cases the conserved regions are larger, and then are called *domains*. Domains are sometimes associated with some structurally motivated definition of domain. Sometimes however, the distinction between these two types of conserved regions is ambigous.
@@ -169,4 +177,7 @@ Motifs and domains can be identified by using the information from a MSA. This i
 
 The software HMMER implements HMM for the analysis of biological sequences. It can learn models representing motifs, domains or entire sequences. These models are used to search for sequences matching the models in databases. It can also be used to annotate the domains/motifs present in a sequence using a database of domains. PFAM uses HMMER and manually curated MSA of domains to generate a database of protein families (PFAM).
 
-## Phylogenetic methods
+
+## Phylogenetics
+
+Biological sequences with a commoen evolutionary origin are called homologs. Homolog sequences found in different species are called orthologs. Homologs within the same species (i.e. originated by e.g. a gene duplication event) are called paralogs. Because of the shared ancestry homologs share similarity at the sequence level. The closer homologs, i.e. the less time has passed since the two sequences diverged, the more similar the two sequences will be. Therefore, sequence similarity is often used as evidence for homology, i.e. common ancestry.
