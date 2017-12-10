@@ -109,9 +109,9 @@ Global aligment is alse called [Needleman-Wunsch](https://en.wikipedia.org/wiki/
 
 ## Scoring matrices
 
-In reality we do not use a scoring matrix like the one above. We want to use scoring matrices that reflect how residue changes (whether amino acid or nucleotide) occur in nature. For protein sequences there are two main types of matrices used typically in sequence aligments: BLOSUM and PAM.
+In reality we do not use a scoring matrix like the one above. We want to use scoring matrices that reflect how residues (whether amino acid or nucleotide) change in nature. For protein sequences there are two main types of matrices used in sequence aligments: BLOSUM and PAM. I will briefly describe BLOSUM matrices here.
 
-BLOSUM stands for BLOcks SUbstitution Matrix. BLOSUM matrices are empirical, derived from local aligment of protein sequenes found in databases (originally in the BLOCKS database). The matrix number indicates the selection process for including sequences into the computatiom. For example, the BLOSUM62 matrix includes aligments of sequences with less than 62% similarity. A fragment of the BLOSUM62 matrix is shown below.
+BLOSUM stands for BLOcks SUbstitution Matrix. BLOSUM matrices are empirical, derived from local aligment of protein sequenes found in databases (originally in the BLOCKS database). The matrix number indicates the selection process for including sequences into the computatiom. For example, the BLOSUM62 matrix includes aligments of sequences with less than 62% similarity. Here you can see a fragment of the BLOSUM62 matrix.
 
 ```{r, echo=FALSE, comment=NA}
 data("BLOSUM62", package = "Biostrings")
@@ -119,8 +119,6 @@ BLOSUM62[1:10, 1:10]
 ```
 
 As you can see the diagonal contains positive scores (e.g. A->A score 4), indicating that identity is highly favored. Not all scores in the diagonal are equal. This reflects that some identities are more strongly enforced that others. For example, the score for D->D is 6, indicating that this identity happens more frequently than A->A. This probably reflect the fact that an A can be replaced by more amino acids without causing a big disruption in the structure than if the change involves a D. Some of the positions are 0, and some others are negative, indicating non-favorable substitutions. For example, the change E->C has a score of -4 indicating that it doesn't happen often, probably because is not favored.
-
-An alternative to the BLOSUM matrices are the [PAM matrices](https://en.wikipedia.org/wiki/Point_accepted_mutation).
 
 ## Blast
 

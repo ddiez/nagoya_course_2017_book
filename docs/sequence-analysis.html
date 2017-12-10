@@ -277,8 +277,8 @@ score: 4 </code></pre>
 </div>
 <div id="scoring-matrices" class="section level2">
 <h2><span class="header-section-number">2.2</span> Scoring matrices</h2>
-<p>In reality we do not use a scoring matrix like the one above. We want to use scoring matrices that reflect how residue changes (whether amino acid or nucleotide) occur in nature. For protein sequences there are two main types of matrices used typically in sequence aligments: BLOSUM and PAM.</p>
-<p>BLOSUM stands for BLOcks SUbstitution Matrix. BLOSUM matrices are empirical, derived from local aligment of protein sequenes found in databases (originally in the BLOCKS database). The matrix number indicates the selection process for including sequences into the computatiom. For example, the BLOSUM62 matrix includes aligments of sequences with less than 62% similarity. A fragment of the BLOSUM62 matrix is shown below.</p>
+<p>In reality we do not use a scoring matrix like the one above. We want to use scoring matrices that reflect how residues (whether amino acid or nucleotide) change in nature. For protein sequences there are two main types of matrices used in sequence aligments: BLOSUM and PAM. I will briefly describe BLOSUM matrices here.</p>
+<p>BLOSUM stands for BLOcks SUbstitution Matrix. BLOSUM matrices are empirical, derived from local aligment of protein sequenes found in databases (originally in the BLOCKS database). The matrix number indicates the selection process for including sequences into the computatiom. For example, the BLOSUM62 matrix includes aligments of sequences with less than 62% similarity. Here you can see a fragment of the BLOSUM62 matrix.</p>
 <pre><code>   A  R  N  D  C  Q  E  G  H  I
 A  4 -1 -2 -2  0 -1 -1  0 -2 -1
 R -1  5  0 -2 -3  1  0 -2  0 -3
@@ -291,7 +291,6 @@ G  0 -2  0 -1 -3 -2 -2  6 -2 -4
 H -2  0  1 -1 -3  0  0 -2  8 -3
 I -1 -3 -3 -3 -1 -3 -3 -4 -3  4</code></pre>
 <p>As you can see the diagonal contains positive scores (e.g. A-&gt;A score 4), indicating that identity is highly favored. Not all scores in the diagonal are equal. This reflects that some identities are more strongly enforced that others. For example, the score for D-&gt;D is 6, indicating that this identity happens more frequently than A-&gt;A. This probably reflect the fact that an A can be replaced by more amino acids without causing a big disruption in the structure than if the change involves a D. Some of the positions are 0, and some others are negative, indicating non-favorable substitutions. For example, the change E-&gt;C has a score of -4 indicating that it doesn’t happen often, probably because is not favored.</p>
-<p>An alternative to the BLOSUM matrices are the <a href="https://en.wikipedia.org/wiki/Point_accepted_mutation">PAM matrices</a>.</p>
 </div>
 <div id="blast" class="section level2">
 <h2><span class="header-section-number">2.3</span> Blast</h2>
