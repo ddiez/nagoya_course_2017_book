@@ -105,7 +105,7 @@ Biostrings::pairwiseAlignment(
   )
 ```
 
-Global aligment is alse called [Needleman-Wunsch](https://en.wikipedia.org/wiki/Needleman–Wunsch_algorithm) whereas local aligment is called [Smith-Waterman](https://en.wikipedia.org/wiki/Smith–Waterman_algorithm). You can see more details regarding how these two algorithms work in their wikipedia pages, or in the excellent O'Reilly book [BLAST: An essential guide to the Basic Local Alignment Search Tool].
+Global aligment is alse called [Needleman-Wunsch](https://en.wikipedia.org/wiki/Needleman–Wunsch_algorithm) whereas local aligment is called [Smith-Waterman](https://en.wikipedia.org/wiki/Smith–Waterman_algorithm). You can see more details regarding how these two algorithms work in their wikipedia pages, or in the excellent O'Reilly book [BLAST: An essential guide to the Basic Local Alignment Search Tool]. A more advanced book on the topic of sequence aligment is [Biological sequence analysis: Probabilistic models of proteins and nucleic acids].
 
 ## Scoring matrices
 
@@ -180,4 +180,4 @@ The software HMMER implements HMM for the analysis of biological sequences. It c
 
 ## Phylogenetics
 
-Biological sequences with a commoen evolutionary origin are called homologs. Homolog sequences found in different species are called orthologs. Homologs within the same species (i.e. originated by e.g. a gene duplication event) are called paralogs. Because of the shared ancestry homologs share similarity at the sequence level. The closer homologs, i.e. the less time has passed since the two sequences diverged, the more similar the two sequences will be. Therefore, sequence similarity is often used as evidence for homology, i.e. common ancestry.
+Biological sequences with a commoen evolutionary origin are called homologs. Homolog sequences found in different species are called orthologs. Homologs within the same species (i.e. originated by e.g. a gene duplication event) are called paralogs. Because of the shared ancestry homologs share similarity at the sequence level. The closer homologs, i.e. the less time has passed since the two sequences diverged, the more similar the two sequences will be. Therefore, sequence similarity is often used as evidence for homology, i.e. common ancestry. Here we do not get into the problem of phylogenies but a good starting point is the classic [Molecular evolution and phylogenetics] by M. Nei, creator of the popular Neighbor-Joining method for tree reconstruction.
