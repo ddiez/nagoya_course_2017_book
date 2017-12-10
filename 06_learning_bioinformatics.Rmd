@@ -2,11 +2,13 @@
 
 ## Books
 
-### Sequence analaysis
+### Sequence analysis
 
 * BLAST. Ian Korf, ... O'Reilly, 2003
 
 * Biological sequence analysis: Probabilistic models of proteins and nucleic acids. R. Durbin, S. Eddy, ... Cambridge, 1998.
+
+* Molecular evolution and phylogenetics. M. Nei, S. Kumar. Oxford University Press, 2000.
 
 ### Omics technologies
 
