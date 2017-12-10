@@ -4,11 +4,29 @@
 
 ### Sequence analysis
 
-* BLAST. Ian Korf, ... O'Reilly, 2003
+#### BLAST: An essential guide to the Basic Local Alignment Search Tool {-}
 
-* Biological sequence analysis: Probabilistic models of proteins and nucleic acids. R. Durbin, S. Eddy, ... Cambridge, 1998.
+Introductory book to the topic of sequence aligments in general and Blast in particular. Includes Perl code.
 
-* Molecular evolution and phylogenetics. M. Nei, S. Kumar. Oxford University Press, 2000.
+```{r, echo=FALSE, fig.cap="Blast. Ian Korf, ... O'Reilly, 2003"}
+knitr::include_graphics("pic/blast_book.jpg")
+```
+
+#### Biological sequence analysis: Probabilistic models of proteins and nucleic acids {-}
+
+Advance level understanding of the theory of sequence aligment and Hidden Markov Models (HMM).
+
+```{r, echo=FALSE, fig.cap="Biological sequence analysis: Probabilistic models of proteins and nucleic acids. R. Durbin, S. Eddy, ... Cambridge, 1998"}
+knitr::include_graphics("pic/hmm_book.jpg")
+```
+
+#### Molecular evolution and phylogenetics {-}
+
+Introductory level book on the topic of inferring phylogenies from sequence information.
+
+```{r, echo=FALSE, fig.cap="Molecular evolution and phylogenetics. M. Nei, S. Kumar. Oxford University Press, 2000."}
+knitr::include_graphics("pic/phylogenetics_book.jpg")
+```
 
 ### Omics technologies
 
@@ -20,22 +38,22 @@ Sometimes using Bioinformatics tools requires to have some knowledge of how to u
 
 Another interesting resource is [https://www.codecademy.com](https://www.codecademy.com), providing an interactive learning experience. It offers also paid courses.
 
-## Community resources
+### Support Communities
 
-Learning Bioinformatics, as with any other complex topic, can be daunting. Sometimes web sites and software come with good and extended documentation. Because the amount of information can be very large, sometimes it is possible to find short tutorials that can help newcomers to get started. It is important to get a good understanding of the methods being used when the goal is to publish your results. The Bioinformatics community can sometimes help in the learning process by providing solutions to the most frequently encountered problems. Here I will highlight some of the most relevant online communities for the Bioinformatician.
+Learning Bioinformatics, as with any other complex topic, can be daunting. Often Bioinformatics software come with good and detailed documentation and. It is also possible to frequently find short tutorials that can help newcomers get started. It is important to get a *good* understanding of the methods being used when the goal is to publish your results. The Bioinformatics community can sometimes help in the learning process by providing solutions to the most frequently encountered problems. Here I will highlight some of the most relevant online communities for the Bioinformatician.
 
-### Biostars
+#### Biostars {-}
 
 [Biostars](http://biostars.org)
 
-### Bioinformatics channel at Stackexchange
+#### Bioinformatics Stack Exchange {-}
 
 Another useful resource for solving questions related to Bioinformatics might be the [Bioinformatics](https://bioinformatics.stackexchange.com) channel at the Stackexchange network.
 
-### Bioconductor support site
+#### Bioconductor support site {-}
 
 The [Bioconductor support site](https://support.bioconductor.org) provides support for questions related to the use of Bioconductor in particular and R for Bioinformatics more in general.
 
 
-### How to use the support sites
+#### How to use the support sites {-}
 
