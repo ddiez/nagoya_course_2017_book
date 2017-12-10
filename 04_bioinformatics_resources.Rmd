@@ -149,3 +149,14 @@ knitr::include_graphics("pic/meme_web.png")
 
 ### Cytoscape
 
+## File formats
+
+### FASTA
+
+FASTA is a very simple file format used to store information about biological sequences, including protein, DNA and RNA. Each entry consists of the `>` character followed by a sequence *Id* and a description, separated from the *Id* by a space character. The sequence itself goes in the next lines. Often FASTA files are formatted with a maximum number of residues per line (e.g. 60), which helps when visualizing the information in a regular text editor.
+
+```
+>seq1 This is seq1
+AGTTAGGATTTGCGCCATT
+```
+
