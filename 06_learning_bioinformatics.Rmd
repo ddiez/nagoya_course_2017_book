@@ -44,16 +44,15 @@ Learning Bioinformatics, as with any other complex topic, can be daunting. Often
 
 #### Biostars {-}
 
-[Biostars](http://biostars.org)
+[Biostars](http://biostars.org) is an online community deboted to answering questions about *"bioinformatics, computational genomics and biological data analysis"*. Users can post questions, get answers in the same post. There is a rating system that enables to give credit to good questions and answers. It is possible to include comments for further clarification and discussion.
 
 #### Bioinformatics Stack Exchange {-}
 
-Another useful resource for solving questions related to Bioinformatics might be the [Bioinformatics](https://bioinformatics.stackexchange.com) channel at the Stackexchange network.
+Another useful resource for solving general questions related to Bioinformatics can be the [Bioinformatics Stack Exchange](https://bioinformatics.stackexchange.com) network. These site follows the same phylosohpy of Biostars (indeed, Biostars originated in the old version of Stack Exchange) but offers, in my opinion, a better user inteface. The site is still in beta but most of the Biostars community can be found also in this new site.
 
 #### Bioconductor support site {-}
 
-The [Bioconductor support site](https://support.bioconductor.org) provides support for questions related to the use of Bioconductor in particular and R for Bioinformatics more in general.
-
+The [Bioconductor support site](https://support.bioconductor.org) provides support for questions related to the use of Bioconductor, using a similar interface to Biostars.
 
 #### How to use the support sites {-}
 
