@@ -175,7 +175,7 @@ Biological sequences contain regions of high similarity to other similar regions
 
 Motifs and domains can be identified by using the information from a MSA. This is the approach followed in the Pfam database. Sections of MSAs containing the domain of interest are manually curated. These are used to train a Hidden Markov Model (HMM) that learns how to recognize the same domain in other sequences. With that model, we can identify all sequences in a database containing that particular domain.
 
-The software HMMER implements HMM for the analysis of biological sequences. It can learn models representing motifs, domains or entire sequences. These models are used to search for sequences matching the models in databases. It can also be used to annotate the domains/motifs present in a sequence using a database of domains. PFAM uses HMMER and manually curated MSA of domains to generate a database of protein families (PFAM).
+The software HMMER implements HMM for the analysis of biological sequences. It can learn models representing motifs, domains or entire sequences. These models are used to search for sequences matching the models in databases. It can also be used to annotate the domains/motifs present in a sequence using a database of domains. PFAM uses HMMER and manually curated MSA of domains to generate a database of protein families (PFAM). The use of HMM for sequence alignment is described in detail in the excellent book [Biological sequence analysis: Probabilistic models of proteins and nucleic acids].
 
 
 ## Phylogenetics
