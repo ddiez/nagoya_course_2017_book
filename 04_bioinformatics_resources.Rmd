@@ -163,11 +163,17 @@ knitr::include_graphics("pic/meme_web.png")
 
 [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) is a command line software to align sequence reads obtained from NGS technologies to a reference genome. It requires sequencing data in [Fastq] format and produces aligments in [SAM] format.
 
-```{r bowtie2-web, echo=FALSE, fig.cap="Screenshot of the Bowtie2 home page at (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml."}
+```{r bowtie2-web, echo=FALSE, fig.cap="Screenshot of the Bowtie2 home page at http://bowtie-bio.sourceforge.net/bowtie2/index.shtml."}
 knitr::include_graphics("pic/bowtie2_web.png")
 ```
 
 #### Samtools {-}
+
+The [samtools](http://www.htslib.org) is a command line software for the manipulation of [SAM] files. It can convert SAM files into binary (BAM) files and perform other tasks like sorting and indexing.
+
+```{r samtools-web, echo=FALSE, fig.cap="Screenshot of the samtools home page at http://www.htslib.org."}
+knitr::include_graphics("pic/samtools_web.png")
+```
 
 ### General frameworks
 
