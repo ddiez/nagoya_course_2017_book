@@ -125,10 +125,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.2" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#microarrays"><i class="fa fa-check"></i><b>3.2</b> Microarrays</a></li>
 <li class="chapter" data-level="3.3" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#next-generation-sequencing"><i class="fa fa-check"></i><b>3.3</b> Next-generation sequencing</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#rna-seq"><i class="fa fa-check"></i><b>3.3.1</b> RNA-seq</a></li>
-<li class="chapter" data-level="3.3.2" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#example-stat3-expression-in-macrophages-exposed-to-il10"><i class="fa fa-check"></i><b>3.3.2</b> Example: Stat3 expression in macrophages exposed to IL10</a></li>
-<li class="chapter" data-level="3.3.3" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#chip-seq"><i class="fa fa-check"></i><b>3.3.3</b> ChIP-seq</a></li>
-<li class="chapter" data-level="3.3.4" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#example-stat3-binding-in-macrophages-exposed-to-il10"><i class="fa fa-check"></i><b>3.3.4</b> Example: Stat3 binding in macrophages exposed to IL10</a></li>
-<li class="chapter" data-level="3.3.5" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#other-ngs-technologies"><i class="fa fa-check"></i><b>3.3.5</b> Other NGS technologies</a></li>
+<li class="chapter" data-level="3.3.2" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#chip-seq"><i class="fa fa-check"></i><b>3.3.2</b> ChIP-seq</a></li>
+<li class="chapter" data-level="3.3.3" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#other-ngs-technologies"><i class="fa fa-check"></i><b>3.3.3</b> Other NGS technologies</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#mass-spectromics-methods"><i class="fa fa-check"></i><b>3.4</b> Mass spectromics methods</a><ul>
 <li class="chapter" data-level="3.4.1" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#ms"><i class="fa fa-check"></i><b>3.4.1</b> MS</a></li>
@@ -267,16 +265,16 @@ Figure 3.6: Summary of typical microarray workflow.
 </div>
 <div id="next-generation-sequencing" class="section level2">
 <h2><span class="header-section-number">3.3</span> Next-generation sequencing</h2>
-<p>An important limitation of microarrays is that they are based on oligonucleotide probes for detecting expression. This means microarrays can only detect molecules for which a probe exists in the array. The probes in a microarray are based on our knowledge of the genome’s sequence at the time of microarray design. Because our knowledge is not perfect, microarrays often contain probes measuring things different to what were originally intended. This may lead to incorrect conclusions if the information about the most likely target sequence is not up to date. Instead of using a probe to quantify the presence of a DNA or RNA molecule, why not just sequence the molecule? The problem was that existing sequencing technology was slow and expensive. This motivated the development of so called next generation technologies, or NGS.</p>
-<div id="rna-seq" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> RNA-seq</h3>
-<p>Let’s look into the fundamental concept behind all NGS technologies from the perspective of transcriptomics (Figure <a href="omics-analysis-1.html#fig:ngs">3.7</a>). Imagine this gene containing one intron and both 5’ and 3’ UTRs, and is transcribed into a messenger RNA. The RNA is extracted from the cell and converted into cDNA. This cDNA is used in microarray technology for the hybridization reaction. In NGS however, the cDNA is ligated to sequencing primers, and sequencing produces a set of short reads. Then, this reads are mapped back using sequence alignment, to some reference genome. The location and number of reads will reveal, after correcting from biases like sequencing depth and transcript length, which genes are being expressed and their abundance levels. There are many applications of NGS technologies. Next we will review two of the most popular.</p>
+<p>An important limitation of microarrays is that they are based on oligonucleotide probes for detecting expression. This means microarrays can only detect molecules for which a probe exists in the array. The probes in a microarray are based on our knowledge of the genome’s sequence at the time of microarray design. Because our knowledge is not perfect, microarrays often contain probes measuring things different to what were originally intended. This may lead to incorrect conclusions if the information about the most likely target sequence is not up to date. Instead of using a probe to quantify the presence of a DNA or RNA molecule, why not just sequence the molecule? The problem was that existing sequencing technology was slow and expensive. This motivated the development of so called <em>Next Generation Sequencing</em> technologies, or NGS.</p>
+<p>Let’s look into the fundamental concept behind all NGS technologies from the perspective of transcriptomics (Figure <a href="omics-analysis-1.html#fig:ngs">3.7</a>). Imagine this gene containing one intron and both 5’ and 3’ UTRs. The gene is transcribed into a messenger RNA (mRNA). The mRNA is extracted from the cell and converted into cDNA. This cDNA is used in microarray technology for the hybridization reaction. In NGS however, the cDNA is ligated to sequencing primers, and sequencing produces a set of short reads. Then, these reads are mapped back to the genome using sequence alignment. The location and number of reads will reveal, after correcting from biases like sequencing depth and transcript length, which genes are being expressed and their abundance levels. There are many applications of NGS technologies. Next we will review two of the most popular.</p>
 <div class="figure"><span id="fig:ngs"></span>
 <img src="pic/ngs.png" alt="Summary of rationale behind NGS technologies." width="712" />
 <p class="caption">
 Figure 3.7: Summary of rationale behind NGS technologies.
 </p>
 </div>
+<div id="rna-seq" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> RNA-seq</h3>
 <p>The most popular application of NGS technologies is RNA-seq, a technology to measure the transcriptome (Figure <a href="omics-analysis-1.html#fig:ngs-rnaseq">3.8</a>). This slide shows a summary of the typical RNA-seq protocol.</p>
 <ol style="list-style-type: decimal">
 <li><p>Isolate and fragment the RNA.</p></li>
@@ -292,9 +290,8 @@ Figure 3.7: Summary of rationale behind NGS technologies.
 Figure 3.8: Summary of typical RNA-seq workflow.
 </p>
 </div>
-</div>
-<div id="example-stat3-expression-in-macrophages-exposed-to-il10" class="section level3">
-<h3><span class="header-section-number">3.3.2</span> Example: Stat3 expression in macrophages exposed to IL10</h3>
+<div id="example-stat3-expression-in-macrophages-exposed-to-il10" class="section level4 unnumbered">
+<h4>Example: Stat3 expression in macrophages exposed to IL10</h4>
 <p>In the following example we will look into an RNA-seq experiment in more detail. Figure <a href="omics-analysis-1.html#fig:stat3-rnaseq-1">3.9</a> shows the mouse Stat3 locus including the exon/intron structure of the different transcripts as yellow boxes and lines. You can see also other genes nearby, like Stat5a. The expression level in resting and IL10 stimulated macrophages is shown as the peaks overlapping with the exons.</p>
 <div class="figure"><span id="fig:stat3-rnaseq-1"></span>
 <img src="pic/stat3_rnaseq_1.png" alt="Expression of Stat3 in macrophages exposed to IL10." width="811" />
@@ -324,8 +321,9 @@ Figure 3.12: Expression of Stat3 in macrophages exposed to IL10.
 </p>
 </div>
 </div>
+</div>
 <div id="chip-seq" class="section level3">
-<h3><span class="header-section-number">3.3.3</span> ChIP-seq</h3>
+<h3><span class="header-section-number">3.3.2</span> ChIP-seq</h3>
 <p>Another popular NGS technology is ChIP-seq, which stands for chromatin immunoprecipitation followed by NGS sequencing. In ChIP-seq we aim to identify protein-DNA interactions. That is, we want to know the sequence of the DNA to which a DNA-binding protein binds. This information is critical to understand gene regulatory programs. For example, gene transcription is regulated by transcription factors that bind to specific regions in the genome, including gene promoters and enhancers. Also, histones represent another type of DNA binding proteins with important roles in the regulation of gene expression. Posttranscriptional histone modifications, like acetylation, methylation, and others, are associated with regulatory outcomes, like expression activation and repression. ChIP-seq enables to study many of these patterns at genome wide scale.</p>
 <p>The basic ChIP-seq protocol is shown in Figure <a href="omics-analysis-1.html#fig:ngs-chipseq">3.13</a>. First, proteins are fixed to the DNA with, e.g. formaldehyde. Then, the chromatin is fragmented, leading to many small fragments free of proteins and some with proteins bound. Among the later ones, some will be bound to the target protein, that can be a transcription factor or a histone with some particular modification like H3K9me3 (tri-methylation of lysine in position 9 of the histone H3). Next, we use an antibody against the target protein for an immunoprecipitation, which allows us to obtain the proteins and the DNA sequences they are bound to. Then we remove the fixation and isolate the DNA. The rest of the protocol, cDNA library construction and sequencing are performed similarly to RNA-seq. Sequencing will produce sequence reads that can be aligned to the reference genome. The read peaks accumulating in DNA loci will reveal where the target protein was bound. Computational methods are used to identify and quantify the peaks. Statistical analysis will help us determine if there is differential binding between experimental conditions.</p>
 <div class="figure"><span id="fig:ngs-chipseq"></span>
@@ -334,9 +332,8 @@ Figure 3.12: Expression of Stat3 in macrophages exposed to IL10.
 Figure 3.13: ChIP-seq workflow.
 </p>
 </div>
-</div>
-<div id="example-stat3-binding-in-macrophages-exposed-to-il10" class="section level3">
-<h3><span class="header-section-number">3.3.4</span> Example: Stat3 binding in macrophages exposed to IL10</h3>
+<div id="example-stat3-binding-in-macrophages-exposed-to-il10" class="section level4 unnumbered">
+<h4>Example: Stat3 binding in macrophages exposed to IL10</h4>
 <p>In the following example we can see an application of ChIP-seq to identify the binding locations of the transcription factor Stat3 in macrophages after exposure to Il10. As before, the Stat3 locus in the mouse genome is shown, together with the coverage for the Stat3 ChIP-seq experiment. We can see that Stat3 binds to its own promoter upon Il10 treatment, suggesting that it regulates its own expression.</p>
 <div class="figure"><span id="fig:stat3-chipseq"></span>
 <img src="pic/stat3_chipseq.png" alt="Stat3 binding profile around the Stat3 locus" width="836" />
@@ -346,8 +343,9 @@ Figure 3.14: Stat3 binding profile around the Stat3 locus
 </div>
 <p>An important limitation of ChIP-seq is that it can only identify binding sites for a single TF or histone modification at a time. Another problem is that in eukaryotes, enhancers can be located far away from the genes they regulate, hampering the assignment of TF binding to target genes. Finally, the observation of protein binding to DNA does not demonstrate its functional relevance, which requires additional functional experiments.</p>
 </div>
+</div>
 <div id="other-ngs-technologies" class="section level3">
-<h3><span class="header-section-number">3.3.5</span> Other NGS technologies</h3>
+<h3><span class="header-section-number">3.3.3</span> Other NGS technologies</h3>
 <p>Other NGS technologies are becoming popular in recent years. For example, TSS-seq and CAGE-seq are technologies that identify the 5’ cap structure of the processed mRNA, revealing the location of active promoters. Other technologies are able to reveal information about the chromatin. Chromatin accessibility can be assayed by means of either DNaseI digestion or by transposase reaction. In both cases the enzymes have a preference to react with open chromatin regions, with regions of close chromatin or protected by the binding of proteins being more resilient. This enables to map open chromatin and even the location of nucleosomes and binding of TFs if enough sequencing depth is performed. Nucleosome location can be more directly assayed by using the Mnase-seq protocol. Finally, the methylation of the DNA can be assayed by bisulfite sequencing.</p>
 </div>
 </div>

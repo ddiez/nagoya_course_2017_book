@@ -48,16 +48,15 @@ knitr::include_graphics("pic/microarray_workflow.png")
 
 ## Next-generation sequencing
 
-An important limitation of microarrays is that they are based on oligonucleotide probes for detecting expression. This means microarrays can only detect molecules for which a probe exists in the array. The probes in a microarray are based on our knowledge of the genome's sequence at the time of microarray design. Because our knowledge is not perfect, microarrays often contain probes measuring things different to what were originally intended. This may lead to incorrect conclusions if the information about the most likely target sequence is not up to date.
-Instead of using a probe to quantify the presence of a DNA or RNA molecule, why not just sequence the molecule? The problem was that existing sequencing technology was slow and expensive. This motivated the development of so called next generation technologies, or NGS.
+An important limitation of microarrays is that they are based on oligonucleotide probes for detecting expression. This means microarrays can only detect molecules for which a probe exists in the array. The probes in a microarray are based on our knowledge of the genome's sequence at the time of microarray design. Because our knowledge is not perfect, microarrays often contain probes measuring things different to what were originally intended. This may lead to incorrect conclusions if the information about the most likely target sequence is not up to date. Instead of using a probe to quantify the presence of a DNA or RNA molecule, why not just sequence the molecule? The problem was that existing sequencing technology was slow and expensive. This motivated the development of so called *Next Generation Sequencing* technologies, or NGS.
 
-### RNA-seq
-
-Let’s look into the fundamental concept behind all NGS technologies from the perspective of transcriptomics (Figure \@ref(fig:ngs)). Imagine this gene containing one intron and both 5’ and 3’ UTRs, and is transcribed into a messenger RNA. The RNA is extracted from the cell and converted into cDNA. This cDNA is used in microarray technology for the hybridization reaction. In NGS however, the cDNA is ligated to sequencing primers, and sequencing produces a set of short reads. Then, this reads are mapped back using sequence alignment, to some reference genome. The location and number of reads will reveal, after correcting from biases like sequencing depth and transcript length, which genes are being expressed and their abundance levels. There are many applications of NGS technologies. Next we will review two of the most popular.
+Let’s look into the fundamental concept behind all NGS technologies from the perspective of transcriptomics (Figure \@ref(fig:ngs)). Imagine this gene containing one intron and both 5’ and 3’ UTRs. The gene is transcribed into a messenger RNA (mRNA). The mRNA is extracted from the cell and converted into cDNA. This cDNA is used in microarray technology for the hybridization reaction. In NGS however, the cDNA is ligated to sequencing primers, and sequencing produces a set of short reads. Then, these reads are mapped back to the genome using sequence alignment. The location and number of reads will reveal, after correcting from biases like sequencing depth and transcript length, which genes are being expressed and their abundance levels. There are many applications of NGS technologies. Next we will review two of the most popular.
 
 ```{r ngs, echo=FALSE, fig.cap="Summary of rationale behind NGS technologies."}
 knitr::include_graphics("pic/ngs.png")
 ```
+
+### RNA-seq
 
 The most popular application of NGS technologies is RNA-seq, a technology to measure the transcriptome (Figure \@ref(fig:ngs-rnaseq)). This slide shows a summary of the typical RNA-seq protocol.
 
@@ -77,7 +76,7 @@ Because we are not limited to pre-specified sequence probes we can use the NGS d
 knitr::include_graphics("pic/ngs_rnaseq.png")
 ```
 
-### Example: Stat3 expression in macrophages exposed to IL10
+#### Example: Stat3 expression in macrophages exposed to IL10 {-}
 
 In the following example we will look into an RNA-seq experiment in more detail. Figure \@ref(fig:stat3-rnaseq-1) shows the mouse Stat3 locus including the exon/intron structure of the different transcripts as yellow boxes and lines. You can see also other genes nearby, like Stat5a. The expression level in resting and IL10 stimulated macrophages is shown as the peaks overlapping with the exons.
 
@@ -113,7 +112,7 @@ The basic ChIP-seq protocol is shown in Figure \@ref(fig:ngs-chipseq). First, pr
 knitr::include_graphics("pic/ngs_chipseq.png")
 ```
 
-### Example: Stat3 binding in macrophages exposed to IL10
+#### Example: Stat3 binding in macrophages exposed to IL10 {-}
 
 In the following example we can see an application of ChIP-seq to identify the binding locations of the transcription factor Stat3 in macrophages after exposure to Il10. As before, the Stat3 locus in the mouse genome is shown, together with the coverage for the Stat3 ChIP-seq experiment. We can see that Stat3 binds to its own promoter upon Il10 treatment, suggesting that it regulates its own expression.
 
