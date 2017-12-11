@@ -162,13 +162,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#gene-ontology"><i class="fa fa-check"></i>Gene Ontology</a></li>
 </ul></li>
 <li class="chapter" data-level="4.8" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#bioformatics-software"><i class="fa fa-check"></i><b>4.8</b> Bioformatics software</a><ul>
-<li class="chapter" data-level="" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#blast-1"><i class="fa fa-check"></i>Blast</a></li>
-<li class="chapter" data-level="" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#hmmer"><i class="fa fa-check"></i>HMMER</a></li>
-<li class="chapter" data-level="" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#jalview"><i class="fa fa-check"></i>Jalview</a></li>
-<li class="chapter" data-level="" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#meme"><i class="fa fa-check"></i>MEME</a></li>
-<li class="chapter" data-level="" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#bioconductor"><i class="fa fa-check"></i>Bioconductor</a></li>
-<li class="chapter" data-level="" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#cytoscape"><i class="fa fa-check"></i>Cytoscape</a></li>
-<li class="chapter" data-level="" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#galaxy"><i class="fa fa-check"></i>Galaxy</a></li>
+<li class="chapter" data-level="4.8.1" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#sequence-analysis-1"><i class="fa fa-check"></i><b>4.8.1</b> Sequence analysis</a></li>
+<li class="chapter" data-level="4.8.2" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#next-generation-sequencing-1"><i class="fa fa-check"></i><b>4.8.2</b> Next generation sequencing</a></li>
+<li class="chapter" data-level="4.8.3" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#general-frameworks"><i class="fa fa-check"></i><b>4.8.3</b> General frameworks</a></li>
 </ul></li>
 <li class="chapter" data-level="4.9" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#file-formats"><i class="fa fa-check"></i><b>4.9</b> File formats</a><ul>
 <li class="chapter" data-level="" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#fasta"><i class="fa fa-check"></i>FASTA</a></li>
@@ -187,7 +183,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="6" data-path="learning-bioinformatics.html"><a href="learning-bioinformatics.html"><i class="fa fa-check"></i><b>6</b> Learning Bioinformatics</a><ul>
 <li class="chapter" data-level="6.1" data-path="learning-bioinformatics.html"><a href="learning-bioinformatics.html#books"><i class="fa fa-check"></i><b>6.1</b> Books</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="learning-bioinformatics.html"><a href="learning-bioinformatics.html#sequence-analysis-1"><i class="fa fa-check"></i><b>6.1.1</b> Sequence analysis</a></li>
+<li class="chapter" data-level="6.1.1" data-path="learning-bioinformatics.html"><a href="learning-bioinformatics.html#sequence-analysis-2"><i class="fa fa-check"></i><b>6.1.1</b> Sequence analysis</a></li>
 <li class="chapter" data-level="6.1.2" data-path="learning-bioinformatics.html"><a href="learning-bioinformatics.html#omics-technologies"><i class="fa fa-check"></i><b>6.1.2</b> Omics technologies</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="learning-bioinformatics.html"><a href="learning-bioinformatics.html#online-resources"><i class="fa fa-check"></i><b>6.2</b> Online resources</a><ul>
@@ -366,8 +362,10 @@ Figure 4.11: Screenshot of the Gene Ontology home page at <a href="http://www.ge
 </div>
 <div id="bioformatics-software" class="section level2">
 <h2><span class="header-section-number">4.8</span> Bioformatics software</h2>
-<div id="blast-1" class="section level3 unnumbered">
-<h3>Blast</h3>
+<div id="sequence-analysis-1" class="section level3">
+<h3><span class="header-section-number">4.8.1</span> Sequence analysis</h3>
+<div id="blast-1" class="section level4 unnumbered">
+<h4>Blast</h4>
 <p>The <a href="https://blast.ncbi.nlm.nih.gov">Blast</a> web page at NCBI is the main point of access to this versitile tool. It can be used to search for sequence similarity against any of the sequence databases at the NCBI.</p>
 <div class="figure"><span id="fig:blast-web"></span>
 <img src="pic/blast_web.png" alt="Screenshot of the Blast home page at https://blast.ncbi.nlm.nih.gov." width="606" />
@@ -376,8 +374,8 @@ Figure 4.12: Screenshot of the Blast home page at <a href="https://blast.ncbi.nl
 </p>
 </div>
 </div>
-<div id="hmmer" class="section level3 unnumbered">
-<h3>HMMER</h3>
+<div id="hmmer" class="section level4 unnumbered">
+<h4>HMMER</h4>
 <p><a href="http://hmmer.org">HMMER</a> implements Hidden Markov Models for the analysis of biological sequences. It can learn models representing motifs, domains or entire sequences. These models are used to search for sequences matching the models in databases. It can also be used to annotate the domains/motifs present in a sequence using a database of domains. PFAM uses HMMER and manually curated MSA of domains to generate a database of protein families (PFAM). The use of HMM for sequence alignment is described in detail in the excellent book <a href="learning-bioinformatics.html#biological-sequence-analysis-probabilistic-models-of-proteins-and-nucleic-acids">Biological sequence analysis: Probabilistic models of proteins and nucleic acids</a>.</p>
 <div class="figure"><span id="fig:hmmer-web"></span>
 <img src="pic/hmmer_web.png" alt="Screenshot of the Hmmer home page at https://www.ebi.ac.uk/Tools/hmmer." width="598" />
@@ -386,8 +384,8 @@ Figure 4.13: Screenshot of the Hmmer home page at <a href="https://www.ebi.ac.uk
 </p>
 </div>
 </div>
-<div id="jalview" class="section level3 unnumbered">
-<h3>Jalview</h3>
+<div id="jalview" class="section level4 unnumbered">
+<h4>Jalview</h4>
 <p><a href="http://www.jalview.org">Jalview</a> is a software for sequence analysis. It can visualize sequences, submit them to multiple sequence aligment servers, visualize the resulting MSA, create basic phylogenetic trees and visualize associated structures.</p>
 <div class="figure"><span id="fig:jalview-web"></span>
 <img src="pic/jalview_web.png" alt="Screenshot of the Jalview home page at http://www.jalview.org." width="608" />
@@ -396,8 +394,8 @@ Figure 4.14: Screenshot of the Jalview home page at <a href="http://www.jalview.
 </p>
 </div>
 </div>
-<div id="meme" class="section level3 unnumbered">
-<h3>MEME</h3>
+<div id="meme" class="section level4 unnumbered">
+<h4>MEME</h4>
 <p>The <a href="http://meme-suite.org">MEME-suite</a> is a collection of tools for the discovery of motifs in proteins, DNA and RNA sequences. If can find de-novo motifs (e.g. MEME) or search for known motifs from a motif database (e.g. MAST, FIMO, etc.)</p>
 <div class="figure"><span id="fig:meme-web"></span>
 <img src="pic/meme_web.png" alt="Screenshot of the MEME-suite home page at http://meme-suite.org." width="424" />
@@ -406,8 +404,20 @@ Figure 4.15: Screenshot of the MEME-suite home page at <a href="http://meme-suit
 </p>
 </div>
 </div>
-<div id="bioconductor" class="section level3 unnumbered">
-<h3>Bioconductor</h3>
+</div>
+<div id="next-generation-sequencing-1" class="section level3">
+<h3><span class="header-section-number">4.8.2</span> Next generation sequencing</h3>
+<div id="bowtie" class="section level4 unnumbered">
+<h4>Bowtie</h4>
+</div>
+<div id="samtools" class="section level4 unnumbered">
+<h4>Samtools</h4>
+</div>
+</div>
+<div id="general-frameworks" class="section level3">
+<h3><span class="header-section-number">4.8.3</span> General frameworks</h3>
+<div id="bioconductor" class="section level4 unnumbered">
+<h4>Bioconductor</h4>
 <p><a href="http://www.bioconductor.org">Bioconductor</a> is a project providing R packages for the anlysis of omics datasets in the <a href="https://www.r-project.org">R software</a>. R runs on Windows, Macs and Linux computers.</p>
 <blockquote>
 <p>Bioconductor provides tools for the analysis and comprehension of high-throughput genomic data. Bioconductor uses the R statistical programming language, and is open source and open development.</p>
@@ -419,8 +429,8 @@ Figure 4.16: Screenshot of the Bioconductor home page at <a href="http://www.bio
 </p>
 </div>
 </div>
-<div id="cytoscape" class="section level3 unnumbered">
-<h3>Cytoscape</h3>
+<div id="cytoscape" class="section level4 unnumbered">
+<h4>Cytoscape</h4>
 <p><a href="http://www.cytoscape.org">Cytoscape</a> is a software for the analysis and visualization of networks. It enables to import network information from online databases and integrate it with omics data like for example gene expression profiles. Cytoscape runs on Windows, Macs and Linux computers.</p>
 <div class="figure"><span id="fig:cytoscape-hiv"></span>
 <img src="pic/cytoscape_hiv.png" alt="Screenshot of Cytoscape showing the HIV sample dataset http://www.cytoscape.org." width="650" />
@@ -429,8 +439,8 @@ Figure 4.17: Screenshot of Cytoscape showing the HIV sample dataset <a href="htt
 </p>
 </div>
 </div>
-<div id="galaxy" class="section level3 unnumbered">
-<h3>Galaxy</h3>
+<div id="galaxy" class="section level4 unnumbered">
+<h4>Galaxy</h4>
 <p>The <a href="https://galaxyproject.org/tutorials/g101">Galaxy</a> project provides a web platform for the analysis of NGS data. In their own words:</p>
 <blockquote>
 <p>Galaxy software framework is an open-source application (distributed under the permissive Academic Free License. Its goal is to develop and maintain a system that enables researchers without informatics expertise to perform computational analyses through the web. A user interacts with Galaxy through the web by uploading and analyzing the data. Galaxy interacts with underlying computational infrastructure (servers that run the analyses and disks that store the data) without exposing it to the user.</p>
@@ -440,6 +450,7 @@ Figure 4.17: Screenshot of Cytoscape showing the HIV sample dataset <a href="htt
 <p class="caption">
 Figure 4.18: Screenshot of the main Galaxy site at <a href="http://usegalaxy.org" class="uri">http://usegalaxy.org</a>.
 </p>
+</div>
 </div>
 </div>
 </div>

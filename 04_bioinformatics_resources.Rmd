@@ -123,7 +123,9 @@ knitr::include_graphics("pic/go_web.png")
 
 ## Bioformatics software
 
-### Blast {-}
+### Sequence analysis
+
+#### Blast {-}
 
 The [Blast](https://blast.ncbi.nlm.nih.gov) web page at NCBI is the main point of access to this versitile tool. It can be used to search for sequence similarity against any of the sequence databases at the NCBI.
 
@@ -131,7 +133,7 @@ The [Blast](https://blast.ncbi.nlm.nih.gov) web page at NCBI is the main point o
 knitr::include_graphics("pic/blast_web.png")
 ```
 
-### HMMER {-}
+#### HMMER {-}
 
 [HMMER](http://hmmer.org) implements Hidden Markov Models for the analysis of biological sequences. It can learn models representing motifs, domains or entire sequences. These models are used to search for sequences matching the models in databases. It can also be used to annotate the domains/motifs present in a sequence using a database of domains. PFAM uses HMMER and manually curated MSA of domains to generate a database of protein families (PFAM). The use of HMM for sequence alignment is described in detail in the excellent book [Biological sequence analysis: Probabilistic models of proteins and nucleic acids].
 
@@ -139,7 +141,7 @@ knitr::include_graphics("pic/blast_web.png")
 knitr::include_graphics("pic/hmmer_web.png")
 ```
 
-### Jalview {-}
+#### Jalview {-}
 
 [Jalview](http://www.jalview.org) is a software for sequence analysis. It can visualize sequences, submit them to multiple sequence aligment servers, visualize the resulting MSA, create basic phylogenetic trees and visualize associated structures.
 
@@ -147,7 +149,7 @@ knitr::include_graphics("pic/hmmer_web.png")
 knitr::include_graphics("pic/jalview_web.png")
 ```
 
-### MEME {-}
+#### MEME {-}
 
 The [MEME-suite](http://meme-suite.org) is a collection of tools for the discovery of motifs in proteins, DNA and RNA sequences. If can find de-novo motifs (e.g. MEME) or search for known motifs from a motif database (e.g. MAST, FIMO, etc.)
 
@@ -155,7 +157,15 @@ The [MEME-suite](http://meme-suite.org) is a collection of tools for the discove
 knitr::include_graphics("pic/meme_web.png")
 ```
 
-### Bioconductor {-}
+### Next generation sequencing
+
+#### Bowtie {-}
+
+#### Samtools {-}
+
+### General frameworks
+
+#### Bioconductor {-}
 
 [Bioconductor](http://www.bioconductor.org) is a project providing R packages for the anlysis of omics datasets in the [R software](https://www.r-project.org). R runs on Windows, Macs and Linux computers.
 
@@ -165,7 +175,7 @@ knitr::include_graphics("pic/meme_web.png")
 knitr::include_graphics("pic/bioconductor_web.png")
 ```
 
-### Cytoscape {-}
+#### Cytoscape {-}
 
 [Cytoscape](http://www.cytoscape.org) is a software for the analysis and visualization of networks. It enables to import network information from online databases and integrate it with omics data like for example gene expression profiles. Cytoscape runs on Windows, Macs and Linux computers.
 
@@ -173,7 +183,7 @@ knitr::include_graphics("pic/bioconductor_web.png")
 knitr::include_graphics("pic/cytoscape_hiv.png")
 ```
 
-### Galaxy {-}
+#### Galaxy {-}
 
 The [Galaxy](https://galaxyproject.org/tutorials/g101) project provides a web platform for the analysis of NGS data. In their own words:
 
