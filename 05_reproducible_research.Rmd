@@ -4,10 +4,12 @@ An important topic in Bioinformatics as a research tools is reproducibility. Bio
 
 ## Git
 
-### Github
+### Github {-}
+
+### Gitlab {-}
 
 ## Literate programming
 
-### RMarkdown notebooks
+### RMarkdown notebooks {-}
 
-### Jupyter notebooks
+### Jupyter notebooks {-}
