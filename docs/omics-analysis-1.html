@@ -122,10 +122,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="3" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html"><i class="fa fa-check"></i><b>3</b> Omics analysis</a><ul>
 <li class="chapter" data-level="3.1" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
-<li class="chapter" data-level="3.2" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#microarrays"><i class="fa fa-check"></i><b>3.2</b> Microarrays</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#expression-microarrays"><i class="fa fa-check"></i><b>3.2.1</b> Expression microarrays</a></li>
-<li class="chapter" data-level="3.2.2" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#analysis-of-microarray-data"><i class="fa fa-check"></i><b>3.2.2</b> Analysis of microarray data</a></li>
-</ul></li>
+<li class="chapter" data-level="3.2" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#microarrays"><i class="fa fa-check"></i><b>3.2</b> Microarrays</a></li>
 <li class="chapter" data-level="3.3" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#next-generation-sequencing"><i class="fa fa-check"></i><b>3.3</b> Next-generation sequencing</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#rna-seq"><i class="fa fa-check"></i><b>3.3.1</b> RNA-seq</a></li>
 <li class="chapter" data-level="3.3.2" data-path="omics-analysis-1.html"><a href="omics-analysis-1.html#example-stat3-expression-in-macrophages-exposed-to-il10"><i class="fa fa-check"></i><b>3.3.2</b> Example: Stat3 expression in macrophages exposed to IL10</a></li>
@@ -245,8 +242,6 @@ Figure 3.3: Classification of OMICS technologies.
 </div>
 <div id="microarrays" class="section level2">
 <h2><span class="header-section-number">3.2</span> Microarrays</h2>
-<div id="expression-microarrays" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> Expression microarrays</h3>
 <p>Microarrays were arguably the first of the “omics” technologies, starting a new generation of high-throughput analyses. This type of exploratory analysis enables the generation of new hypotheses that can be further tested, becoming one important source of knowledge discovery. Microarrays were the first technology to allow this and currently there is a wealth of experimental data available in public databases. There are over 50,000 samples for expression microarrays deposited in the NCBI gene expression omnibus (Figure <a href="omics-analysis-1.html#fig:geo">3.4</a>).</p>
 <div class="figure"><span id="fig:geo"></span>
 <img src="pic/geo_total.pdf" alt="Number of total submissions for the top 4 technologies."  />
@@ -254,81 +249,20 @@ Figure 3.3: Classification of OMICS technologies.
 Figure 3.4: Number of total submissions for the top 4 technologies.
 </p>
 </div>
-<p>Microarrays are basically made of a solid surface with short oligonucleotides attached to it (see Figure <a href="omics-analysis-1.html#fig:microarray">3.5</a>). Each oligonucleotide has a specific sequence, complementary to a particular gene transcript. This makes the oligonucleotide a probe for the expression level of the target transcript. The solid surface is divided into regions forming an array. Each region has attached the same oligonucleotide and therefore measures the expression of a single transcript.</p>
+<p>Microarrays are basically made of a solid surface with short oligonucleotides attached to it (see Figure <a href="omics-analysis-1.html#fig:microarray">3.5</a>). Each oligonucleotide has a specific sequence, complementary to a particular gene transcript. This makes the oligonucleotide a probe for the expression level of the target transcript. The solid surface is divided into regions forming an array. Each region has attached the same oligonucleotide and therefore can detect the same transcript.</p>
 <div class="figure"><span id="fig:microarray"></span>
 <img src="pic/microarray.png" alt="Microarrays are made of oligonucleotide probes attached to a solid surface." width="674" />
 <p class="caption">
 Figure 3.5: Microarrays are made of oligonucleotide probes attached to a solid surface.
 </p>
 </div>
-<p>Here we can see a typical microarray experiment protocol in more detail (Figure <a href="omics-analysis-1.html#fig:microarray-workflow">3.6</a>). The RNA extracted from the target cells is converted into cDNA using nucleotides with a fluorescence molecule attached. A hybridization reaction is performed to allow the labelled cDNA to bind to its complementary probes. The location of the hybridized probes is revealed by exciting the array with a laser. Only those regions with cDNA bound will emit fluorescence upon stimulation with the laser. Because the location and sequence of the oligonucleotides are known, the location of the fluorescence will tell us which transcript has been detected. Image analysis is performed to quantify the signal associated with each probe, obtaining an estimate of the transcript’s expression level. Analysis of the raw data involves preprocessing of the intensities (usually background correction and normalization) and statistical analysis. Variants of this basic protocol exist that use different labeling approaches, detection methods, amplification of original RNA, etc.</p>
+<p>Microarrays were initially develop to perform transcriptomics, i.e. study transcription profiles. It was later adapated to study other interesting aspects of Biology, like the binding of transcription factors to the DNA (using ChIP-on-chip) or patterns of human variation (using SNP arrays). Here we will focus on expression microarrays.</p>
+<p>In Figure <a href="omics-analysis-1.html#fig:microarray-workflow">3.6</a> we can see a typical microarray experiment protocol in more detail. The RNA extracted from the target cells is converted into cDNA using nucleotides with a fluorescence molecule attached. A hybridization reaction is performed to allow the labelled cDNA to bind to its complementary probes in the microarray. The location of the hybridized probes is revealed by exciting the array with a laser (scanning). Only those regions with cDNA bound will emit fluorescence upon stimulation with the laser. Because the location and sequence of the oligonucleotides in the microarray are known, the location of the fluorescence will tell us which transcript has been detected. Image analysis is performed to quantify the signal associated with each probe, obtaining an estimate of the transcript’s expression level. Analysis of the raw data involves preprocessing of the intensities (usually background correction and normalization) and statistical analysis. Variants of this basic protocol exist that use different labeling approaches, detection methods, amplification of original RNA, etc.</p>
 <div class="figure"><span id="fig:microarray-workflow"></span>
 <img src="pic/microarray_workflow.png" alt="Summary of typical microarray workflow." width="722" />
 <p class="caption">
 Figure 3.6: Summary of typical microarray workflow.
 </p>
-</div>
-</div>
-<div id="analysis-of-microarray-data" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> Analysis of microarray data</h3>
-<p>Once the hybridization of the samples and microarrays is finished, we need to measure the signal. This is done by exciting the microarray with a laser and quantifying the fluerescence light emited. An image of the microarray is then generated.</p>
-<p>In the image only the regions of the microarray where the cDNA has hybridized will emit light, so we can identify the probes by considering the position of the emited light. The intensity of the light is proportional to the amount of cDNA in the original sample complementary for each probe. So it becomes an estimate of the expression level.</p>
-<p>Typically this quantification process is automated and done by the company or service performing the microarray experiment. So our data corresponds with a file containing information about each of the probes in the array and the raw signal (intensity) of the probe, plus some estimate of the noise associated with each probe. From here, the following steps are necessary:</p>
-<ol style="list-style-type: decimal">
-<li>Load the data into the analysis software (e.g. into R).</li>
-<li>Preprocess the microarray signal.</li>
-<li>Background correction.</li>
-<li>Normalization.</li>
-<li>Summarization (for Affymetrix microarrays).</li>
-<li>Statistical analysis.</li>
-<li>Writing report sumarizing the results.</li>
-</ol>
-<p>For example, here we can se the output of some microarray platform. The files contain information about each probe position and the intensities.</p>
-<pre><code>[CEL]
-Version=3
-
-[HEADER]
-Cols=602
-Rows=602
-TotalX=602
-TotalY=602
-OffsetX=0
-OffsetY=0
-GridCornerUL=234 232
-GridCornerUR=3844 228
-GridCornerLR=3847 3838
-GridCornerLL=236 3842
-Axis-invertX=0
-AxisInvertY=0
-swapXY=0
-DatHeader=[0..24458]  Madrid pool TX+T3
-Algorithm=Percentile
-AlgorithmParameters=Percentile:75;CellMargin:2;OutlierHigh:1.500;OutlierLow:1.004
-
-[INTENSITY]
-NumberCells=362404
-CellHeader=X    Y       MEAN    STDV    NPIXELS
-  0       0     114.0   16.4     16
-  1       0     8715.8  982.2    16
-  2       0     137.3   18.5     16
-  3       0     9857.0  1267.9   16
-  4       0     65.3    13.3     16
-  5       0     121.3   16.6     16
-  6       0     8474.8  1411.3   16
-  7       0     129.8   27.2     16
-  8       0     8462.5  1526.1   16
-  9       0     130.8   25.6     16
- 10       0     9004.8  1564.8   16
- 11       0     120.3   15.3     16
- 12       0     9083.0  1590.8   16
- 13       0     117.0   21.2     16
- 14       0     9177.3  1692.9   16
- 15       0     123.0   15.7     16
- 16       0     9258.0  1606.6   16
- 17       0     116.8   19.3     16
- 18       0     9016.0  1662.7   16
- 19       0     124.3   22.4     16
-</code></pre>
 </div>
 </div>
 <div id="next-generation-sequencing" class="section level2">
