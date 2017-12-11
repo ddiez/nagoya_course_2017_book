@@ -198,10 +198,10 @@ This information can also be represented using *Sequence Logos*. In this approac
 
 ```{r, echo=FALSE, message=FALSE, comment=NA}
 library(MotifDb)
-library(motifStack)
+library(ggplot2)
+library(ggseqlogo)
 motif <- query(MotifDb, "MA0144.1")[[1]]
-motif <- new("pcm", mat=as.matrix(motif), name="Stat3 binding motif")
-plot(motif)
+ggplot() + geom_logo(motif) + theme_logo()
 ```
 
 PSSM are commonly used to encode the binding motifs of transcription factors, and this information is collected in databases like [Jaspar]. Then tools like [MEME] can be used to identify the binding sites of transcription factors in the genome.
