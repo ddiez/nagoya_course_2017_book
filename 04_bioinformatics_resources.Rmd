@@ -163,6 +163,14 @@ The [MEME-suite](http://meme-suite.org) is a collection of tools for the discove
 knitr::include_graphics("pic/meme_web.png")
 ```
 
+The `meme` commdan line tool enables to search for *de novo* motifs in nucleotide or protein sequences. The basic usage is:
+
+```
+meme -o <output_folder_name> -nmotifs <n> <fasta file>
+```
+
+Where `<output_folder_name>` is the name of the output directory where we want our results to be placed, `<n>` is the maximum number of motifs we want MEME to search for (default if `-nmotifs` ommited is 1), and `<fasta file>` is the file in [FASTA] format with our sequences.
+
 ### Next generation sequencing
 
 #### Bowtie2 {-}
