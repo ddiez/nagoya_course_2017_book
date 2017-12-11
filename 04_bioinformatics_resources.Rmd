@@ -227,6 +227,8 @@ knitr::include_graphics("pic/galaxy_web.png")
 
 ## File formats
 
+A summary of several file formats useful in genomic research is given [here](https://genome.ucsc.edu/FAQ/FAQformat.html).
+
 ### FASTA {-}
 
 FASTA is a very simple file format used to store information about biological sequences, including protein, DNA and RNA. Each entry consists of the `>` character followed by a sequence *Id* and a description, separated from the *Id* by a space character. The sequence itself goes in the next lines. Often FASTA files are formatted with a maximum number of residues per line (e.g. 60), which helps when visualizing the information in a regular text editor.
@@ -256,3 +258,29 @@ Sequence Aligment/Map format is a text format to store the alignment of NGS read
 knitr::include_graphics("pic/sam_web.png")
 ```
 
+### BED {-}
+
+Browser Extensible Data (BED) format is used to represent genomic features like exons, transcripts, genes, etc. Each line contains at least the following columns: chromosome, start, end, name, score and strand.
+
+```
+chr7    127471196  127472363  Pos1  0  +
+chr7    127472363  127473530  Pos2  0  +
+chr7    127473530  127474697  Pos3  0  +
+chr7    127474697  127475864  Pos4  0  +
+chr7    127475864  127477031  Neg1  0  -
+chr7    127477031  127478198  Neg2  0  -
+```
+
+### GFF {-}
+
+General Feature Format (GFF) is used to represent genomic features like exons, transcript, genes, etc.
+
+```
+browser position chr22:10000000-10025000
+browser hide all
+track name=regulatory description="TeleGene(tm) Regulatory Regions"
+visibility=2
+chr22  TeleGene enhancer  10000000  10001000  500 +  .  touch1
+chr22  TeleGene promoter  10010000  10010100  900 +  .  touch1
+chr22  TeleGene promoter  10020000  10025000  800 -  .  touch2
+```
