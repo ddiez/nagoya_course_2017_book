@@ -155,9 +155,17 @@ knitr::include_graphics("pic/meme_web.png")
 
 ### Bioconductor
 
+[Bioconductor](http://www.bioconductor.org) is a project providing R packages for the anlysis of omics datasets in the [R software](https://www.r-project.org). R runs on Windows, Macs and Linux computers.
+
+>Bioconductor provides tools for the analysis and comprehension of high-throughput genomic data. Bioconductor uses the R statistical programming language, and is open source and open development.
+
+```{r bioconductor-web, echo=FALSE, fig.cap="Screenshot of the Bioconductor home page at http://www.bioconductor.org."}
+knitr::include_graphics("pic/bioconductor_web.png")
+```
+
 ### Cytoscape
 
-[Cytoscape](http://www.cytoscape.org) is a software for the analysis and visualization of networks. It enables to import network information from online databases and integrate it with omics data like for example gene expression profiles. Cytoscape runs on Windows, Macs and Linux machines.
+[Cytoscape](http://www.cytoscape.org) is a software for the analysis and visualization of networks. It enables to import network information from online databases and integrate it with omics data like for example gene expression profiles. Cytoscape runs on Windows, Macs and Linux computers.
 
 ```{r cytoscape-hiv, echo=FALSE, fig.cap="Screenshot of Cytoscape showing the HIV sample dataset http://www.cytoscape.org."}
 knitr::include_graphics("pic/cytoscape_hiv.png")
