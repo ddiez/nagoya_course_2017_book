@@ -167,10 +167,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4.8" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#bioformatics-software"><i class="fa fa-check"></i><b>4.8</b> Bioformatics software</a><ul>
 <li class="chapter" data-level="4.8.1" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#blast-1"><i class="fa fa-check"></i><b>4.8.1</b> Blast</a></li>
-<li class="chapter" data-level="4.8.2" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#jalview"><i class="fa fa-check"></i><b>4.8.2</b> Jalview</a></li>
-<li class="chapter" data-level="4.8.3" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#meme"><i class="fa fa-check"></i><b>4.8.3</b> MEME</a></li>
-<li class="chapter" data-level="4.8.4" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#bioconductor"><i class="fa fa-check"></i><b>4.8.4</b> Bioconductor</a></li>
-<li class="chapter" data-level="4.8.5" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#cytoscape"><i class="fa fa-check"></i><b>4.8.5</b> Cytoscape</a></li>
+<li class="chapter" data-level="4.8.2" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#hmmer"><i class="fa fa-check"></i><b>4.8.2</b> HMMER</a></li>
+<li class="chapter" data-level="4.8.3" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#jalview"><i class="fa fa-check"></i><b>4.8.3</b> Jalview</a></li>
+<li class="chapter" data-level="4.8.4" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#meme"><i class="fa fa-check"></i><b>4.8.4</b> MEME</a></li>
+<li class="chapter" data-level="4.8.5" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#bioconductor"><i class="fa fa-check"></i><b>4.8.5</b> Bioconductor</a></li>
+<li class="chapter" data-level="4.8.6" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#cytoscape"><i class="fa fa-check"></i><b>4.8.6</b> Cytoscape</a></li>
 </ul></li>
 <li class="chapter" data-level="4.9" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#file-formats"><i class="fa fa-check"></i><b>4.9</b> File formats</a><ul>
 <li class="chapter" data-level="4.9.1" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#fasta"><i class="fa fa-check"></i><b>4.9.1</b> FASTA</a></li>
@@ -346,8 +347,28 @@ Figure 2.5: Phylogenetic tree of 4 RAS proteins.
 <div id="domains-and-motifs" class="section level2">
 <h2><span class="header-section-number">2.6</span> Domains and motifs</h2>
 <p>Biological sequences contain regions of high similarity to other similar regions in other proteins. Sometimes this regios are small, accounting for a few aminoacids, and they are typically named <em>motifs</em>. In other cases the conserved regions are larger, and then are called <em>domains</em>. Domains are sometimes associated with some structurally motivated definition of domain. Sometimes however, the distinction between these two types of conserved regions is ambigous.</p>
-<p>Motifs and domains can be identified by using the information from a MSA. This is the approach followed in the Pfam database. Sections of MSAs containing the domain of interest are manually curated. These are used to train a Hidden Markov Model (HMM) that learns how to recognize the same domain in other sequences. With that model, we can identify all sequences in a database containing that particular domain.</p>
-<p>The software HMMER implements HMM for the analysis of biological sequences. It can learn models representing motifs, domains or entire sequences. These models are used to search for sequences matching the models in databases. It can also be used to annotate the domains/motifs present in a sequence using a database of domains. PFAM uses HMMER and manually curated MSA of domains to generate a database of protein families (PFAM). The use of HMM for sequence alignment is described in detail in the excellent book <a href="learning-bioinformatics.html#biological-sequence-analysis-probabilistic-models-of-proteins-and-nucleic-acids">Biological sequence analysis: Probabilistic models of proteins and nucleic acids</a>.</p>
+<p>Motifs and domains can be identified as those conserved regions in a MSA. This information then can be encoded into a <em>Position Specific Scoring Matrix</em> (PSSM), also called <em>Position Weight Matrix</em> (PWM). PSSMs contain information about how likely a particular residue is to be found at a particular position. Therefore, unlike substitution matrices, PSSMs are typically not square or symmetric. Here is the PSSM of the binding motif for the mouse Stat3 transcription factor, obtained from the <a href="bioinformatics-resources.html#jaspar">Jaspar</a> database.</p>
+<pre><code>&gt;MA0144.1 Stat3
+  20  13  38   6 321   8   6 585 606 191
+  19  10 552 541  21   0   2  21   1  15
+  25 129   9   1 148 605 592   7   5 393
+ 549 461  14  65 123   0  13   0   1  14</code></pre>
+<p>This matrix represents a motif 10 residues length. It is a DNA motif so the number of rows is four, representing respectivelly <code>A</code>, <code>C</code>, <code>G</code> and <code>T</code>. Each column sums up to 613. This means that we started with a 10 residues length MSA containing 613 sequences. At each position we count the number of times a particular letter appears. For example in the first position <code>T</code> happens 549 times. This form of the motif is also called <em>Position Count Matrix</em> or PCM, because it shows the actual counts. We can transform into frequencies by dividing each column by the total number of counts (613 in this case). We obtain then a <em>Position Frequency Matrix</em> or PFM.</p>
+<pre><code>           [,1]       [,2]       [,3]        [,4]       [,5]       [,6]
+[1,] 0.03262643 0.02120718 0.06199021 0.009787928 0.52365416 0.01305057
+[2,] 0.03099511 0.01631321 0.90048940 0.882544861 0.03425775 0.00000000
+[3,] 0.04078303 0.21044046 0.01468189 0.001631321 0.24143556 0.98694943
+[4,] 0.89559543 0.75203915 0.02283850 0.106035889 0.20065253 0.00000000
+            [,7]       [,8]        [,9]      [,10]
+[1,] 0.009787928 0.95432300 0.988580750 0.31158238
+[2,] 0.003262643 0.03425775 0.001631321 0.02446982
+[3,] 0.965742251 0.01141925 0.008156607 0.64110930
+[4,] 0.021207178 0.00000000 0.001631321 0.02283850</code></pre>
+<p>This information can also be represented using <em>Sequence Logos</em>. In this approach we plot at each position all the letters, with each letter height proportional to the probability (In reality it is proportional not to the probability directly but to the information content or <em>bits</em>). For example here is the sequence logo for Stat3. You can see that the letters at position 5 are all small. This is because the probabilities are more uniform. There is no clear residue dominating the binding at that position. So we have less information about what residue should be in that position.</p>
+<p><img src="nagoya_course_book_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>PSSM are commonly used to encode the binding motifs of transcription factors, and this information is collected in databases like <a href="bioinformatics-resources.html#jaspar">Jaspar</a>. Then tools like <a href="bioinformatics-resources.html#meme">MEME</a> can be used to identify the binding sites of transcription factors in the genome.</p>
+<p>PSSMs are also used in a variant of Blast called PSI-BLAST. Basically PSI-BLAST performs a round of Blast, then construct at PSSM from a MSA of the best hits, then use this PSSM to iterativelly search the same database, refining the PSSM each cycle with the best hits. This approach results in improved sensitivity.</p>
+<p>A similar approach is followed in the <a href="bioinformatics-resources.html#pfam">Pfam</a> database. In Pfam MSAs containing the domain of interest are manually curated (also known as <em>seed alignments</em>). These alignments are used to train a Hidden Markov Model (HMM) that learns how to recognize the same domain in other sequences. With this HMM, we can identify all sequences in a database containing that particular domain. HMM models are learned using the software <a href="bioinformatics-resources.html#hmmer">HMMER</a>.</p>
 </div>
 <div id="phylogenetics" class="section level2">
 <h2><span class="header-section-number">2.7</span> Phylogenetics</h2>
@@ -393,7 +414,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["nagoya_course_book.pdf", "nagoya_course_book.epub"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }

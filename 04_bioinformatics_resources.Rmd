@@ -129,6 +129,14 @@ The [Blast](https://blast.ncbi.nlm.nih.gov) web page at NCBI is the main point o
 knitr::include_graphics("pic/blast_web.png")
 ```
 
+### HMMER
+
+[HMMER](http://hmmer.org) implements Hidden Markov Models for the analysis of biological sequences. It can learn models representing motifs, domains or entire sequences. These models are used to search for sequences matching the models in databases. It can also be used to annotate the domains/motifs present in a sequence using a database of domains. PFAM uses HMMER and manually curated MSA of domains to generate a database of protein families (PFAM). The use of HMM for sequence alignment is described in detail in the excellent book [Biological sequence analysis: Probabilistic models of proteins and nucleic acids].
+
+```{r hmmer-web, echo=FALSE, fig.cap="Screenshot of the Hmmer home page at https://www.ebi.ac.uk/Tools/hmmer."}
+knitr::include_graphics("pic/hmmer_web.png")
+```
+
 ### Jalview
 
 [Jalview](http://www.jalview.org) is a software for sequence analysis. It can visualize sequences, submit them to multiple sequence aligment servers, visualize the resulting MSA, create basic phylogenetic trees and visualize associated structures.

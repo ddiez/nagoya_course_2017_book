@@ -171,10 +171,44 @@ knitr::include_graphics("pic/tree_ras.pdf")
 
 Biological sequences contain regions of high similarity to other similar regions in other proteins. Sometimes this regios are small, accounting for a few aminoacids, and they are typically named *motifs*. In other cases the conserved regions are larger, and then are called *domains*. Domains are sometimes associated with some structurally motivated definition of domain. Sometimes however, the distinction between these two types of conserved regions is ambigous.
 
-Motifs and domains can be identified by using the information from a MSA. This is the approach followed in the Pfam database. Sections of MSAs containing the domain of interest are manually curated. These are used to train a Hidden Markov Model (HMM) that learns how to recognize the same domain in other sequences. With that model, we can identify all sequences in a database containing that particular domain.
+Motifs and domains can be identified as those conserved regions in a MSA. This information then can be encoded into a *Position Specific Scoring Matrix* (PSSM), also called *Position Weight Matrix* (PWM). PSSMs contain information about how likely a particular residue is to be found at a particular position. Therefore, unlike substitution matrices, PSSMs are typically not square or symmetric. Here is the PSSM of the binding motif for the mouse Stat3 transcription factor, obtained from the [Jaspar] database.
 
-The software HMMER implements HMM for the analysis of biological sequences. It can learn models representing motifs, domains or entire sequences. These models are used to search for sequences matching the models in databases. It can also be used to annotate the domains/motifs present in a sequence using a database of domains. PFAM uses HMMER and manually curated MSA of domains to generate a database of protein families (PFAM). The use of HMM for sequence alignment is described in detail in the excellent book [Biological sequence analysis: Probabilistic models of proteins and nucleic acids].
+```
+>MA0144.1 Stat3
+  20  13  38   6 321   8   6 585 606 191
+  19  10 552 541  21   0   2  21   1  15
+  25 129   9   1 148 605 592   7   5 393
+ 549 461  14  65 123   0  13   0   1  14
+```
 
+This matrix represents a motif 10 residues length. It is a DNA motif so the number of rows is four, representing respectivelly `A`, `C`, `G` and `T`. Each column sums up to 613. This means that we started with a 10 residues length MSA containing 613 sequences. At each position we count the number of times a particular letter appears. For example in the first position `T` happens 549 times. This form of the motif is also called *Position Count Matrix* or PCM, because it shows the actual counts. We can transform into frequencies by dividing each column by the total number of counts (613 in this case). We obtain then a *Position Frequency Matrix* or PFM.
+
+```{r, echo=FALSE, comment=NA}
+# Don't show for now.
+m <- read.table(text = "20  13  38   6 321   8   6 585 606 191
+  19  10 552 541  21   0   2  21   1  15
+  25 129   9   1 148 605 592   7   5 393
+ 549 461  14  65 123   0  13   0   1  14")
+m <- unname(as.matrix(m))
+sweep(m, 2, colSums(m), "/")
+```
+
+This information can also be represented using *Sequence Logos*. In this approach we plot at each position all the letters, with each letter height proportional to the probability (In reality it is proportional not to the probability directly but to the information content or *bits*). For example here is the sequence logo for Stat3. You can see that the letters at position 5 are all small. This is because the probabilities are more uniform. There is no clear residue dominating the binding at that position. So we have less information about what residue should be in that position.
+
+
+```{r, echo=FALSE, message=FALSE, comment=NA}
+library(MotifDb)
+library(motifStack)
+motif <- query(MotifDb, "MA0144.1")[[1]]
+motif <- new("pcm", mat=as.matrix(motif), name="Stat3 binding motif")
+plot(motif)
+```
+
+PSSM are commonly used to encode the binding motifs of transcription factors, and this information is collected in databases like [Jaspar]. Then tools like [MEME] can be used to identify the binding sites of transcription factors in the genome.
+
+PSSMs are also used in a variant of Blast called PSI-BLAST. Basically PSI-BLAST performs a round of Blast, then construct at PSSM from a MSA of the best hits, then use this PSSM to iterativelly search the same database, refining the PSSM each cycle with the best hits. This approach results in improved sensitivity.
+
+A similar approach is followed in the [Pfam] database. In Pfam MSAs containing the domain of interest are manually curated (also known as *seed alignments*). These alignments are used to train a Hidden Markov Model (HMM) that learns how to recognize the same domain in other sequences. With this HMM, we can identify all sequences in a database containing that particular domain. HMM models are learned using the software [HMMER].
 
 ## Phylogenetics
 
