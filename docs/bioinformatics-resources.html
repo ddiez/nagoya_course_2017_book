@@ -168,7 +168,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4.9" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#file-formats"><i class="fa fa-check"></i><b>4.9</b> File formats</a><ul>
 <li class="chapter" data-level="" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#fasta"><i class="fa fa-check"></i>FASTA</a></li>
-<li class="chapter" data-level="" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#fastq"><i class="fa fa-check"></i>FASTQ</a></li>
+<li class="chapter" data-level="" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#fastq"><i class="fa fa-check"></i>Fastq</a></li>
+<li class="chapter" data-level="" data-path="bioinformatics-resources.html"><a href="bioinformatics-resources.html#sam"><i class="fa fa-check"></i>SAM</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="reproducible-research.html"><a href="reproducible-research.html"><i class="fa fa-check"></i><b>5</b> Reproducible research</a><ul>
@@ -407,8 +408,15 @@ Figure 4.15: Screenshot of the MEME-suite home page at <a href="http://meme-suit
 </div>
 <div id="next-generation-sequencing-1" class="section level3">
 <h3><span class="header-section-number">4.8.2</span> Next generation sequencing</h3>
-<div id="bowtie" class="section level4 unnumbered">
-<h4>Bowtie</h4>
+<div id="bowtie2" class="section level4 unnumbered">
+<h4>Bowtie2</h4>
+<p><a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">Bowtie2</a> is a command line software to align sequence reads obtained from NGS technologies to a reference genome. It requires sequencing data in <a href="bioinformatics-resources.html#fastq">Fastq</a> format and produces aligments in <a href="bioinformatics-resources.html#sam">SAM</a> format.</p>
+<div class="figure"><span id="fig:bowtie2-web"></span>
+<img src="pic/bowtie2_web.png" alt="Screenshot of the Bowtie2 home page at (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml." width="708" />
+<p class="caption">
+Figure 4.16: Screenshot of the Bowtie2 home page at (<a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml" class="uri">http://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a>.
+</p>
+</div>
 </div>
 <div id="samtools" class="section level4 unnumbered">
 <h4>Samtools</h4>
@@ -425,7 +433,7 @@ Figure 4.15: Screenshot of the MEME-suite home page at <a href="http://meme-suit
 <div class="figure"><span id="fig:bioconductor-web"></span>
 <img src="pic/bioconductor_web.png" alt="Screenshot of the Bioconductor home page at http://www.bioconductor.org." width="476" />
 <p class="caption">
-Figure 4.16: Screenshot of the Bioconductor home page at <a href="http://www.bioconductor.org" class="uri">http://www.bioconductor.org</a>.
+Figure 4.17: Screenshot of the Bioconductor home page at <a href="http://www.bioconductor.org" class="uri">http://www.bioconductor.org</a>.
 </p>
 </div>
 </div>
@@ -435,7 +443,7 @@ Figure 4.16: Screenshot of the Bioconductor home page at <a href="http://www.bio
 <div class="figure"><span id="fig:cytoscape-hiv"></span>
 <img src="pic/cytoscape_hiv.png" alt="Screenshot of Cytoscape showing the HIV sample dataset http://www.cytoscape.org." width="650" />
 <p class="caption">
-Figure 4.17: Screenshot of Cytoscape showing the HIV sample dataset <a href="http://www.cytoscape.org" class="uri">http://www.cytoscape.org</a>.
+Figure 4.18: Screenshot of Cytoscape showing the HIV sample dataset <a href="http://www.cytoscape.org" class="uri">http://www.cytoscape.org</a>.
 </p>
 </div>
 </div>
@@ -448,7 +456,7 @@ Figure 4.17: Screenshot of Cytoscape showing the HIV sample dataset <a href="htt
 <div class="figure"><span id="fig:gakaxy-web"></span>
 <img src="pic/galaxy_web.png" alt="Screenshot of the main Galaxy site at http://usegalaxy.org." width="746" />
 <p class="caption">
-Figure 4.18: Screenshot of the main Galaxy site at <a href="http://usegalaxy.org" class="uri">http://usegalaxy.org</a>.
+Figure 4.19: Screenshot of the main Galaxy site at <a href="http://usegalaxy.org" class="uri">http://usegalaxy.org</a>.
 </p>
 </div>
 </div>
@@ -463,12 +471,15 @@ Figure 4.18: Screenshot of the main Galaxy site at <a href="http://usegalaxy.org
 AGTTAGGATTTGCGCCATT</code></pre>
 </div>
 <div id="fastq" class="section level3 unnumbered">
-<h3>FASTQ</h3>
+<h3>Fastq</h3>
 <p><a href="https://en.wikipedia.org/wiki/FASTQ_format">FASTQ</a> is a format used to store information from NGS technologies. In particular, stores the sequences of the reads in addition to information about the quality of sequencing. Each entry starts with the <code>@</code> character. That line also contains other information like the read identifier. The next line is the sequence information. Next there is a line with the <code>+</code> character, and then is the quality information encoded as a <a href="https://en.wikipedia.org/wiki/Phred_quality_score">phred score</a> of the same length as the sequence.</p>
 <pre><code>@K00211:114:H52N5BBXX:1:2125:22252:26301
 TTCCTATATAATCTTTATTTCTGGAAGTTAAAGTAGTTACAGCAATATACAAAAACAAACAACAACAAAAAACAACCCACAATAATATAAATTTTTACAC
 +
 AAFFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJ</code></pre>
+</div>
+<div id="sam" class="section level3 unnumbered">
+<h3>SAM</h3>
 
 </div>
 </div>

@@ -159,7 +159,13 @@ knitr::include_graphics("pic/meme_web.png")
 
 ### Next generation sequencing
 
-#### Bowtie {-}
+#### Bowtie2 {-}
+
+[Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) is a command line software to align sequence reads obtained from NGS technologies to a reference genome. It requires sequencing data in [Fastq] format and produces aligments in [SAM] format.
+
+```{r bowtie2-web, echo=FALSE, fig.cap="Screenshot of the Bowtie2 home page at (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml."}
+knitr::include_graphics("pic/bowtie2_web.png")
+```
 
 #### Samtools {-}
 
@@ -204,7 +210,7 @@ FASTA is a very simple file format used to store information about biological se
 AGTTAGGATTTGCGCCATT
 ```
 
-### FASTQ {-}
+### Fastq {-}
 
 [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) is a format used to store information from NGS technologies. In particular, stores the sequences of the reads in addition to information about the quality of sequencing. Each entry starts with the `@` character. That line also contains other information like the read identifier. The next line is the sequence information. Next there is a line with the `+` character, and then is the quality information encoded as a [phred score](https://en.wikipedia.org/wiki/Phred_quality_score) of the same length as the sequence.
 
@@ -215,3 +221,4 @@ TTCCTATATAATCTTTATTTCTGGAAGTTAAAGTAGTTACAGCAATATACAAAAACAAACAACAACAAAAAACAACCCAC
 AAFFFJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJ
 ```
 
+### SAM {-}
