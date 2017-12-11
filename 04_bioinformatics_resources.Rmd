@@ -157,6 +157,12 @@ knitr::include_graphics("pic/meme_web.png")
 
 ### Cytoscape
 
+[Cytoscape](http://www.cytoscape.org) is a software for the analysis and visualization of networks. It enables to import network information from online databases and integrate it with omics data like for example gene expression profiles. Cytoscape runs on Windows, Macs and Linux machines.
+
+```{r cytoscape-hiv, echo=FALSE, fig.cap="Screenshot of Cytoscape showing the HIV sample dataset http://www.cytoscape.org."}
+knitr::include_graphics("pic/cytoscape_hiv.png")
+```
+
 ### Galaxy
 
 The [Galaxy](https://galaxyproject.org/tutorials/g101) project provides a web platform for the analysis of NGS data. In their own words:
