@@ -6,6 +6,12 @@ In this chapter some of the most important Bioinformatics resources are describe
 
 ### NCBI {-}
 
+The [National Center for Biotechnology Information (NCBI)](https://www.ncbi.nlm.nih.gov) host many sequence databases including genome databases and the Genbank repository for sequence information. It also host many Bioinformatics resources like the [Blast] tool.
+
+```{r ncbi-web, echo=FALSE, fig.cap="Screenshot of the NCBI home page at https://www.ncbi.nlm.nih.gov."}
+knitr::include_graphics("pic/ncbi_web.png")
+```
+
 ### EnsEMBL {-}
 
 [EnsEMBL](https://www.ensembl.org) is a database where the genome information about many species is collected with a focus con comparative genomics research.
