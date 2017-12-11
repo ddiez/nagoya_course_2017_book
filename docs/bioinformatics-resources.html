@@ -413,7 +413,9 @@ Figure 4.16: Screenshot of the MEME-suite home page at <a href="http://meme-suit
 </div>
 <p>The <code>meme</code> commdan line tool enables to search for <em>de novo</em> motifs in nucleotide or protein sequences. The basic usage is:</p>
 <pre><code>meme -o &lt;output_folder_name&gt; -nmotifs &lt;n&gt; &lt;fasta file&gt;</code></pre>
-<p>Where <code>&lt;output_folder_name&gt;</code> is the name of the output directory where we want our results to be placed, <code>&lt;n&gt;</code> is the maximum number of motifs we want MEME to search for (default if <code>-nmotifs</code> ommited is 1), and <code>&lt;fasta file&gt;</code> is the file in <a href="bioinformatics-resources.html#fasta">FASTA</a> format with our sequences.</p>
+<p>Where <code>&lt;output_folder_name&gt;</code> is the name of the output directory where we want our results to be placed, <code>&lt;n&gt;</code> is the maximum number of motifs we want <code>meme</code> to search for (default if <code>-nmotifs</code> ommited is 1), and <code>&lt;fasta file&gt;</code> is the file in <a href="bioinformatics-resources.html#fasta">FASTA</a> format with our sequences.</p>
+<p><code>fimo</code> enables to scan a database of sequences in a <a href="bioinformatics-resources.html#fasta">FASTA</a> file for motifs from a motif database. The motif database could be the output from <code>meme</code> (for example, the meme.txt file inside the output directory). It can also be a database from other motif databases, like <a href="bioinformatics-resources.html#jaspar">Jaspar</a>. These need to be formatted appropriately before using it with <code>fimo</code>. The MEME suite includes a <code>jaspar2meme</code> command line tool that enables to format the <a href="bioinformatics-resources.html#jaspar">Jaspar</a> database in a way suitable to use with <code>fimo</code>.</p>
+<pre><code>fimo &lt;motif file&gt; &lt;fasta file&gt;</code></pre>
 </div>
 </div>
 <div id="next-generation-sequencing-1" class="section level3">
