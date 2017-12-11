@@ -2,25 +2,11 @@
 
 In this chapter some of the most important Bioinformatics resources are described. An attempt to organized them by topic is made, but most of these resources are highly integrated. So, for example, you would thing that to do a Blast search you need to go to the Blast web page. But you can also perform Blast searches from the Uniprot and EnsEMBL web pages, to mention just two. Similarly, most if not all sequence databases link the associated Gene Ontology information to their sequence entries. This high degree of integration might make difficult at first to value the existence of different resources.
 
-## Gene Ontology
-
-One important difficulty when dealing with Biological structures (molecules, organelles, etc.) is the vocabulary we use to described them. As this type of information accumulated different researches would tend to use slighly different ways to describe the same thing. In other cases they can use similar words to describe different things. These nuances make the descriptions often found in publications ambiguous making it difficult to determine the exact meaning of some assertion. This difficulty became more prominent once the amount of information increased dramatically with the advent of omics technologies, and the information about the biological stuff was the subject of computational analyses. There was a need for an standardized nomenclature, and that was the origin of the [Gene Ontology](http://www.geneontology.org) project. The purpose of the Gene Ontology project is stated in it web page:
-
->The Gene Ontology (GO) project is a major bioinformatics initiative to develop a computational representation of our evolving knowledge of how genes encode biological functions at the molecular, cellular and tissue system levels. Biological systems are so complex that we need to rely on computers to represent this knowledge. The project has developed formal ontologies that represent over 40,000 biological concepts, and are constantly being revised to reflect new discoveries. To date, these concepts have been used to "annotate" gene functions based on experiments reported in over 100,000 peer-reviewed scientific papers.
-
-In particular:
-
->The Gene Ontology project provides a controlled vocabulary of terms for describing gene product characteristics and gene product annotation data from GO Consortium members, as well as tools to access and process these data.
-
-```{r go-web, echo=FALSE, fig.cap="Screenshot of the Gene Ontology home page at http://www.geneontology.org."}
-knitr::include_graphics("pic/go_web.png")
-```
-
 ## Sequence databases
 
-### NCBI
+### NCBI {-}
 
-### EnsEMBL
+### EnsEMBL {-}
 
 [EnsEMBL](https://www.ensembl.org) is a database where the genome information about many species is collected with a focus con comparative genomics research.
 
@@ -28,7 +14,7 @@ knitr::include_graphics("pic/go_web.png")
 knitr::include_graphics("pic/ensembl_web.png")
 ```
 
-### Uniprot
+### Uniprot {-}
 
 The [Uniprot](http://www.uniprot.org) website focuses on information about protein sequences, including splice forms.
 
@@ -38,7 +24,7 @@ knitr::include_graphics("pic/uniprot_web.png")
 
 ## Gene expression databases
 
-### GEO: Gene Expression Omnibus
+### GEO: Gene Expression Omnibus {-}
 
 The [Gene Expression Omnibus (GEO)](https://www.ncbi.nlm.nih.gov/geo/) database collects data from high-throughtput experiments including microarrays and NGS datasets.
 
@@ -52,7 +38,7 @@ The number of submissions per year for microarrays and RNA-seq continues to incr
 knitr::include_graphics("pic/geo_year.pdf")
 ```
 
-### ArrayExpress
+### ArrayExpress {-}
 
 [ArrayExpress](https://www.ebi.ac.uk/arrayexpress/) is the alternative at the European Bioinformatics Institute.
 
@@ -64,7 +50,7 @@ knitr::include_graphics("pic/ae_web.png")
 
 As information about genes, proteins and metabolites accumulates, it becomes more and more important to organize this knowledge in a comprehensive way. We have mentioned how genes and their products participate in the networks of cellular processes, the cell's pathway. This network includes metabolic, signaling and gene regulatory networks. This information is critical to understand the cell's phenotype, but the accumulated knowledge is daunting. It would benefit to have some central repository with easily accessible tools that enables to visualize existing knowledge in an easy way. It would be also very useful if it was possible to use that information in computer analysis. This is the motivation behind some of the web resources described below.
 
-### KEGG
+### KEGG {-}
 
 KEGG stands for [Kyoto Encyclopedia for Genes and Genomes](http://www.kegg.jp) (Figure \@ref(fig:kegg-web)). Is an integrative resource with information about matabolic and signaling pathways in different species, from bacteria and archaea to mammals.
 
@@ -73,11 +59,11 @@ knitr::include_graphics("pic/kegg_web.png")
 ```
 
 
-### Reactome
+### Reactome {-}
 
 ## Domain databases
 
-### Pfam
+### Pfam {-}
 
 [Pfam](http://pfam.xfam.org) is a database of protein domain families.
 
@@ -91,7 +77,7 @@ knitr::include_graphics("pic/pfam_web.png")
 
 ## Motif databases
 
-### Jaspar
+### Jaspar {-}
 
 [Jaspar](http://jaspar.genereg.net) is a database for transcription factor DNA binding motifs.
 
@@ -99,11 +85,11 @@ knitr::include_graphics("pic/pfam_web.png")
 knitr::include_graphics("pic/jaspar_web.png")
 ```
 
-## Interaction networks
+## Interaction databases
 
 Information about protein-protein interactions has grown incredibly due to advances in MS in combination with affinity purification methods. There are several databases integrating existing information. Two resources will be highlighted here: BioGRID and STRING.
 
-### BioGRID
+### BioGRID {-}
 
 [BioGRID](https://thebiogrid.org) focuses on storing information about PPIs for which experimental evidence exists.
 
@@ -111,7 +97,7 @@ Information about protein-protein interactions has grown incredibly due to advan
 knitr::include_graphics("pic/biogrid_web.png")
 ```
 
-### STRING
+### STRING {-}
 
 STRING combines experimental and computational evidence to infer PPIs.
 
@@ -119,9 +105,25 @@ STRING combines experimental and computational evidence to infer PPIs.
 knitr::include_graphics("pic/string_web.png")
 ```
 
+## Other
+
+### Gene Ontology {-}
+
+One important difficulty when dealing with Biological structures (molecules, organelles, etc.) is the vocabulary we use to described them. As this type of information accumulated different researches would tend to use slighly different ways to describe the same thing. In other cases they can use similar words to describe different things. These nuances make the descriptions often found in publications ambiguous making it difficult to determine the exact meaning of some assertion. This difficulty became more prominent once the amount of information increased dramatically with the advent of omics technologies, and the information about the biological stuff was the subject of computational analyses. There was a need for an standardized nomenclature, and that was the origin of the [Gene Ontology](http://www.geneontology.org) project. The purpose of the Gene Ontology project is stated in it web page:
+
+>The Gene Ontology (GO) project is a major bioinformatics initiative to develop a computational representation of our evolving knowledge of how genes encode biological functions at the molecular, cellular and tissue system levels. Biological systems are so complex that we need to rely on computers to represent this knowledge. The project has developed formal ontologies that represent over 40,000 biological concepts, and are constantly being revised to reflect new discoveries. To date, these concepts have been used to "annotate" gene functions based on experiments reported in over 100,000 peer-reviewed scientific papers.
+
+In particular:
+
+>The Gene Ontology project provides a controlled vocabulary of terms for describing gene product characteristics and gene product annotation data from GO Consortium members, as well as tools to access and process these data.
+
+```{r go-web, echo=FALSE, fig.cap="Screenshot of the Gene Ontology home page at http://www.geneontology.org."}
+knitr::include_graphics("pic/go_web.png")
+```
+
 ## Bioformatics software
 
-### Blast
+### Blast {-}
 
 The [Blast](https://blast.ncbi.nlm.nih.gov) web page at NCBI is the main point of access to this versitile tool. It can be used to search for sequence similarity against any of the sequence databases at the NCBI.
 
@@ -129,7 +131,7 @@ The [Blast](https://blast.ncbi.nlm.nih.gov) web page at NCBI is the main point o
 knitr::include_graphics("pic/blast_web.png")
 ```
 
-### HMMER
+### HMMER {-}
 
 [HMMER](http://hmmer.org) implements Hidden Markov Models for the analysis of biological sequences. It can learn models representing motifs, domains or entire sequences. These models are used to search for sequences matching the models in databases. It can also be used to annotate the domains/motifs present in a sequence using a database of domains. PFAM uses HMMER and manually curated MSA of domains to generate a database of protein families (PFAM). The use of HMM for sequence alignment is described in detail in the excellent book [Biological sequence analysis: Probabilistic models of proteins and nucleic acids].
 
@@ -137,7 +139,7 @@ knitr::include_graphics("pic/blast_web.png")
 knitr::include_graphics("pic/hmmer_web.png")
 ```
 
-### Jalview
+### Jalview {-}
 
 [Jalview](http://www.jalview.org) is a software for sequence analysis. It can visualize sequences, submit them to multiple sequence aligment servers, visualize the resulting MSA, create basic phylogenetic trees and visualize associated structures.
 
@@ -145,7 +147,7 @@ knitr::include_graphics("pic/hmmer_web.png")
 knitr::include_graphics("pic/jalview_web.png")
 ```
 
-### MEME
+### MEME {-}
 
 The [MEME-suite](http://meme-suite.org) is a collection of tools for the discovery of motifs in proteins, DNA and RNA sequences. If can find de-novo motifs (e.g. MEME) or search for known motifs from a motif database (e.g. MAST, FIMO, etc.)
 
@@ -153,7 +155,7 @@ The [MEME-suite](http://meme-suite.org) is a collection of tools for the discove
 knitr::include_graphics("pic/meme_web.png")
 ```
 
-### Bioconductor
+### Bioconductor {-}
 
 [Bioconductor](http://www.bioconductor.org) is a project providing R packages for the anlysis of omics datasets in the [R software](https://www.r-project.org). R runs on Windows, Macs and Linux computers.
 
@@ -163,7 +165,7 @@ knitr::include_graphics("pic/meme_web.png")
 knitr::include_graphics("pic/bioconductor_web.png")
 ```
 
-### Cytoscape
+### Cytoscape {-}
 
 [Cytoscape](http://www.cytoscape.org) is a software for the analysis and visualization of networks. It enables to import network information from online databases and integrate it with omics data like for example gene expression profiles. Cytoscape runs on Windows, Macs and Linux computers.
 
@@ -171,7 +173,7 @@ knitr::include_graphics("pic/bioconductor_web.png")
 knitr::include_graphics("pic/cytoscape_hiv.png")
 ```
 
-### Galaxy
+### Galaxy {-}
 
 The [Galaxy](https://galaxyproject.org/tutorials/g101) project provides a web platform for the analysis of NGS data. In their own words:
 
@@ -183,7 +185,7 @@ knitr::include_graphics("pic/galaxy_web.png")
 
 ## File formats
 
-### FASTA
+### FASTA {-}
 
 FASTA is a very simple file format used to store information about biological sequences, including protein, DNA and RNA. Each entry consists of the `>` character followed by a sequence *Id* and a description, separated from the *Id* by a space character. The sequence itself goes in the next lines. Often FASTA files are formatted with a maximum number of residues per line (e.g. 60), which helps when visualizing the information in a regular text editor.
 
@@ -192,7 +194,7 @@ FASTA is a very simple file format used to store information about biological se
 AGTTAGGATTTGCGCCATT
 ```
 
-### FASTQ
+### FASTQ {-}
 
 [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) is a format used to store information from NGS technologies. In particular, stores the sequences of the reads in addition to information about the quality of sequencing. Each entry starts with the `@` character. That line also contains other information like the read identifier. The next line is the sequence information. Next there is a line with the `+` character, and then is the quality information encoded as a [phred score](https://en.wikipedia.org/wiki/Phred_quality_score) of the same length as the sequence.
 
