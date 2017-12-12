@@ -180,12 +180,12 @@
             <section class="normal" id="section-">
 <div id="sequence-analysis" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Sequence analysis</h1>
-<p>This chapter introduces the basics of sequence analysis methods. As mentioned in Section <a href="intro.html#intro-sequence-analysis">1.1</a> (<a href="intro-sequence-analysis">Sequence analysis</a>), the main goal of sequence analysis is two answer questions regarding DNA, RNA and/or protein sequences. For example, we could be presented with an unknown sequence, like the one shown here:</p>
+<p>This chapter introduces basic concepts of sequence analysis methods. The main goal of sequence analysis is two answer questions regarding DNA, RNA and/or protein sequences. For example, we could be presented with an unknown sequence, like the one shown here:</p>
 <pre><code>MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAG
 QEEYSAMRDQYMRTGEGFLCVFAINNTKSFEDIHHYREQIKRVKDSEDVPMVLVGNKCDL
 PSRTVDTKQAQDLARSYGIPFIETSAKTRQRVEDAFYTLVREIRQYRLKKISKEEKTPGC
 VKIKKCIIM</code></pre>
-<p>Since we only have the amino acid sequence, the first thing we may want to do is to compare these sequence with the sequence of other proteins in order to see whether we find other proteins that look similar. The process of comparing two sequences to figure out their similarity is called sequence alignment.</p>
+<p>Since we only have the amino acid sequence, the first thing we may want to do is to compare this sequence with the sequence of other proteins in order to see whether we can find other similar proteins. The process of comparing two sequences to figure out their similarity is called pairwise sequence alignment.</p>
 <div id="pairwise-alignment" class="section level2">
 <h2><span class="header-section-number">2.1</span> Pairwise alignment</h2>
 <p>Imagine we could find a known protein for which 100% of its amino acid sequence is identical with our unknown sequence. Then we could say we have identified our protein! Imagine however that not all the amino acids are exactly identical. At some positions we may have some changes. The more changes we have, the more disimilar the two sequences will be. We want a way to quantitatively measure how much different (or similar) two sequences are. This is represented below by the two DNA sequences (seq1 and seq2) which are put together. The sequence of dots and asteriks below indicates whether the two aminoacids aligned are identical (and then is a <code>.</code>) or different (and then is a <code>*</code>).</p>
