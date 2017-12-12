@@ -159,5 +159,7 @@ knitr::include_graphics("pic/ngs_sc.png")
 
 The field of single cell omics is in constant development and new or improved methodologies appear increasingly. For transcriptomics the use of microfluidic reaction chambers enables single cells to be subjected to RNA-seq protocols. Another methodology is Fluorescence based flow cytometry (FBFC), which enables to quantify the amount of proteins using fluorophores attached to antibodies. However, because spectral overlap, the maximum number of proteins that can be measured simultaneously is limited. A modification of this technology known as mass cytometry tags antibodies with rare isotopes and uses mass spectrometry to identify proteins. This technique highly improves the dimensionality by increasing the number of proteins and conditions that can be analyzed simultaneously.
 
+## Nanopore sequencing
 
+[Nanopore sequencing](https://nanoporetech.com), also known as 4th generation sequencing enables to sequence a single DNA molecule without need of PCR amplification or chemical labeling. It consists of a membrane with protein pores attached to it. DNA molecules pass through the pores and induce a current. The different DNA nucleotides induce different current due to their differing electrical properties. This information is used to identify the identity of the base.
 
