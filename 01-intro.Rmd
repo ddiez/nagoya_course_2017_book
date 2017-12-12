@@ -2,16 +2,16 @@
 
 Bioinformatics can be defined as the use of computational methods to answer questions in Biology. Another way to define it is as the field concerned with the development of such tools. Another related name is Computational Biologist, which refers to a Biologist that use mainly Bioinformatics tools to tackle questions in Biology. All these terms can be confusing but here we will put our focus on the Biologist point of view. From that perspective Bioinformatics is just a tool, in the same way as Molecular Biology is, that can help us to get insight into Biology.
 
-Another confusion comes from the overlap with other fields like Statistics and Computer Science. This is because researchers that use Bioinformatics tools may inevitably end up using also methods and tools from Statistics, Computer Science, Machine learning, etc. Here we will concentrate on the description of mainly purely Bioinformatics tools. However, it is unavoidable that reference and/or knowledge of these other fields will be required to have some understanding of how Bioinformatics tools work, and also to be able to interpret the results from Bioinformatics tools.
+Another confusion comes from the overlap with other fields like Statistics and Computer Science. This is because researchers that use Bioinformatics tools may inevitably end up using also methods and tools from Statistics, Computer Science, Machine learning, etc. Here we will concentrate on the description of mainly purely Bioinformatics tools. However, it is unavoidable that reference and/or knowledge of these other fields will be required to understand how some Bioinformatics tools work. Often it will also be necessary to interpret the results obtained from the use of Bioinformatics tools.
 
 Bioinformatics is a very broad terms covering and overlapping with other previously existing fields. Some of the topics touched by Bioinformatics include:
 
 * Sequence analysis
-* Phylogenetic analysis
 * Omics analysis
 * Structural analysis
+* Phylogenetic analysis
 
-Below we will briefly describe each of these topics. In this introductory course, however, we will focus on two topics, sequence analysis and omics analysis.
+Below we will briefly describe each of these topics. In this introductory course, however, we will focus on two of them, sequence analysis and omics analysis.
 
 ## Sequence analysis {#intro-sequence-analysis}
 
