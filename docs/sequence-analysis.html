@@ -49,43 +49,6 @@
 
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -104,7 +67,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a></li>
-<li class="chapter" data-level="" data-path="prerequisites.html"><a href="prerequisites.html"><i class="fa fa-check"></i>Prerequisites</a></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#intro-sequence-analysis"><i class="fa fa-check"></i><b>1.1</b> Sequence analysis</a></li>
 <li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#omics-analysis"><i class="fa fa-check"></i><b>1.2</b> Omics analysis</a></li>
@@ -298,20 +260,20 @@ I -1 -3 -3 -3 -1 -3 -3 -4 -3  4</code></pre>
 <h2><span class="header-section-number">2.3</span> Blast</h2>
 <p>Searching for similar sequences in a large sequence database can be computationally expensive because the SW algorithm is relativelly slow. Therefore, some alternatives using heuristics have been developed over the years. One such alternative is <a href="https://en.wikipedia.org/wiki/BLAST">Blast</a>. Blast stands for Basic Local Alignment Tool. Blast uses some heuristics to improve the speed of the local alignment and therefore can be used to search for large sequence databases. Often the quality of the alignment is as good as the one we could obtain with SW, however, it is possible to loose some accuracy. The <a href="https://www.ncbi.nlm.nih.gov/BLAST">NCBI Blast</a> web server can be used to search for sequence similarity against a wide range of sequence databases hosted at NCBI. Blast searches are also available at many other sequence database resources like <a href="https://www.ensembl.org/Multi/Tools/Blast?db=core">EnsEMBL</a> and <a href="http://www.uniprot.org/blast/">Uniprot</a>.</p>
 <p>For example, we can use the NCBI Blast service to identify our unknown sequence at the begining of this chapter. Go <a href="https://www.ncbi.nlm.nih.gov/BLAST">there</a> and click on <code>Protein BLAST</code>. A web form will show. Copy/paste our unknown sequence on the textbox saying <em>Enter accession number(s), gi(s), or FASTA sequence(s)</em>. Click the blue rounded button saying <em>BLAST</em>. Wait a few seconds (or minutes depending on the network load) for the result page to show.</p>
-<div class="figure"><span id="fig:unnamed-chunk-6"></span>
+<div class="figure"><span id="fig:unnamed-chunk-4"></span>
 <img src="pic/blast_submit.png" alt="Standard Protein Blast submit form." width="491" />
 <p class="caption">
 Figure 2.1: Standard Protein Blast submit form.
 </p>
 </div>
 <p>The result page will look something like this.</p>
-<div class="figure"><span id="fig:unnamed-chunk-7"></span>
+<div class="figure"><span id="fig:unnamed-chunk-5"></span>
 <img src="pic/blast_result_1.png" alt="Standard Protein Blast result page (top)." width="650" />
 <p class="caption">
 Figure 2.2: Standard Protein Blast result page (top).
 </p>
 </div>
-<div class="figure"><span id="fig:unnamed-chunk-8"></span>
+<div class="figure"><span id="fig:unnamed-chunk-6"></span>
 <img src="pic/blast_result_2.png" alt="Standard Protein Blast result page (hit list)." width="651" />
 <p class="caption">
 Figure 2.3: Standard Protein Blast result page (hit list).
@@ -322,7 +284,7 @@ Figure 2.3: Standard Protein Blast result page (hit list).
 <div id="multiple-sequence-alignment" class="section level2">
 <h2><span class="header-section-number">2.4</span> Multiple sequence alignment</h2>
 <p>When we want to align 3 o more sequences together we have a multiple sequence alignment (MSA). In a MSA there is more ambiguity about what determines a correct alignment. Also, finding the <em>best</em> aligment in terms of scoring scheme is more computationally expensive. Therefore, MSA software uses heuristics to find good but often sub-optimal solutions. Here you can see a MSA of four sequences, members of the Ras family. Three of them correspond to human sequences, the last one to mouse RASH.</p>
-<div class="figure"><span id="fig:unnamed-chunk-9"></span>
+<div class="figure"><span id="fig:unnamed-chunk-7"></span>
 <img src="pic/msa.pdf" alt="Multiple sequence aligment of RAS protein family members."  />
 <p class="caption">
 Figure 2.4: Multiple sequence aligment of RAS protein family members.
@@ -366,7 +328,7 @@ Figure 2.5: Phylogenetic tree of 4 RAS proteins.
 [3,] 0.965742251 0.01141925 0.008156607 0.64110930
 [4,] 0.021207178 0.00000000 0.001631321 0.02283850</code></pre>
 <p>This information can also be represented using <em>Sequence Logos</em>. In this approach we plot at each position all the letters, with each letter height proportional to the probability (In reality it is proportional not to the probability directly but to the information content or <em>bits</em>). For example here is the sequence logo for Stat3. You can see that the letters at position 5 are all small. This is because the probabilities are more uniform. There is no clear residue dominating the binding at that position. So we have less information about what residue should be in that position.</p>
-<p><img src="nagoya_course_book_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="nagoya_course_book_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>PSSM are commonly used to encode the binding motifs of transcription factors, and this information is collected in databases like <a href="bioinformatics-resources.html#jaspar">Jaspar</a>. Then tools like <a href="bioinformatics-resources.html#meme">MEME</a> can be used to identify the binding sites of transcription factors in the genome.</p>
 <p>PSSMs are also used in a variant of Blast called PSI-BLAST. Basically PSI-BLAST performs a round of Blast, then construct at PSSM from a MSA of the best hits, then use this PSSM to iterativelly search the same database, refining the PSSM each cycle with the best hits. This approach results in improved sensitivity.</p>
 <p>A similar approach is followed in the <a href="bioinformatics-resources.html#pfam">Pfam</a> database. In Pfam MSAs containing the domain of interest are manually curated (also known as <em>seed alignments</em>). These alignments are used to train a Hidden Markov Model (HMM) that learns how to recognize the same domain in other sequences. With this HMM, we can identify all sequences in a database containing that particular domain. HMM models are learned using the software <a href="bioinformatics-resources.html#hmmer">HMMER</a>.</p>
@@ -423,17 +385,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(script.src))
-      script.src  = script.src.replace(/^https?:/, '');
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
