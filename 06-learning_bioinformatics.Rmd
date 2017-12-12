@@ -40,6 +40,14 @@ There are many free online courses by instructors from reputable universities at
 knitr::include_graphics("pic/edx_web.png")
 ```
 
+### YouTube
+
+Many Bioinformatics resources are putting a lot of resources into teaching how to use their services, with an emphasis on newcomers. Some of them provide introductory tutorials and case studies in videos hosted in their YouTube channels. For example there are channels for [NCBI](https://www.youtube.com/user/NCBINLM), [Uniprot](https://www.youtube.com/user/uniprotvideos), [EnsEMBL](https://www.youtube.com/user/EnsemblHelpdesk), and [Bioconductor](https://www.youtube.com/user/bioconductor), to mention a few.
+
+```{r youtube-uniprot, echo=FALSE, fig.cap="Screenshot of the Uniprot YouTube channel home page at https://www.youtube.com/user/uniprotvideos."}
+knitr::include_graphics("pic/youtube_uniprot.png")
+```
+
 ### How to use the command line
 
 Often using Bioinformatics tools requires knowledge of how to use the command line, specially in Linux/Unix environments. [http://linuxcommand.org](http://linuxcommand.org/index.php) has a nice introduction to the Linux command line. Another interesting resource is [https://www.codecademy.com](https://www.codecademy.com), providing an interactive learning experience (It offers also paid courses). Also, [here](https://ryanstutorials.net/bash-scripting-tutorial/) there is a tutorial on *Bash* scripting.
