@@ -32,6 +32,14 @@ knitr::include_graphics("pic/phylogenetics_book.jpg")
 
 ## Online resources
 
+### Online courses
+
+There are many free online courses by instructors from reputable universities at web sites like [edX](https://www.edx.org). You can find many topics related to Bioinformatics, Computational Biology, Statistics and Data analysis.
+
+```{r edx-web, echo=FALSE, fig.cap="Screenshot of the edX home page at https://www.edx.org."}
+knitr::include_graphics("pic/edx_web.png")
+```
+
 ### How to use the command line
 
 Often using Bioinformatics tools requires knowledge of how to use the command line, specially in Linux/Unix environments. [http://linuxcommand.org](http://linuxcommand.org/index.php) has a nice introduction to the Linux command line. Another interesting resource is [https://www.codecademy.com](https://www.codecademy.com), providing an interactive learning experience (It offers also paid courses). Also, [here](https://ryanstutorials.net/bash-scripting-tutorial/) there is a tutorial on *Bash* scripting.
