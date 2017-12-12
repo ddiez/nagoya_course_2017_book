@@ -36,6 +36,18 @@ knitr::include_graphics("pic/phylogenetics_book.jpg")
 
 Often using Bioinformatics tools requires knowledge of how to use the command line, specially in Linux/Unix environments. [http://linuxcommand.org](http://linuxcommand.org/index.php) has a nice introduction to the Linux command line. Another interesting resource is [https://www.codecademy.com](https://www.codecademy.com), providing an interactive learning experience (It offers also paid courses). Also, [here](https://ryanstutorials.net/bash-scripting-tutorial/) there is a tutorial on *Bash* scripting.
 
+### Programming languages
+
+Learning a programming language is not absolutely necessary when using most of the bioinformatics tools described in this book. However, when analyzing high-throughput datasets it is neccessary to use them. In particular, [Python](https://www.python.org) and [R](https://www.r-project.org) are the most used languages in data science, including Bioinformatics. There are many free online resources to learn the basics of these programming languages. Check their web pages for tutorials for beginners.
+
+```{r python-web, echo=FALSE, fig.cap="Screenshot of the Python home page at https://www.python.org."}
+knitr::include_graphics("pic/python_web.png")
+```
+
+```{r r-web, echo=FALSE, fig.cap="Screenshot of the R home page at https://www.r-project.org."}
+knitr::include_graphics("pic/r_web.png")
+```
+
 ### Support Communities
 
 Learning Bioinformatics, as with any other complex topic, can be daunting. Often Bioinformatics software come with good and detailed documentation and. It is also possible to frequently find short tutorials that can help newcomers get started. It is important to get a *good* understanding of the methods being used when the goal is to publish your results. The Bioinformatics community can sometimes help in the learning process by providing solutions to the most frequently encountered problems. Here I will highlight some of the most relevant online communities for the Bioinformatician.
