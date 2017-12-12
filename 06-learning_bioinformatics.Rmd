@@ -20,6 +20,14 @@ Advance level understanding of the theory of sequence aligment and Hidden Markov
 knitr::include_graphics("pic/hmm_book.jpg")
 ```
 
+#### Sequence Analysis in a Nutshell: A Guide to Tools and Databases
+
+General introduction to many of the sequence analysis tools covered in this course.
+
+```{r, echo=FALSE, fig.cap="Sequence Analysis in a Nutshell: A Guide to Tools and Databases. S. Markel, D. Leon , ... Oreilly, 2003"}
+knitr::include_graphics("pic/seq_analysis_book.png")
+```
+
 #### Molecular evolution and phylogenetics {-}
 
 Introductory level book on the topic of inferring phylogenies from sequence information.
