@@ -149,7 +149,7 @@ We can see from this list that the first hit is the human GTPase KRas. This is r
 When we want to align 3 o more sequences together we have a multiple sequence alignment (MSA). In a MSA there is more ambiguity about what determines a correct alignment. Also, finding the *best* aligment in terms of scoring scheme is more computationally expensive. Therefore, MSA software uses heuristics to find good but often sub-optimal solutions. Here you can see a MSA of four sequences, members of the Ras family. Three of them correspond to human sequences, the last one to mouse RASH.
 
 ```{r, echo=FALSE, fig.cap="Multiple sequence aligment of RAS protein family members."}
-knitr::include_graphics("pic/msa.pdf")
+knitr::include_graphics("pic/msa.png")
 ```
 
 
@@ -164,7 +164,7 @@ Software for MSA:
 Sequence aligment methods give us information about the similarity between different sequences. Some sequences are more similar to one another than to other sequences. Although this information is somwhat visible in the MSA, it is difficult to visualize complex similarity relationships when many sequences are considered. To help with this problem tree visualization methods can be useful. Tree methods use a distance matrix, e.g. derived from pairwise sequence aligment of a set of sequences, and constructs a binary tree in which proteins closer in the tree are more similar. For example, take a look at the tree shown in Figure \@ref(fig:tree-ras) for the 4 RAS proteins.
 
 ```{r tree-ras, echo=FALSE, fig.cap="Phylogenetic tree of 4 RAS proteins."}
-knitr::include_graphics("pic/tree_ras.pdf")
+knitr::include_graphics("pic/tree_ras.png")
 ```
 
 ## Domains and motifs
